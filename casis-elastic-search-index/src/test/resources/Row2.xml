@@ -1,0 +1,77 @@
+<Document>
+	<CASIS.DOCNO>
+		<orgianl>DGL1510302</orgianl>
+	</CASIS.DOCNO>
+	
+	
+	<CASIS.UPD>
+		<PublicationDate CCYYMMDD="20141028">28 Oct 2014
+		</PublicationDate>
+	</CASIS.UPD>
+	<LaunchDetails>
+		<LaunchDateComment />
+		<NewChemicalEntity />
+		<Ingredients>
+			<Ingredient>ribavirin</Ingredient>
+		</Ingredients>
+		<CASIS.USE>
+			<CASIS.ACT>
+				<Class>
+					<ClassCode>J5B</ClassCode>
+					<ClassDescription>Antivirals</ClassDescription>
+				</Class>
+			</CASIS.ACT>
+			<CASIS.IND>
+				<Indication>Chronic hepatitis C infection.</Indication>
+			</CASIS.IND>
+		</CASIS.USE>
+		<CASIS.CN>
+			<BrandName>MODERIBA</BrandName>
+		</CASIS.CN>
+		<CASIS.CO>
+			<CASIS.NORMALIZED.CO>Manufacturer: Abbvie</CASIS.NORMALIZED.CO>
+			<CASIS.NORMALIZED.CO>ABBVIE</CASIS.NORMALIZED.CO>
+			<Manufacturer>Abbvie</Manufacturer>
+			<Corporation>ABBVIE</Corporation>
+		</CASIS.CO>
+		<CASIS.DSTA>
+			<CASIS.NORMALIZED.DSTA>SF: Launched 20140801</CASIS.NORMALIZED.DSTA>
+			<Country>Finland</Country>
+			<LaunchDate CCYYMM="20140801">01 Aug 2014</LaunchDate>
+		</CASIS.DSTA>
+		<CASIS.TX>
+			<Biotech>No</Biotech>
+			<Unbranded>No</Unbranded>
+		</CASIS.TX>
+		<CASIS.RN>
+			<CASInfo>
+				<CASItem />
+			</CASInfo>
+		</CASIS.RN>
+	</LaunchDetails>
+	<PackInfo>
+		<ExcipientInfo>
+			<Excipient />
+		</ExcipientInfo>
+		<PriceInfo>
+			<Price>tabs film-coated a 168: EUR 818.540 (RPP)</Price>
+			<Price>tabs film-coated b 56: EUR 545.690 (RPP)</Price>
+		</PriceInfo>
+		<DoseFormInfo>
+			<DoseForm>tabs film-coated</DoseForm>
+		</DoseFormInfo>
+		<NumberOfIngredients>1</NumberOfIngredients>
+		<CASIS.TX>
+			<CompositionInfo>
+				<Composition>tabs film-coated a: ribavirin base, 200 mg
+				</Composition>
+				<Composition>tabs film-coated b: ribavirin base, 400 mg
+				</Composition>
+			</CompositionInfo>
+		</CASIS.TX>
+	</PackInfo>
+	<LaunchStatus>
+		<RecordStatus />
+	</LaunchStatus>
+	<CASIS.MDNUMBER>MD000001</CASIS.MDNUMBER>
+</Document>

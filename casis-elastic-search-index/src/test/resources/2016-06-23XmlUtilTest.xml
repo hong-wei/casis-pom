@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document>
+	<CASIS.DOCNO>DGL1235365</CASIS.DOCNO>
+	<CASIS.UPD>
+		<PublicationDate CCYYMMDD="20011128">28 Nov 2001
+		</PublicationDate>
+	</CASIS.UPD>
+	<LaunchDetails>
+		<LaunchDateComment />
+		<NewChemicalEntity />
+		<Ingredients>
+			<Ingredient>glyceryl trinitrate</Ingredient>
+		</Ingredients>
+		<CASIS.USE>
+			<CASIS.ACT>
+				<Class>
+					<ClassCode>C1E</ClassCode>
+					<ClassDescription>Nitrates and Nitrites</ClassDescription>
+				</Class>
+			</CASIS.ACT>
+			<CASIS.IND>
+				<Indication>Prevention and treatment of angina pectoris</Indication>
+			</CASIS.IND>
+		</CASIS.USE>
+		<CASIS.CN>
+			<BrandName>ANGIOCARD</BrandName>
+		</CASIS.CN>
+		<CASIS.CO>
+			<CASIS.NORMALIZED.CO>Manufacturer: Biogenics</CASIS.NORMALIZED.CO>
+			<CASIS.NORMALIZED.CO>BIOGENICS</CASIS.NORMALIZED.CO>
+			<Manufacturer>Biogenics</Manufacturer>
+			<Corporation>BIOGENICS</Corporation>
+		</CASIS.CO>
+		<CASIS.DSTA>
+			<CASIS.NORMALIZED.DSTA>PK: Launched 20010601</CASIS.NORMALIZED.DSTA>
+			<Country>Pakistan</Country>
+			<LaunchDate CCYYMM="20010601">01 Jun 2001</LaunchDate>
+		</CASIS.DSTA>
+		<CASIS.TX>
+			<Biotech>No</Biotech>
+			<Unbranded>No</Unbranded>
+		</CASIS.TX>
+		<CASIS.RN>
+			<CASInfo>
+				<CASItem />
+			</CASInfo>
+		</CASIS.RN>
+	</LaunchDetails>
+	<PackInfo>
+		<ExcipientInfo>
+			<Excipient />
+		</ExcipientInfo>
+		<PriceInfo>
+			<Price>caps retard a 30: PKR 84.150 (RPP)</Price>
+			<Price>caps retard b 30: PKR 109.650 (RPP)</Price>
+		</PriceInfo>
+		<DoseFormInfo>
+			<DoseForm>caps retard</DoseForm>
+		</DoseFormInfo>
+		<NumberOfIngredients>1</NumberOfIngredients>
+		<CASIS.TX>
+			<CompositionInfo>
+				<Composition>caps retard a: glyceryl trinitrate, 2.5 mg
+				</Composition>
+				<Composition>caps retard b: glyceryl trinitrate, 6.5 mg
+				</Composition>
+			</CompositionInfo>
+		</CASIS.TX>
+	</PackInfo>
+	<LaunchStatus>
+		<RecordStatus />
+	</LaunchStatus>
+	<CASIS.MDNUMBER>MD000001</CASIS.MDNUMBER>
+</Document>
