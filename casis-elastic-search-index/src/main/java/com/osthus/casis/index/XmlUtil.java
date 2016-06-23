@@ -65,7 +65,7 @@ public class XmlUtil {
 
 		return doc;
 	}
-
+	// TODO0 refactory -- 6  change String to String Buffer
 	private void loopRenameTagsDotToMinus(Document doc, Node node) {
 		// TODO string ? to StringBuilder?
 		String nodeName = node.getNodeName();
@@ -94,7 +94,7 @@ public class XmlUtil {
 		}
 	}
 
-	// TODO change String to String Buffer
+	// TODO0 refactory -- 6  change String to String Buffer
 	public void getNodesValue(org.dom4j.Element node, org.dom4j.Element root, String parentString,
 			Map<String, ArrayList<String>> map) throws DocumentException {
 		List<org.dom4j.Element> listElement = node.elements();
@@ -106,29 +106,35 @@ public class XmlUtil {
 		// travel all the data nodes
 
 		if (listElement.isEmpty()) {
-			List<Attribute> listAttr = node.attributes();
-			for (Attribute attr : listAttr) {
-				ArrayList<String> arrayList = new ArrayList<String>();
-				String newParentString = parentString;
-				String name = attr.getName();
-				String value = attr.getValue();
-				newParentString = parentString + "_" + name;
-				if (map.get(newParentString) != null)
-					arrayList = map.get(newParentString);
-				arrayList.add(value);
-				map.put(newParentString, arrayList);
-			}
-
-			// TODO element's atrributes should be there also
-			ArrayList<String> arrayList1 = new ArrayList<String>();
-			if (map.get(parentString) != null)
-				arrayList1 = map.get(parentString);
-			arrayList1.add(node.getStringValue());
-			map.put(parentString, arrayList1);
+			getLeafAttributes(node, parentString, map);
+			getLeafValues(node, parentString, map);
 		}
-
+		
 		for (org.dom4j.Element e : listElement) {
 			this.getNodesValue(e, root, parentString, map);//
+		}
+	}
+
+	private void getLeafValues(org.dom4j.Element node, String parentString, Map<String, ArrayList<String>> map) {
+		ArrayList<String> arrayList1 = new ArrayList<String>();
+		if (map.get(parentString) != null)
+			arrayList1 = map.get(parentString);
+		arrayList1.add(node.getStringValue());
+		map.put(parentString, arrayList1);
+	}
+
+	private void getLeafAttributes(org.dom4j.Element node, String parentString, Map<String, ArrayList<String>> map) {
+		List<Attribute> listAttr = node.attributes();
+		for (Attribute attr : listAttr) {
+			ArrayList<String> arrayList = new ArrayList<String>();
+			String newParentString = parentString;
+			String name = attr.getName();
+			String value = attr.getValue();
+			newParentString = parentString + "_" + name;
+			if (map.get(newParentString) != null)
+				arrayList = map.get(newParentString);
+			arrayList.add(value);
+			map.put(newParentString, arrayList);
 		}
 	}
 
@@ -148,5 +154,42 @@ public class XmlUtil {
 		return map;
 	}
 
+	public void getNodesValue1(org.dom4j.Element node, org.dom4j.Element root, StringBuilder parentString,
+			HashMap<StringBuilder, ArrayList<StringBuilder>> map) {
+		List<org.dom4j.Element> listElement = node.elements();
+
+		if (node == root)
+			parentString = new StringBuilder(node.getName());
+		else
+			parentString = parentString.append("_").append(node.getName());
+		// travel all the data nodes
+
+		if (listElement.isEmpty()) {
+			List<Attribute> listAttr = node.attributes();
+			for (Attribute attr : listAttr) {
+				ArrayList<StringBuilder> arrayList = new ArrayList<StringBuilder>();
+				StringBuilder newParentString = new StringBuilder(parentString);
+				String name = attr.getName();
+				String value = attr.getValue();
+				newParentString = parentString.append("_").append(name);
+				if (map.get(newParentString) != null)
+					arrayList = map.get(newParentString);
+				arrayList.add(new StringBuilder(value));
+				map.put(newParentString, arrayList);
+			}
+
+			// TODO element's atrributes should be there also
+			ArrayList<StringBuilder> arrayList1 = new ArrayList<StringBuilder>();
+			if (map.get(parentString) != null)
+				arrayList1 = map.get(parentString);
+			arrayList1.add(new StringBuilder(node.getStringValue()));
+			map.put(parentString, arrayList1);
+		}
+
+		for (org.dom4j.Element e : listElement) {
+			this.getNodesValue1(e, root, parentString, map);//
+		}
+
+	}
 
 }

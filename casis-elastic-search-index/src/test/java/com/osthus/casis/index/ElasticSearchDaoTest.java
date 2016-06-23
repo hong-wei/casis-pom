@@ -1,14 +1,8 @@
 package com.osthus.casis.index;
 
-import static org.junit.Assert.*;
 
 import java.io.IOException;
-import java.sql.ResultSetMetaData;
-import java.util.ArrayList;
-import java.util.HashMap;
 
-import org.codehaus.jackson.node.ObjectNode;
-import org.elasticsearch.action.get.GetResponse;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Assert;
@@ -16,7 +10,10 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.osthus.casis.index.ioc.ElasticSearchIocModule;
 
+import de.osthus.ambeth.testutil.AbstractIocTest;
+import de.osthus.ambeth.testutil.TestFrameworkModule;
 import io.searchbox.client.JestClient;
 import io.searchbox.client.JestClientFactory;
 import io.searchbox.client.config.HttpClientConfig;
@@ -25,8 +22,8 @@ import io.searchbox.core.Delete;
 import io.searchbox.core.Index;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
-
-public class ElasticSearchDaoTest {
+@TestFrameworkModule(value=ElasticSearchIocModule.class)
+public class ElasticSearchDaoTest extends AbstractIocTest{
 
 	
 	@Test
@@ -44,7 +41,7 @@ public class ElasticSearchDaoTest {
 		
 	}
 	
-	@Test
+//	@Test
 	public void mainTest() throws IOException{
 
 		// Construct a new Jest client according to configuration via factory

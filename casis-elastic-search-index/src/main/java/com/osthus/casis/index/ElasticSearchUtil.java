@@ -34,15 +34,14 @@ public final class ElasticSearchUtil {
 		client = factory.getObject();
 		return client;
 	}
-
-	//TODO need close or not ??
-//	public static void close(Connection conn){
-//		if(conn!=null){
-//			try {
-//				conn.close();
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
-//	}
+	//TODO 0 refactory --3 I don't know when the client closed : client.shutdownClient();
+	public static void close(JestClient client){
+		if(client!=null){
+			try {
+				client.shutdownClient();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }

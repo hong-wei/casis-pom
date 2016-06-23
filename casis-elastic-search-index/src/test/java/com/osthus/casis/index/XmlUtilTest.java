@@ -19,13 +19,19 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.dom4j.DocumentException;
+import org.dom4j.io.DOMReader;
 import org.junit.Assert;
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
+import com.osthus.casis.index.ioc.ElasticSearchIocModule;
 
-public class XmlUtilTest {
+import de.osthus.ambeth.testutil.AbstractIocTest;
+import de.osthus.ambeth.testutil.TestFrameworkModule;
+
+@TestFrameworkModule(value=ElasticSearchIocModule.class)
+public class XmlUtilTest extends AbstractIocTest {
 
 	///casis-elastic-search-index/src/test/resources/2016-06-23XmlUtilTest.xml test file
 	XmlUtil xmlUtil= new XmlUtil();
@@ -128,10 +134,42 @@ public class XmlUtilTest {
 		Assert.assertTrue(result.equals(expectResult));
 	}
 	@Test
-	public void X2Test() {
-//		fail("Not yet implemented");
-//		xmlUtil.renameXmlTags(null);
+	public void getNodesValue1Test() throws DocumentException, ParserConfigurationException, SAXException, IOException {
+		
+		StringBuilder parentString= new StringBuilder("");
+		HashMap<StringBuilder, ArrayList<StringBuilder>> map = new HashMap<StringBuilder, ArrayList<StringBuilder>>();
+		Document doc = xmlUtil.convertStringToXmlDocumnet(xmlString);
+
+		org.dom4j.io.DOMReader reader = new DOMReader();
+		org.dom4j.Document document = reader.read(doc);
+
+		org.dom4j.Element root = document.getRootElement();
+
+		xmlUtil.getNodesValue1(root, root, parentString, map);
+
+		System.out.println(map); 
 	}
+	
+	@Test
+	public void getNodesValueTest() throws DocumentException, ParserConfigurationException, SAXException, IOException {
+		
+		String parentString = "";
+		HashMap<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
+		Document doc = xmlUtil.convertStringToXmlDocumnet(xmlString);
+
+		org.dom4j.io.DOMReader reader = new DOMReader();
+		org.dom4j.Document document = reader.read(doc);
+
+		org.dom4j.Element root = document.getRootElement();
+
+		xmlUtil.getNodesValue(root, root, parentString, map);
+
+		String result = map.toString();
+		String expectResult = "{Document_CASIS.UPD_PublicationDate_CCYYMMDD=[20011128], Document_CASIS.UPD_PublicationDate=[28 Nov 2001], Document_LaunchDetails_CASIS.USE_CASIS.ACT_Class_ClassDescription=[Nitrates and Nitrites], Document_PackInfo_CASIS.TX_CompositionInfo_Composition=[caps retard a: glyceryl trinitrate, 2.5 mg, caps retard b: glyceryl trinitrate, 6.5 mg], Document_LaunchDetails_CASIS.CO_Corporation=[BIOGENICS], Document_PackInfo_ExcipientInfo_Excipient=[], Document_LaunchDetails_CASIS.DSTA_LaunchDate=[01 Jun 2001], Document_LaunchDetails_CASIS.CO_Manufacturer=[Biogenics], Document_PackInfo_DoseFormInfo_DoseForm=[caps retard], Document_LaunchDetails_CASIS.CN_BrandName=[ANGIOCARD], Document_LaunchDetails_LaunchDateComment=[], Document_LaunchDetails_CASIS.RN_CASInfo_CASItem=[], Document_CASIS.DOCNO=[DGL1235365], Document_PackInfo_PriceInfo_Price=[caps retard a 30: PKR 84.150 (RPP), caps retard b 30: PKR 109.650 (RPP)], Document_LaunchDetails_CASIS.DSTA_Country=[Pakistan], Document_LaunchDetails_CASIS.TX_Unbranded=[No], Document_LaunchDetails_CASIS.USE_CASIS.IND_Indication=[Prevention and treatment of angina pectoris], Document_LaunchDetails_CASIS.USE_CASIS.ACT_Class_ClassCode=[C1E], Document_LaunchDetails_CASIS.DSTA_LaunchDate_CCYYMM=[20010601], Document_PackInfo_NumberOfIngredients=[1], Document_LaunchDetails_Ingredients_Ingredient=[glyceryl trinitrate], Document_LaunchStatus_RecordStatus=[], Document_LaunchDetails_CASIS.CO_CASIS.NORMALIZED.CO=[Manufacturer: Biogenics, BIOGENICS], Document_LaunchDetails_CASIS.TX_Biotech=[No], Document_LaunchDetails_NewChemicalEntity=[], Document_LaunchDetails_CASIS.DSTA_CASIS.NORMALIZED.DSTA=[PK: Launched 20010601], Document_CASIS.MDNUMBER=[MD000001]}";
+		Assert.assertTrue(result.equals(expectResult));
+	}
+	
+	
 	
 	private  final String prettyPrint(Document xml) throws Exception {
 

@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.bayer.casis</groupId>
 	<artifactId>casis-pom</artifactId>
@@ -11,11 +12,11 @@
 		<version>0.0.35</version>
 	</parent>
 
- 	<properties>
+	<properties>
 		<applicationName>casis-pom</applicationName>
 		<version.ambeth>2.3.287</version.ambeth>
 	</properties>
-	 
+
 	<modules>
 		<module>casis-chemical-structure-rest</module>
 		<module>casis-elastic-search-rest</module>
@@ -40,11 +41,23 @@
 			</dependency>
 			
 			<dependency>
-			<groupId>de.osthus.ambeth</groupId>
-			<artifactId>jambeth-ioc-test</artifactId>
-			<version>${version.ambeth}</version>
-		</dependency>
-			<!-- <dependency> <groupId>de.osthus.ambeth</groupId> <artifactId>jambeth-core</artifactId> <version>${version.ambeth}</version> </dependency> -->
+				<groupId>de.osthus.ambeth</groupId>
+				<artifactId>jambeth-ioc-test</artifactId>
+				<version>${version.ambeth}</version>
+			</dependency>
+
+<!-- 		<dependency> -->
+<!-- 				<groupId>de.osthus.ambeth</groupId> -->
+<!-- 				<artifactId>jambeth-persistence-jdbc </artifactId> -->
+<!-- 				<version>${version.ambeth}</version> -->
+<!-- 			</dependency> -->
+<!-- 			<dependency> -->
+<!-- 				<groupId>de.osthus.ambeth</groupId> -->
+<!-- 				<artifactId>jambeth-persistence-oracle11 </artifactId> -->
+<!-- 				<version>${version.ambeth}</version> -->
+<!-- 			</dependency> -->
+			<!-- <dependency> <groupId>de.osthus.ambeth</groupId> <artifactId>jambeth-core</artifactId> 
+				<version>${version.ambeth}</version> </dependency> -->
 			<dependency>
 				<groupId>de.osthus.ambeth</groupId>
 				<artifactId>jambeth-core-test</artifactId>

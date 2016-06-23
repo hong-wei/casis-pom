@@ -7,10 +7,13 @@ import io.searchbox.core.Bulk;
 import io.searchbox.core.Index;
 import org.json.JSONObject;
 
+import de.osthus.ambeth.ioc.annotation.Autowired;
+
 public class ElasticSearchDao {
 
+	//TODO 0 refactory --3 I don't know when the client closed : client.shutdownClient();
 	private JestClient client;
-
+	
 	public ElasticSearchDao() {
 		client = ElasticSearchUtil.getEsClinet();
 	}
@@ -25,6 +28,7 @@ public class ElasticSearchDao {
 			bulkBuilder.addAction(index);
 		}
 		client.execute(bulkBuilder.build());
+		
 	}
 
 }

@@ -23,9 +23,14 @@ import org.xml.sax.SAXException;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
+import de.osthus.ambeth.ioc.annotation.Autowired;
+
 public class JsonUtil {
-	private XmlUtil xmlUtil =new XmlUtil();
+	//TODO fix -1 Unitl only use the static methods
+	@Autowired
+	protected XmlUtil xmlUtilService;
 	
+	//TODO 0 refactory --5 mix the following two methods in one, is it right ?
 	public String getOralceInvalues2(JSONArray resultSetToJson) {
 		StringBuilder sb = new StringBuilder();
 
@@ -36,22 +41,22 @@ public class JsonUtil {
 		String nos = sb.substring(1);
 		return nos;
 	}
-
+	
 	public String getOracleInValues(JSONArray resultSetToJson) {
 		JSONObject jsonDocument;
 		StringBuilder sb = new StringBuilder();
-		// if (resultSetToJson.getJSONObject(0) instanceof JSONObject) {
+		 if (resultSetToJson.getJSONObject(0) instanceof JSONObject) {
 		for (int i = 0; i < resultSetToJson.length(); i++) {
 			jsonDocument = resultSetToJson.getJSONObject(i);
 			String documentDOCNO = jsonDocument.getString("DOCNO");
 			sb.append(",'").append(documentDOCNO).append("'");
 		}
-		// } else {
-		// for (int i = 0; i < resultSetToJson.length(); i++) {
-		// String documentDOCNO = resultSetToJson.getString(i);
-		// sb.append(",'").append(documentDOCNO).append("'");
-		// }
-		// }
+		 } else {
+		 for (int i = 0; i < resultSetToJson.length(); i++) {
+		 String documentDOCNO = resultSetToJson.getString(i);
+		 sb.append(",'").append(documentDOCNO).append("'");
+		 }
+		 }
 		String nos = sb.substring(1);
 		return nos;
 	}
@@ -146,9 +151,9 @@ public class JsonUtil {
 				if ("DOCUMENT".equalsIgnoreCase(columnName)) {
 					// TODO refactory the code here:
 					String xmlTagsWithDot = rs.getString(columnName);
-					if (xmlTagsWithDot != null) {
-						String xmlTagsWithMinus = xmlUtil.renameTagsDotToMinus(xmlTagsWithDot);
-						HashMap<String, ArrayList<String>> map = xmlUtil.getXmlKeyValuesPairs(xmlTagsWithMinus);
+					if (xmlTagsWithDot != null) { 
+						String xmlTagsWithMinus = xmlUtilService.renameTagsDotToMinus(xmlTagsWithDot);
+						HashMap<String, ArrayList<String>> map = xmlUtilService.getXmlKeyValuesPairs(xmlTagsWithMinus);
 
 						ArrayList<String> completeXML = new ArrayList<String>();
 						// String valueUnderline1
@@ -157,7 +162,7 @@ public class JsonUtil {
 
 						map.put("DOCUMENT_COMPLETETEXT", completeXML);
 
-						// TODO 0 test the new functions -- these memery should
+						// TODO 01 test the new functions -- these memery should
 						JSONObject xmlJSONObj = new JSONObject(map);
 
 						// System.out.println(xmlJSONObj.toString());

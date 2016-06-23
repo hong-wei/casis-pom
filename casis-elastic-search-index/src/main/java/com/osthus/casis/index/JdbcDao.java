@@ -21,21 +21,25 @@ import org.xml.sax.SAXException;
 
 import com.google.common.collect.Multimap;
 
-public class JdbcDao {
-	private JsonUtil jsonUtil = new JsonUtil();
+import de.osthus.ambeth.ioc.annotation.Autowired;
 
-	public  long checkOralceUpdates(Connection conn, String sqlCheckUpdate) throws Exception {
+public class JdbcDao {
+	// TODO 0 refactory --4 I don't know when the connm ,stmt,rset close.
+	@Autowired
+	private JsonUtil jsonUtil;
+
+	public long checkOralceUpdates(Connection conn, String sqlCheckUpdate) throws SQLException  {
 
 		try (PreparedStatement stmt = conn.prepareStatement(sqlCheckUpdate); ResultSet rset = stmt.executeQuery();) {
+			ResultSet countQuery = conn.createStatement()
+					.executeQuery("select count(DOCNO) from CASIS2_BG_INGEST_RUNS");
+			countQuery.next();
+			long length = countQuery.getLong(1);
+			return length;
 		}
-
-		ResultSet countQuery = conn.createStatement().executeQuery("select count(DOCNO) from CASIS2_BG_INGEST_RUNS");
-		countQuery.next();
-		long length = countQuery.getLong(1);
-		return length;
 	}
 
-	public  JSONArray readJsonArray(Connection conn, String sqlRead) throws SQLException {
+	public JSONArray readJsonArray(Connection conn, String sqlRead) throws SQLException {
 		JSONArray resultSetToJson = new JSONArray();
 
 		try (PreparedStatement stmt = conn.prepareStatement(sqlRead); ResultSet rset = stmt.executeQuery();) {
@@ -46,7 +50,7 @@ public class JdbcDao {
 		return resultSetToJson;
 	}
 
-	public  void deleteAllTables(Connection conn) throws SQLException {
+	public void deleteAllTables(Connection conn) throws SQLException {
 		String sqlDelete = "truncate table CASIS2_BG_INGEST_RUNS";
 		try (PreparedStatement stmt = conn.prepareStatement(sqlDelete); ResultSet rset = stmt.executeQuery();) {
 		}
@@ -59,20 +63,6 @@ public class JdbcDao {
 		long length = countQuery.getLong(1);
 		return length;
 	}
-
-	// public void executeQuery(JSONArray resultSetToJson, String sql, String
-	// key) throws SQLException {
-	// try (PreparedStatement ps = conn.prepareStatement(sql); ResultSet
-	// resultSet = ps.executeQuery();) {
-	// Multimap<String, JSONObject> multiMap = resultTOMap(resultSet);
-	// Map<String, JSONArray> docNoMapCompany = convertMultiMap(multiMap);
-	// for (Object obj : resultSetToJson) {
-	// JSONObject docJson = (JSONObject) obj;
-	// JSONArray jsonArray = docNoMapCompany.get(docJson.get("DOCNO"));
-	// docJson.put(key, jsonArray);
-	// }
-	// }
-	// }
 
 	public int getTotalPageCount(Connection conn, int size) throws SQLException {
 		String sqlCheckLength = "select count(DOCNO) from CASIS_DOCUMENT";
@@ -111,7 +101,7 @@ public class JdbcDao {
 		}
 	}
 
-	public JSONArray operateByPage(Connection conn,int page, int size, String casisIndex)
+	public JSONArray operateByPage(Connection conn, int page, int size, String casisIndex)
 			throws SQLException, FileNotFoundException, IOException, JSONException, TransformerException,
 			DocumentException, ParserConfigurationException, SAXException {
 		// prepare statement
@@ -140,7 +130,7 @@ public class JdbcDao {
 
 	}
 
-	public void addOtherTables(Connection conn,String nos, JSONArray resultSetToJson) throws SQLException {
+	public void addOtherTables(Connection conn, String nos, JSONArray resultSetToJson) throws SQLException {
 
 		String sqlCompany = "select src_db,co, COUNTRY,STATUS, DOCNO from CASIS_COMPANY where DOCNO in(" + nos + ")";
 		queryAddTableToJsonarray(conn, resultSetToJson, sqlCompany, "CASIS_COMPANY");
@@ -166,7 +156,7 @@ public class JdbcDao {
 	}
 
 	public LastHourState checkLastHourUpdate(Connection conn) {
-		LastHourState lastHourState= new LastHourState();
+		LastHourState lastHourState = new LastHourState();
 		String sqlCheckUpdate = "INSERT INTO CASIS2_BG_INGEST_RUNS          "
 				+ "(DOCNO)                                    " + "select temp.DOCNO from(                    "
 				+ "SELECT DOCNO  FROM CASIS_DOCUMENT          " + "WHERE UPDATE_TIMESTAMP >= (SYSDATE-1/24)   "
@@ -191,26 +181,27 @@ public class JdbcDao {
 				+ "union all                                  " + "SELECT DOCNO  FROM DOC_STRUC_LINK          "
 				+ "WHERE UPDATE_TIMESTAMP >= (SYSDATE-1/24))   ";
 
-		JSONArray resultCBIR = new JSONArray();
-		JSONArray resultLastHour = new JSONArray();
+		JSONArray casis2bIngestRunsState = new JSONArray();
+		JSONArray lastHourAllTableState = new JSONArray();
 
 		try {
 			checkOralceUpdates(conn, sqlCheckUpdate);
-			resultCBIR = readJsonArray(conn, sqlReadCBIR);
-			resultLastHour = readJsonArray(conn, sqlReadLastHour);
+			casis2bIngestRunsState = readJsonArray(conn, sqlReadCBIR);
+			lastHourAllTableState = readJsonArray(conn, sqlReadLastHour);
 		} catch (Exception e) {
 			// TODO log into the log system
 			e.printStackTrace();
 		}
-		boolean lastHourflag= false;
-		
-		if (resultLastHour.length() == 0 && resultCBIR.length() != 0) 
-			lastHourflag = true;
-		
-		lastHourState.setLastHourflag(lastHourflag);
-		lastHourState.setResultCBIR(resultCBIR);
-		lastHourState.setResultLastHour(resultLastHour);
-		
+		boolean triggerUpdateIndexFlag = false;
+
+		if (lastHourAllTableState.length() == 0 && casis2bIngestRunsState.length() != 0){
+			triggerUpdateIndexFlag = true;
+		}
+
+		lastHourState.setTriggerUpdateIndexFlag(triggerUpdateIndexFlag);
+		lastHourState.setCasis2bIngestRunsState(casis2bIngestRunsState);
+		lastHourState.setLastHourAllTableState(lastHourAllTableState);
+
 		return lastHourState;
 	}
 

@@ -7,7 +7,13 @@ import java.text.Normalizer;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.junit.Test;
 
-public class EscapseUtilTest {
+import com.osthus.casis.index.ioc.ElasticSearchIocModule;
+
+import de.osthus.ambeth.testutil.AbstractIocTest;
+import de.osthus.ambeth.testutil.TestFrameworkModule;
+
+@TestFrameworkModule(value=ElasticSearchIocModule.class)
+public class EscapseUtilTest extends AbstractIocTest{
 
 	
 	@Test

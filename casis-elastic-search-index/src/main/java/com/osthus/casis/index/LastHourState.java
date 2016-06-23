@@ -3,26 +3,31 @@ package com.osthus.casis.index;
 import org.json.JSONArray;
 
 public class LastHourState {
-	private boolean lastHourflag;
-	public boolean isLastHourflag() {
-		return lastHourflag;
+	// last hour do not update in oralce , and there are data in Runs_table
+	private boolean triggerUpdateIndexFlag;
+	private JSONArray casis2bIngestRunsState = new JSONArray();
+	private JSONArray lastHourAllTableState = new JSONArray();
+	
+	
+	public boolean isTriggerUpdateIndexFlag() {
+		return triggerUpdateIndexFlag;
 	}
-	public void setLastHourflag(boolean lastHourflag) {
-		this.lastHourflag = lastHourflag;
+	public void setTriggerUpdateIndexFlag(boolean triggerUpdateIndexFlag) {
+		this.triggerUpdateIndexFlag = triggerUpdateIndexFlag;
 	}
-	public JSONArray getResultCBIR() {
-		return resultCBIR;
+	public JSONArray getCasis2bIngestRunsState() {
+		return casis2bIngestRunsState;
 	}
-	public void setResultCBIR(JSONArray resultCBIR) {
-		this.resultCBIR = resultCBIR;
+	public void setCasis2bIngestRunsState(JSONArray casis2bIngestRunsState) {
+		this.casis2bIngestRunsState = casis2bIngestRunsState;
 	}
-	public JSONArray getResultLastHour() {
-		return resultLastHour;
+	public JSONArray getLastHourAllTableState() {
+		return lastHourAllTableState;
 	}
-	public void setResultLastHour(JSONArray resultLastHour) {
-		this.resultLastHour = resultLastHour;
+	public void setLastHourAllTableState(JSONArray lastHourAllTableState) {
+		this.lastHourAllTableState = lastHourAllTableState;
 	}
-	private JSONArray resultCBIR = new JSONArray();
-	private JSONArray resultLastHour = new JSONArray();
+	
+	
 
 }

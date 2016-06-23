@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<packaging>war</packaging>
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -17,17 +18,22 @@
 			<groupId>de.osthus.ambeth</groupId>
 			<artifactId>jambeth-server-rest</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.bayer.casis</groupId>
+			<artifactId>casis-elastic-search-index</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<dependency>
 			<groupId>de.osthus.ambeth</groupId>
 			<artifactId>jambeth-tomcat</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>de.osthus.ambeth</groupId>
 			<artifactId>jambeth-ioc-test</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-servlet</artifactId>
@@ -40,8 +46,8 @@
 			<artifactId>jest</artifactId>
 			<version>2.0.0</version>
 		</dependency>
-		
-		
+
+
 		<!-- http://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>

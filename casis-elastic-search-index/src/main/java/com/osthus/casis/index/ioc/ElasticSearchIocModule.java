@@ -1,12 +1,10 @@
 package com.osthus.casis.index.ioc;
 
-import java.util.Date;
-
+import com.osthus.casis.index.*;
 import de.osthus.ambeth.ioc.IInitializingModule;
+import de.osthus.ambeth.ioc.annotation.FrameworkModule;
 import de.osthus.ambeth.ioc.config.IBeanConfiguration;
 import de.osthus.ambeth.ioc.factory.IBeanContextFactory;
-import de.osthus.ambeth.job.IJob;
-import de.osthus.ambeth.job.IJobContext;
 import de.osthus.ambeth.job.IJobExtendable;
 import de.osthus.ambeth.job.IJobScheduler;
 import de.osthus.ambeth.job.cron4j.AmbethCron4jScheduler;
@@ -15,6 +13,7 @@ import de.osthus.ambeth.security.IAuthenticatedUserHolder;
 import de.osthus.ambeth.security.ISecurityContextHolder;
 import de.osthus.ambeth.security.SecurityContextHolder;
 
+@FrameworkModule
 public class ElasticSearchIocModule implements IInitializingModule
 {
 	@Override
@@ -24,41 +23,17 @@ public class ElasticSearchIocModule implements IInitializingModule
 		beanContextFactory.registerBean(AuthenticatedUserHolder.class).autowireable(IAuthenticatedUserHolder.class);
 		beanContextFactory.registerBean("jobScheduler", AmbethCron4jScheduler.class).autowireable(IJobScheduler.class, IJobExtendable.class);
 
-		IBeanConfiguration myJobBean = beanContextFactory.registerBean(MyJob.class);
-		beanContextFactory.link(myJobBean).to(IJobExtendable.class).with("helloJob", "1 * * * *");
+		IBeanConfiguration myJobBean = beanContextFactory.registerBean(MyJobUpdateEachHour.class);
+		beanContextFactory.link(myJobBean).to(IJobExtendable.class).with("myJobUpdateEachHour", "* * * * *"); // hour(First minute per hour) day month year
+		
+		beanContextFactory.registerBean(ElastichSearchImporter.class).autowireable(ElastichSearchImporter.class);;
+		beanContextFactory.registerBean(ElasticSearchDao.class).autowireable(ElasticSearchDao.class);
+		beanContextFactory.registerBean(ElasticSearchUtil.class).autowireable(ElasticSearchUtil.class);
+		beanContextFactory.registerBean(JdbcDao.class).autowireable(JdbcDao.class);
+		beanContextFactory.registerBean(JsonUtil.class).autowireable(JsonUtil.class);
+		beanContextFactory.registerBean(LastHourState.class).autowireable(LastHourState.class);
+		beanContextFactory.registerBean(XmlUtil.class).autowireable(XmlUtil.class);
+		
 	}
 
-	public static class MyJob implements IJob
-	{
-		@Override
-		public boolean canBePaused()
-		{
-			return false;
-		}
-
-		@Override
-		public boolean canBeStopped()
-		{
-			return false;
-		}
-
-		@Override
-		public boolean supportsStatusTracking()
-		{
-			return false;
-		}
-
-		@Override
-		public boolean supportsCompletenessTracking()
-		{
-			return false;
-		}
-
-		@Override
-		public void execute(IJobContext context) throws Throwable
-		{
-			System.out.println(Thread.currentThread().getId() + " current time:" + new Date());
-		}
-
-	}
 }

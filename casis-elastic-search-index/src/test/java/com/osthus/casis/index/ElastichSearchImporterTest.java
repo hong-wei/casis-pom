@@ -1,50 +1,40 @@
 package com.osthus.casis.index;
 
-import static org.junit.Assert.*;
+import java.sql.Connection;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-
-import org.dom4j.DocumentException;
-import org.dom4j.Element;
-import org.dom4j.io.DOMReader;
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.JsonArray;
+import com.osthus.casis.index.ioc.ElasticSearchIocModule;
 
+import de.osthus.ambeth.ioc.annotation.Autowired;
+import de.osthus.ambeth.testutil.AbstractIocTest;
+import de.osthus.ambeth.testutil.TestFrameworkModule;
 import io.searchbox.client.JestClient;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
 
-public class ElastichSearchImporterTest {
+@TestFrameworkModule(value=ElasticSearchIocModule.class)
+public class ElastichSearchImporterTest  extends AbstractIocTest{
 
 	private final String esIndex= "bb";
 	private final int esPageSize= 2;
 	private final int esPageCount= 1;
 	private JestClient clinet = ElasticSearchUtil.getEsClinet();
 	
+	@Autowired
+	private ElastichSearchImporter elastichSearchImporterService ;
+	
+//	@Autowired
+//	protected  IConnectionFactory connectionFactoryService;
+	
 	@Test
 	public void importFromOralcePartTest() throws Exception {
+		elastichSearchImporterService.importFromOralce(esPageSize, esPageCount,esIndex);
 		
-		new ElastichSearchImporter().importFromOralce(esPageSize, esPageCount,esIndex);
 		Thread.sleep(1000);//supend 1 s
 		String query1 = "{\r\n" + 
 				"  \"size\":1,\r\n" + 
@@ -86,12 +76,14 @@ public class ElastichSearchImporterTest {
 	@Test
 	// index the whole database.
 	public void importFromOralceTest() throws Exception {
-//		new ElastichSearchImporter().importFromOralce(10, 0, esIndex);
+		elastichSearchImporterService.importFromOralce(1000, 0, esIndex);
 	}
 	
 	@Test
 	public void updateDataFromOracleTest() throws Exception {
-		new ElastichSearchImporter().updateDataFromOracle();
+		System.out.println("top");
+		Thread.sleep(10000000);
+//		elastichSearchImporterService.updateDataFromOracle();
 	}
 	
 	
@@ -100,8 +92,6 @@ public class ElastichSearchImporterTest {
 		JSONArray resultSetToJson = new JSONArray();
 		resultSetToJson.put("DGL1483041");
 		resultSetToJson.put("DGL1510302");
-		
-		new ElastichSearchImporter().importFromOralce(resultSetToJson, esIndex);
 		
 		Thread.sleep(1000);//supend 1 s
 		String query1 = "{\r\n" + 

@@ -10,6 +10,7 @@
 	</parent>
 	
 	<artifactId>casis-elastic-search-index</artifactId>
+	
 	<name>casis-elastic-search-index</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -114,7 +115,7 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>de.osthus.ambeth</groupId>
 			<artifactId>jambeth-server-rest</artifactId>
@@ -124,17 +125,26 @@
 			<groupId>de.osthus.ambeth</groupId>
 			<artifactId>jambeth-tomcat</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>de.osthus.ambeth</groupId>
 			<artifactId>jambeth-ioc-test</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>de.osthus.ambeth</groupId>
 			<artifactId>jambeth-job-cron4j</artifactId>
 		</dependency>
-		
+
+		<!-- <dependency> -->
+		<!-- <groupId>de.osthus.ambeth</groupId> -->
+		<!-- <artifactId>jambeth-persistence-jdbc </artifactId> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>de.osthus.ambeth</groupId> -->
+		<!-- <artifactId>jambeth-persistence-oracle11 </artifactId> -->
+		<!-- </dependency> -->
+
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-servlet</artifactId>
@@ -147,7 +157,23 @@
 			<artifactId>jest</artifactId>
 			<version>2.0.0</version>
 		</dependency>
-		
+
+		<!--Add database connection pool as a dependency to your project. -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+			<version>1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>20040616</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
