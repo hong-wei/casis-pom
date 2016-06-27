@@ -1,1 +1,2 @@
 ## bayer/casis
+Development of a backend application for CASIS II that implements search capabilities for CASIS documents with improved performance compared to the existing CASIS system. The backend has to implement a REST interface that allows a separate UI module to search for texts and chemical structures in CASIS documents. Elasticsearch will be used for the text search, the Biovia Direct Cartridge 2016 will be used for chemical (sub)structure search.
