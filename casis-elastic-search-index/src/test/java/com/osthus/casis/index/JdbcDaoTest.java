@@ -53,8 +53,6 @@ public class JdbcDaoTest extends AbstractIocTest {
 	}
 
 	
-	
-	
 	@Test
 	public void checkLastHourUpdateTest() throws Exception {
 	
