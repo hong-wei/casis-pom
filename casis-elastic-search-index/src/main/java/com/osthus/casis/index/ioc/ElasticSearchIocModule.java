@@ -24,7 +24,7 @@ public class ElasticSearchIocModule implements IInitializingModule
 		beanContextFactory.registerBean("jobScheduler", AmbethCron4jScheduler.class).autowireable(IJobScheduler.class, IJobExtendable.class);
 
 		IBeanConfiguration myJobBean = beanContextFactory.registerBean(MyJobUpdateEachHour.class);
-		beanContextFactory.link(myJobBean).to(IJobExtendable.class).with("myJobUpdateEachHour", "* * * * *"); // hour(First minute per hour) day month year
+		beanContextFactory.link(myJobBean).to(IJobExtendable.class).with("myJobUpdateEachHour", "* * * * *"); // hour(First minute per hour) day month year.four * means per minute
 		
 		beanContextFactory.registerBean(ElastichSearchImporter.class).autowireable(ElastichSearchImporter.class);;
 		beanContextFactory.registerBean(ElasticSearchDao.class).autowireable(ElasticSearchDao.class);

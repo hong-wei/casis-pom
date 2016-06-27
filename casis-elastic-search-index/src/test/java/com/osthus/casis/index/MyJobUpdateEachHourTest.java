@@ -15,9 +15,10 @@ public class MyJobUpdateEachHourTest extends AbstractIocTest {
 	@Autowired
 	protected MyJobUpdateEachHour myJobUpdateEachHour;
 	@Test
-	public void executeTest() {
-//		IJobContext context;
+	public void executeTest() throws Throwable {
+//		IJobContext context = null;
 //		myJobUpdateEachHour.execute(context);
+		System.out.println("11");
 	}
 
 }

@@ -27,7 +27,6 @@ public class LastHourState {
 	public void setLastHourAllTableState(JSONArray lastHourAllTableState) {
 		this.lastHourAllTableState = lastHourAllTableState;
 	}
-	
-	
+
 
 }

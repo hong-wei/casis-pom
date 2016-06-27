@@ -94,9 +94,25 @@ public class JdbcDaoTest extends AbstractIocTest {
 	}
 	@Test
 	public void deleteAllTablesTest() throws Exception {
-		//TODO 0 refactory --7 always have errors this test	
+		
 		String sqlDelete = "truncate table CASIS2_BG_INGEST_RUNS";
 		jdbcDaoService.deleteAllTables(conn);
+		String sqlChecklength="Select count(*) from CASIS2_BG_INGEST_RUNS";
+		
+		ResultSet countQuery = conn.createStatement().executeQuery(sqlChecklength);
+		countQuery.next();
+		long length = countQuery.getLong(1);
+		
+		Assert.assertEquals(0, length);
+		
+	}
+	
+	@Test
+	public void deleteAllTables1Test() throws Exception {
+		
+		String sqlDelete = "truncate table CASIS2_BG_INGEST_RUNS";
+	
+		jdbcDaoService.deleteAllTables1(conn);
 		String sqlChecklength="Select count(*) from CASIS2_BG_INGEST_RUNS";
 		
 		ResultSet countQuery = conn.createStatement().executeQuery(sqlChecklength);

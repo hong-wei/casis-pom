@@ -69,7 +69,7 @@ public class MyJobUpdateEachHour implements IJob
 			try {
 				elastichSearchImporter.importFromOralce(conn,checkLastHourUpdate.getCasis2bIngestRunsState(), "aa");
 //				jdbcDaoService.deleteAllTables(conn);
-				log.info("update the date to ES");
+				log.info("update the date to ES"); 
 				System.out.println("update the date to ES");
 			} catch (JSONException | SQLException | IOException | TransformerException | DocumentException e) {
 				log.error("JSONException | SQLException | IOException | TransformerException | DocumentException", e);

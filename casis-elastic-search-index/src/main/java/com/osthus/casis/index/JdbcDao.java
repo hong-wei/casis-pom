@@ -50,12 +50,7 @@ public class JdbcDao {
 		return resultSetToJson;
 	}
 
-	public void deleteAllTables(Connection conn) throws SQLException {
-		String sqlDelete = "truncate table CASIS2_BG_INGEST_RUNS";
-		try (PreparedStatement stmt = conn.prepareStatement(sqlDelete); ResultSet rset = stmt.executeQuery();) {
-		}
 
-	}
 
 	public long getDocumentLength(Connection conn, String sqlCheckLength) throws SQLException {
 		ResultSet countQuery = conn.createStatement().executeQuery("select count(DOCNO) from CASIS_DOCUMENT");
@@ -203,6 +198,18 @@ public class JdbcDao {
 		lastHourState.setLastHourAllTableState(lastHourAllTableState);
 
 		return lastHourState;
+	}
+	
+	public void deleteAllTables(Connection conn) throws SQLException {
+		String sqlDelete = "truncate table CASIS2_BG_INGEST_RUNS";
+		try (PreparedStatement stmt = conn.prepareStatement(sqlDelete); ResultSet rset = stmt.executeQuery();) {
+		}
+
+	}
+	
+	public void deleteAllTables1(Connection conn) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

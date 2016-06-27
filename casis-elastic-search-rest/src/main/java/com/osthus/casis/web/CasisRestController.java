@@ -17,7 +17,7 @@ import io.searchbox.client.JestClient;
 import io.searchbox.client.JestClientFactory;
 import io.searchbox.client.config.HttpClientConfig;
 
-@Path("/rest")
+@Path("/v1")
 public class CasisRestController extends AbstractServiceREST
 {
 
@@ -31,7 +31,7 @@ public class CasisRestController extends AbstractServiceREST
 	// }
 
 	@GET
-	@Path("/get")
+	@Path("/search")
 	// @Produces("application/json")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getJSON(final String input)
@@ -44,7 +44,7 @@ public class CasisRestController extends AbstractServiceREST
 	}
 
 	@POST
-	@Path("/post")
+	@Path("/search")
 	@Consumes("application/json")
 	public String sayPlainTextHello(final String input) throws JsonProcessingException, IOException
 	{

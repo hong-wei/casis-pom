@@ -76,13 +76,13 @@ public class ElastichSearchImporterTest  extends AbstractIocTest{
 	@Test
 	// index the whole database.
 	public void importFromOralceTest() throws Exception {
-		elastichSearchImporterService.importFromOralce(1000, 0, esIndex);
+//		elastichSearchImporterService.importFromOralce(1000, 0, esIndex);
 	}
 	
 	@Test
 	public void updateDataFromOracleTest() throws Exception {
 		System.out.println("top");
-		Thread.sleep(10000000);
+//		Thread.sleep(10000000);
 //		elastichSearchImporterService.updateDataFromOracle();
 	}
 	
