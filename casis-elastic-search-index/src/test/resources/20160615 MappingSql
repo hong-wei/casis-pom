@@ -1,0 +1,133 @@
+# mapping all items
+DELETE casisvm1
+PUT /casisvm1
+{
+  "mappings": {
+    "documents": {
+      "dynamic_templates": [
+        {
+          "my_multi_strings": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            }
+          }
+        },
+        {
+          "my_date_fields": {
+            "match": "DATEINSERTED",
+            "mapping": {
+              "type": "date",
+              "format": "yyyy-mm-dd HH:mm:ss",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            }
+          }
+        },
+        {
+          "my_integer_fields": {
+            "match": "PART*",
+            "mapping": {
+              "type": "integer",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "index":"not_analyzed"
+                }
+            }}
+          }
+        },
+        {
+          "my_integer_fields": {
+            "match": "Document_CASIS-TX_TX",
+            "mapping": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string"
+                }
+            }}
+          }
+        },
+        {
+          "my_integer_fields": {
+            "match": "Document_CASIS-TX_KeyClinicalInformation_PhaseIII",
+            "mapping": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string"
+                }
+            }}
+          }
+        },
+        {
+          "my_integer_fields": {
+            "match": "Document_CASIS-TX_KeyClinicalInformation_PhaseI",
+            "mapping": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string"
+                }
+            }}
+          }
+        },
+        {
+          "my_integer_fields": {
+            "match": "Document_CASIS-TX_KeyClinicalInformation_PhaseII",
+            "mapping": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string"
+                }
+            }}
+          }
+        },
+        {
+          "my_integer_fields": {
+            "match": "Document_CASIS-TX_Marketing",
+            "mapping": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string"
+                }
+            }}
+          }
+        },
+        {
+          "my_integer_fields": {
+            "match": "UPD",
+            "mapping": {
+              "type": "string",
+              "fields":{
+                "raw": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+            }}
+          }
+        }
+      ]
+    }
+  }
+}
+PUT /casisvm1/_mapping/documents
+{
+
+  "dynamic": "ture",
+  "properties": {}
+
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document>
+	<LaunchDetails>
+		<LaunchDateComment />
+		<NewChemicalEntity />
+		<Ingredients>
+			<Ingredient>ipratropium bromide</Ingredient>
+		</Ingredients>
+		<CASIS-USE>
+			<CASIS-ACT>
+				<Class>
+					<ClassCode>R3G</ClassCode>
+					<ClassDescription>Anticholinergics Plain and Combinations with
+						B2-Stimulants</ClassDescription>
+				</Class>
+			</CASIS-ACT>
+			<CASIS-IND>
+				<Indication>Acute exacerbation of chronic bronchitis</Indication>
+			</CASIS-IND>
+		</CASIS-USE>
+		<CASIS-CN>
+			<BrandName>IPRABON</BrandName>
+		</CASIS-CN>
+		<CASIS-CO>
+			<CASIS-NORMALIZED-CO>Manufacturer: Zambon</CASIS-NORMALIZED-CO>
+			<CASIS-NORMALIZED-CO>ZAMBON GROUP</CASIS-NORMALIZED-CO>
+			<Manufacturer>Zambon</Manufacturer>
+			<Corporation>ZAMBON GROUP</Corporation>
+		</CASIS-CO>
+		<CASIS-DSTA>
+			<CASIS-NORMALIZED-DSTA>BR: Launched 19980401</CASIS-NORMALIZED-DSTA>
+			<Country>Brazil</Country>
+			<LaunchDate CCYYMM="19980401">01 Apr 1998</LaunchDate>
+		</CASIS-DSTA>
+		<CASIS-TX>
+			<Biotech>No</Biotech>
+			<Unbranded>No</Unbranded>
+		</CASIS-TX>
+		<CASIS-RN>
+			<CASInfo>
+				<CASItem />
+			</CASInfo>
+		</CASIS-RN>
+	</LaunchDetails>
+	<PackInfo>
+		<ExcipientInfo>
+			<Excipient />
+		</ExcipientInfo>
+		<PriceInfo>
+			<Price>liquid inhalation 20 ml 1: BRL 4.370 (RPP)</Price>
+		</PriceInfo>
+		<DoseFormInfo>
+			<DoseForm>liquid inhalation</DoseForm>
+		</DoseFormInfo>
+		<NumberOfIngredients>1</NumberOfIngredients>
+		<CASIS-TX>
+			<CompositionInfo>
+				<Composition>liquid inhalation: ipratropium bromide, 0.025%</Composition>
+			</CompositionInfo>
+		</CASIS-TX>
+	</PackInfo>
+	<LaunchStatus>
+		<RecordStatus />
+	</LaunchStatus>
+	<CASIS-MDNUMBER>MD000001</CASIS-MDNUMBER>
+</Document>

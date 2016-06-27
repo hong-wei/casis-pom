@@ -1,0 +1,8 @@
+com\osthus\mfs\web\CasisRestController.class
+com\osthus\mfs\web\app\WebServiceTester.class
+com\osthus\mfs\web\app\WebServiceTester$1.class
+com\osthus\mfs\web\app\CasisApplication.class
+com\osthus\mfs\web\app\User.class
+com\osthus\mfs\web\app\UserService.class
+com\osthus\mfs\web\app\UserDao.class
+com\osthus\HeloES.class

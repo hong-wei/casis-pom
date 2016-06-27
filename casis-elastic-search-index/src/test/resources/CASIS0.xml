@@ -1,0 +1,976 @@
+<Document>
+	<CASIS.DOCNO>PD025950</CASIS.DOCNO>
+	<CASIS.UPD>20160229</CASIS.UPD>
+	<SO>T&amp;F Informa UK Ltd, London</SO>
+	<CASIS.CN>
+		<DrugNameData>
+			<DrugName isPrimaryDrugName="false">AR-C124910XX</DrugName>
+			<DrugName isPrimaryDrugName="false">AR-C126532</DrugName>
+			<DrugName isPrimaryDrugName="false">AR-C126532 (orodispersible
+				tablet)</DrugName>
+			<DrugName isPrimaryDrugName="false">AR-C126532XX</DrugName>
+			<DrugName isPrimaryDrugName="false">AR-C126532XX (orodispersible
+				tablet)</DrugName>
+			<DrugName isPrimaryDrugName="false">Axcer</DrugName>
+			<DrugName isPrimaryDrugName="false">AZD-6140</DrugName>
+			<DrugName isPrimaryDrugName="false">AZD-6140 (orodispersible tablet)
+			</DrugName>
+			<DrugName isPrimaryDrugName="false">AZD6140</DrugName>
+			<DrugName isPrimaryDrugName="false">AZD6140 (orodispersible tablet)
+			</DrugName>
+			<DrugName isPrimaryDrugName="false">Brilinta</DrugName>
+			<DrugName isPrimaryDrugName="false">Brilique</DrugName>
+			<DrugName isPrimaryDrugName="false">Brillique</DrugName>
+			<DrugName isPrimaryDrugName="false">Possia</DrugName>
+			<DrugName isPrimaryDrugName="true">ticagrelor</DrugName>
+			<DrugName isPrimaryDrugName="false">ticagrelor (orodispersible
+				tablet)</DrugName>
+			<DrugName isPrimaryDrugName="false">ticagrelor ODT</DrugName>
+		</DrugNameData>
+		<ChemicalName>1,2-Cyclopentanediol,
+			3-[7-[[(1R,2S)-2-(3,4-difluorophenyl)cyclopropyl]amino]-5-(propylthio)-3H-1,2,3-triazolo[4,5-d]pyrimidin-3-yl]-5-(2-hydroxyethoxy)-,
+			(1S,2S,3R,5S)-</ChemicalName>
+	</CASIS.CN>
+	<CASIS.RN>
+		<CASNumber>274693-27-5</CASNumber>
+	</CASIS.RN>
+	<NCE>Yes</NCE>
+	<Origin>Chemical, synthetic</Origin>
+	<MF>C23H28F2N6O4S</MF>
+	<MW>522.57</MW>
+	<CASIS.TX>
+		<Overview>Ticagrelor (AZD-6140) is an orally-active reversible P2Y12
+			ADP purinoreceptor antagonist, developed by AstraZeneca for the
+			treatment of arterial thrombosis (1st Half Res, AstraZeneca, 2001;
+			Company pipeline, AstraZeneca, 22 Jul 2004; USAN Web Page, 21 Aug
+			2007). It is a non-prodrug, non-thienopyridine belonging to the
+			cyclo-pentyl-triazolo-pyrimidine (CPTP) class, that has a rapid onset
+			of action and shows reversible binding to receptors (Ann Bus Rev,
+			AstraZeneca, 7 Nov 2002 &amp; 6 Oct 2004). It is expected that
+			coronary disease patients treated with ticagrelor could be operated
+			on within 24hr of treatment, vs a delay of 5 days for those treated
+			with clopidogrel hydrogen sulfate (Analysts&apos; presentation,
+			AstraZeneca, 2 Feb 2006).</Overview>
+		<Marketing>Approvals ^________________^Acute coronary syndrome;
+			Angina, unstable; Infarction, myocardial; Thrombosis,
+			arterial^Austria (2011); launched as Brilique (Company presentation,
+			AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Australia
+			(2012); as Brilique (Press release, AstraZeneca, 20 Jul 2011,
+			http://www.astrazeneca.com/Media/Press-releases/Article/20110720-fda-approves-brilinta-us;
+			Company presentation, AstraZeneca, 30 Oct 2013, Slide 19,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DPresentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285660606247&amp;ssbinary=true).
+			^Belgium (Company presentation, AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Brazil
+			(2011); launched as Brilique (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Bulgaria;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Canada
+			(2011); launched as Brilique (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Czech
+			Republic; approved as Brilique (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Denmark
+			(2011); launched as Brilique (Company presentation, AstraZeneca, 27
+			Jan 2011, p20 of PDF,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DPresentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285616560306&amp;ssbinary=true).^Estonia
+			(2011) (Company presentation, AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).
+			^EU; approved as Brilique to be co-administered with ASA for
+			prevention of atherothrombotic events in adult patients with ACS
+			(unstable angina, NSTEMI or STEMI); including patients managed
+			medically, and those who are managed with percutaneous coronary
+			intervention (PCI) or coronary artery by-pass grafting (CABG) (Press
+			release, EMA, 23 Sep 2010,
+			http://www.ema.europa.eu/docs/en_GB/document_library/Summary_of_opinion_-_Initial_authorisation/human/002303/WC500097029.pdf;
+			Press release, AstraZeneca, 6 Dec 2010,
+			http://www.astrazeneca.com/Media/Press-releases/Article/European-Commission-Approves-Brilique).
+			Brilique is the approved trade name for use in the EU countries and
+			EEA countries (Press release, AstraZeneca, 16 Mar 2010).^Finland
+			(2011); launched as Brilique (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^France
+			(2012); launched in Jul 2012 (Q3 2012 Earnings Call,
+			AstraZeneca).^Germany (2011); launched as Brilique (Company
+			presentation, AstraZeneca, 27 Jan 2011, p20 of PDF,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DPresentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285616560306&amp;ssbinary=true).
+			^Greece (2011); launched as Brilique (Company presentation,
+			AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Hungary;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Iceland;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^India
+			(2012); as Brilique for the treatment of acute coronary syndromes
+			(ACS) in adult patients (Scrip Intelligence, 19 Oct 2012,
+			http://www.scripintelligence.com/business/AstraZeneca-launches-0.94-Brilinta-in-India-336338).
+			It is also to be sold as Axcer (Scrip Intelligence, 2 Jun 2015,
+			http://www.scripintelligence.com/business/AstraZeneca-unveils-second-brand-play-in-India-358707).^Ireland;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Italy;
+			as Brilique (2nd Qtr &amp; Half Year Res, AstraZeneca, 2012, Slide
+			31, http://cache.cantos.com/download/azn-k009/presentation.pdf).
+			^Latvia (2011) (Company presentation, AstraZeneca, 9 Sep 2011, page
+			49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Lithuania
+			(2011) (Company presentation, AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Luxembourg
+			(Company presentation, AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Malaysia
+			(2011); launched as Brilique (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Mecedonia
+			(Company presentation, AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Netherlands
+			(2011); launched as Brilique (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^New
+			Zealand; as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Norway
+			(2011); launched as Brilique (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Poland;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).
+			^Portugal (Company presentation, AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Romania;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Singapore
+			(2011) (Company presentation, AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^South
+			Korea; approved as Brilinta (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Slovakia;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Slovenia
+			(Company presentation, AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Spain;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Sweden
+			(2011); launched as Brilique (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Switzerland
+			(Company presentation, AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Syria;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^UK
+			(2011); launched as Brilique (MIMS UK New Products, 4 Jan 2011,
+			http://www.mims.co.uk/more/NewDrugs/article/1047693/Brilique-novel-alternative-clopidogrel/).
+			The UK NICE has published a final draft guidance recommending
+			Brilique in combination with aspirin, for upto 12mth in patients with
+			ACS (unstable angina, NSTEMI or STEMI) (Scrip Intelligence, 26 Oct
+			2011,
+			http://www.scripintelligence.com/policyregulation/NICE-gives-clot-busting-Brilique-the-final-OK-322928).^Uruguay;
+			approved as Brilique (Company presentation, AstraZeneca, 9 Sep 2011,
+			page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^USA
+			(2011); launched as Brilinta to reduce the rate of thrombotic
+			cardiovascular events in patients with ACS (unstable angina;
+			non-ST-elevation myocardial infarction or ST-elevation myocardial
+			infarction). It will be available in 90mg tablets to be administered
+			with a single 180mg oral loading dose, followed by twice daily 90mg
+			maintenance dose (Press release, AstraZeneca, 20 Jul 2011,
+			http://www.astrazeneca.com/Media/Press-releases/Article/20110720-fda-approves-brilinta-us;
+			Press release, AstraZeneca, 22 Aug 2011,
+			http://www.businesswire.com/portal/site/biospace/index.jsp?ndmViewId=news_view&amp;newsId=20110822005750&amp;newsLang=en).
+			The US labeling includes a boxed warning stating that aspirin doses
+			above 100mg/day decrease the effectiveness of ticagrelor, and should
+			be avoided (Company presentation, AstraZeneca, 27 Jul 2011, page 30,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DPresentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285625738292&amp;ssbinary=true;
+			Company presentation transcript, AstraZeneca, 27 Jul 2011, p2,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DMartin-Mackay%2C-President-R%26amp%3BD-analyst-script.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285625798831&amp;ssbinary=true).
+			The FDA has recomended for use in the management of patients
+			undergoing percutaneous coronary intervention (PCI) under revised
+			treatment guidelines (Scrip Intelligence, 8 Nov 2011,
+			http://www.scripintelligence.com/policyregulation/Class-1-recommendation-for-Brilinta-in-the-US-323380).
+			It also has the FDA approval to be crushed and administered in water
+			by swallowing or via nasogastric tube in acute coronary syndrome
+			patients who are unable to swallow ticagrelor 90mg tablets as whole
+			(Press release, 30 Mar 2015, AstraZeneca,
+			http://www.astrazeneca-us.com/media/press-releases/Article/20150330-brilinta-receives-approval-for-new-administration).^Acute
+			coronary syndrome; Thrombosis, arterial^AstraZeneca^China; as
+			Brilinta (Press release, Reuters, 29 Nov 2012,
+			http://www.reuters.com/article/2012/11/29/us-astrazeneca-china-idUSBRE8AS0FT20121129).^Acute
+			coronary syndrome; Infarction, myocardial^EU (including Iceland,
+			Norway and Liechtenstein); as Brilique at a 60mg dose for the
+			treatment of patients who have suffered a heart attack at least one
+			year prior and are at high risk of developing a further
+			atherothrombotic event (Press release, AstraZeneca, 19 Feb 2016,
+			https://www.astrazeneca.com/our-company/media-centre/press-releases/2016/Brilique-ticagrelor-approved-in-EU-for-extended-treatment-of-patients-with-history-of-heart-attack-19022016.html).^USA
+			(2015); as Brilinta 60mg tablet for patients with a history of heart
+			attack beyond the 1st yr and used to reduce the rate of
+			cardiovascular death, myocardial infarction (MI) and stroke in
+			patients with acute coronary syndrome (ACS) or a history of MI (Press
+			release, AstraZeneca, 3 Sep 2015,
+			http://www.astrazeneca.com/Media/Press-releases/Article/20150903;
+			Press release, AstraZeneca, 29 Sep 2015,
+			http://www.businesswire.com/news/home/20150929005612/en/Dose-Brilinta-Pharmacies).^Filings^________________^Acute
+			coronary syndrome^China; a filing for use in patients with Type 2
+			diabetes and CAD but without previous history of MI or stroke (based
+			on results from the THEMIS trial) is expected in 2019 (Company
+			pipeline, AstraZeneca, 31 Dec 2013 &amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true;
+			Company pipeline, AstraZeneca, 23 Feb 2016,
+			https://www.astrazeneca.com/our-science/pipeline.html).^EU; a filing
+			for use in patients with Type 2 diabetes and CAD but without previous
+			history of MI or stroke (based on results from the THEMIS trial) is
+			expected in 2018 (Press release, AstraZeneca, 30 Jul 2015, Page 47,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285696919720&amp;ssbinary=true).
+			^Japan; a filing has been submitted for ACS (Scrip Intelligence, 13
+			Dec 2013,
+			http://www.scripintelligence.com/home/New-launches-provide-platform-for-AstraZenecas-Japanese-growth-348750).
+			A filing for use in patients with Type 2 diabetes and CAD but without
+			previous history of MI or stroke (based on results from the THEMIS
+			trial) is expected in 2018 (Company pipeline, AstraZeneca, 31 Dec
+			2013 &amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^USA; a filing for use in patients with Type 2 diabetes and CAD but
+			without previous history of MI or stroke (based on results from the
+			THEMIS trial) is expected in 2018 (Press release, AstraZeneca, 30 Jul
+			2015, Page 47,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285696919720&amp;ssbinary=true).
+			^Acute coronary syndrome; Infarction, myocardial^China; a filing
+			submission for use in patients with prior myocardial infarction
+			(based on results from the PEGASUS-TIMI 54 trial) is expected in the
+			2nd half of 2016 (Company pipeline, AstraZeneca, 31 Dec 2013 &amp; 31
+			Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true;
+			Company pipeline, AstraZeneca, 23 Feb 2016,
+			https://www.astrazeneca.com/our-science/pipeline.html).^Japan; a
+			filing has been accepted for acute coronary syndrome/post-myocardial
+			infarction (3rd Qtr Res, AstraZeneca, 5 Nov 2015, Page 5 &amp; 22,
+			https://www.astrazeneca.com/content/dam/az/our-company/investor-relations/presentations-and-webcast/AstraZeneca%20Results%20Presentation%20Q3%202015.pdf).
+			A filing submission for use in patients with prior myocardial
+			infarction (based on results from the PEGASUS-TIMI 54 trial) is
+			expected in the 4th qtr of 2015 (Company pipeline, AstraZeneca, 31
+			Dec 2013 &amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			Regulatory decisions for ACS and post-MI are expected in the 1st half
+			of 2016 (Investor presentation, AstraZeneca, 4 Feb 2016, Slide 14,
+			https://www.astrazeneca.com/content/dam/az/our-company/investor-relations/presentations-and-webcast/2016/Full-Year%20and%20Q4%202015%20Results%20presentation.pdf).^Acute
+			coronary syndrome; Angina, unstable; Infarction, myocardial;
+			Thrombosis, arterial^Albania; under regulatory review (Company
+			presentation, AstraZeneca, 9 Sep 2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Argentina;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Bangladesh;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Behrain;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Bosnia
+			and herzegovina; under regulatory review (Company presentation,
+			AstraZeneca, 9 Sep 2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Brazil;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Chile;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Costa
+			Rica; under regulatory review (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Croatia;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Colombia;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Cuba;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Cyprus;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^El
+			Salvodor; under regulatory review (Company presentation, AstraZeneca,
+			9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Democratic
+			Republic of Congo; under regulatory review (Company presentation,
+			AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Ghana;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Guatemala;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Honduras;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Indonesia;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Israel;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Jamaica;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Jordon;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Kazakhstan;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Kuwait;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Mexico;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Montenegro;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Morocco;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Nicaragua;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Nigeria;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Panama;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Peru;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Philippines;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Russia;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 46,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).
+			^Saudi Arabia; under regulatory review (Company presentation,
+			AstraZeneca, 9 Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^South
+			Africa; under regulatory review (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Sri
+			Lanka; under regulatory review (Company presentation, AstraZeneca, 9
+			Sep 2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Sudan;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			^http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Thailand;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Turkey;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^UAE;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Ukraine;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Venezuela;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Yemen;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Zambia;
+			under regulatory review (Company presentation, AstraZeneca, 9 Sep
+			2011, page 49,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DInvestor-relations-general-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285628300321&amp;ssbinary=true).^Ischaemia,
+			cerebral^China; filing for use in patients with stroke or TIA is
+			expected in 2017 (Company pipeline, AstraZeneca, 31 Dec 2013 &amp; 31
+			Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^EU; filing for use in patients with stroke or TIA is expected in the
+			1st half of 2016 (Company pipeline, AstraZeneca, 31 Dec 2013 &amp; 31
+			Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^Japan; filing for use in patients with stroke or TIA is expected in
+			the 2nd half of 2016 (Company pipeline, AstraZeneca, 31 Dec 2013
+			&amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^USA; filing for use in patients with stroke or TIA is expected in
+			the 1st half of 2016 (Company pipeline, AstraZeneca, 31 Dec 2013
+			&amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^Peripheral vascular disease^AstraZeneca^China; a filing for a line
+			extension is expected in 2018 (Company pipeline, AstraZeneca, 31 Dec
+			2013 &amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^EU; a filing for a line extension is expected in 2017 (Company
+			pipeline, AstraZeneca, 31 Dec 2013 &amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^Japan; a filing for a line extension is expected in 2017 (Company
+			pipeline, AstraZeneca, 31 Dec 2013 &amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^USA; a filing for a line extension is expected in 2017 (Company
+			pipeline, AstraZeneca, 31 Dec 2013 &amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^Thrombosis, arterial^AstraZeneca^Japan; filed (Company pipeline,
+			AstraZeneca, 30 Jun 2013 &amp; 31 Mar 2015, Page 28,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^Thrombosis, unspecified^EU; filing is expected in 2020 (Company
+			pipeline, AstraZeneca, 31 Dec 2014, Page 36,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DPress-release-amp-development-pipeline.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285686741585&amp;ssbinary=true
+			&amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^USA; filing is expected in 2020 (Company pipeline, AstraZeneca, 31
+			Dec 2014, Page 36,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DPress-release-amp-development-pipeline.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285686741585&amp;ssbinary=true
+			&amp; 31 Mar 2015, Page 34,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+			^Warnings^________________^USA; boxed warning states that maintenance
+			doses of aspirin above 100mg reduce the effectiveness of ticagrelor,
+			and should be avoided (Company presentation, AstraZeneca, 27 Jul
+			2011, page 30,
+			http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DPresentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285625738292&amp;ssbinary=true).
+			^Expedited Review Designation^_________________^Acute coronary
+			syndrome; Infarction, myocardial^USA; a priority review status has
+			been granted for patients with a history of heart attack (Press
+			release, AstraZeneca, 29 Apr 2015,
+			http://www.astrazeneca.com/Media/Press-releases/Article/2015029--us-fda-grants-priroity-review-for-brilinta).
+		</Marketing>
+		<Licensing>Agreements^________________^The Medicines Company^USA;
+			AstraZeneca has a 4yr collaboration agreement with the Medicines
+			Company (TMC) for the copromotion of Brilinta. Under the agreement,
+			the Medicines Company sales force will support Brilinta from May
+			2012. The agreement is a first part of collaboration agreement with
+			the Medicines Company in acute ischaemic heart disease (Press
+			release, AstraZeneca, 25 Apr 2012,
+			http://www.astrazeneca.com/Media/Press-releases/Article/20120425--astrazeneca-and-the-medicines-company).
+		</Licensing>
+		<KeyClinicalInformation>
+			<PhaseIII>Acute coronary syndrome^It is in an event-driven,
+				randomized, parallel-group, double-blind Phase III trial
+				(D513BC00001; U1111-1149-3152; 2013-003519-23; THEMIS) in Argentina,
+				Australia, Austria, Belgium, Brazil, Bulgaria, Canada, Chile, China,
+				Colombia, the Czech Republic, Denmark, Finland, France, Germany,
+				Hungary, Hong Kong, India, Israel, Italy, Mexico, the Netherlands,
+				Norway, Puerto Rico, Poland, Peru, the Philippines, Romania, Russia,
+				Slovakia, S Korea, S Africa, Spain, Sweden, Taiwan, Thailand,
+				Turkey, the UK, the US, Ukraine and Vietnam in 17000 patients with
+				Type 2 diabetes at high risk of cardiovascular (CV) events to
+				evaluate the efficacy of long-term treatment with ticagrelor 90mg po
+				tablets bid vs placebo for the prevention of major CV events, the
+				composite of CV death, MI or stroke (Press release, AstraZeneca, 14
+				Nov 2013,
+				http://www.astrazeneca-us.com/media/press-releases/Article/20131114-astrazeneca-announces-initiation-of-two-additional;
+				ClinicalTrials.gov, 25 Nov 2013 &amp; 8 Nov 2014,
+				http://clinicaltrials.gov/ct2/show/NCT01991795; Company pipeline,
+				AstraZeneca, 31 Dec 2013 &amp; 31 Mar 2015, Page 34,
+				http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+				Enrollment completion and trial completion are expected in 2018 (3rd
+				Qtr Res, AstraZeneca, 5 Nov 2015, Page 14,
+				https://www.astrazeneca.com/content/dam/az/our-company/investor-relations/presentations-and-webcast/AstraZeneca%20Clinical%20Trials%20Appendix%20Q3%202015%20Results.PDF;
+				EU Clinical Trials Registry, 17 Dec 2015, 2013-003519-23,
+				https://www.clinicaltrialsregister.eu/ctr-search/trial/2013-003519-23/HU).^In
+				a randomized, double-blind, placebo-controlled, 3-arm,
+				parallel-group Phase III trial (PEGASUS-TIMI 54, D5132C00001) in
+				21412 patients on a background of ASA 75-150mg once-daily who have
+				sustained a heart attack 1-3yr prior to enrollment in Argentina,
+				Australia, Belgium, Brazil, Bulgaria, Canada, Chile, China,
+				Colombia, the Czech Republic, France, Germany, Hungary, India,
+				Italy, Japan, the Netherlands, Norway, Peru, the Philippines,
+				Poland, Romania, Russia, Slovakia, S Africa, S Korea, Spain, Sweden,
+				Turkey, Ukraine, the UK and the US, top-line results showed that
+				ticagrelor 60 or 90mg po bid x12mth met its primary efficacy
+				endpoint. Preliminary analysis did not reveal any unexpected safety
+				issues. Full evaluation of the data is ongoing. The primary efficacy
+				endpoint was any event after randomization from the composite of
+				cardiovascular death, non-fatal MI or non-fatal stroke within 1yr
+				-38mth (Press release, AstraZeneca, 1 Oct 2010,
+				http://www.astrazeneca.com/media/latest-press-releases/2010-new/PEGASUS?itemId=11566377;
+				ClinicalTrials.gov, 9 Nov 2010 &amp; 24 Dec 2014,
+				http://clinicaltrials.gov/ct2/show/NCT01225562; Press release,
+				AstraZeneca, 14 Jan 2015,
+				http://www.astrazeneca.com/Media/Press-releases/Article/20150114--PEGASUS-TIMI-54-study--BRILINTA-meets-primary-endpoint-in-60mg-and-90mg-doses).
+				As of 14 Mar 2015, efficacy results showed that both 90mg and 60mg
+				study doses of ticagrelor with aspirin significantly reduced the
+				primary composite endpoint of cardiovascular (CV) death, myocardial
+				infarction (MI) or stroke compared to placebo with 7.85% in the
+				ticagrelor 90mg arm, 7.77% in the ticagrelor 60mg arm, and 9.04% in
+				the placebo arm (Hazard Ratio (HR) for ticagrelor 90mg vs placebo
+				0.85, 95% CI 0.75 ? 0.96; HR for ticagrelor 60mg vs placebo 0.84,
+				95% CI 0.74 ? 0.95). The effect of ticagrelor on each of the
+				components of the primary endpoint was consistent. A numerical
+				decrease in the secondary endpoints of cardiovascular death and all
+				cause mortality was observed, but did not reach statistical
+				significance. In addition the primary efficacy endpoint of both
+				doses of ticagrelor appeared consistent across major subgroups
+				including age, sex, index MI type (STEMI/NSTEMI), time from
+				qualifying MI, diabetes, aspirin dose, history of percutaneous
+				intervention (angioplasty), and geographical region. Safety findings
+				revealed that TIMI Major bleeding was higher in both doses of
+				ticagrelor compared to placebo, with 2.60% in the ticagrelor 90mg
+				arm, 2.30% in the ticagrelor 60mg arm and 1.06% in the placebo arm
+				(HR for ticagrelor 90mg vs placebo 2.69, 95% CI 1.96 ? 3.70; HR for
+				ticagrelor 60mg vs placebo 2.32, 95% CI 1.68 ? 3.21). The rates of
+				fatal bleeding or intracranial haemorrhage were low and similar
+				between treatment arms, with fatal bleeding rates at 3yr of 0.11% in
+				the ticagrelor 90mg arm, 0.25% in the ticagrelor 60mg arm, and 0.26%
+				in the placebo arm (HR for ticagrelor 90mg vs placebo 0.58, 95% CI
+				0.22 ? 1.54; HR for ticagrelor 60mg vs placebo 1.00, 95% CI 0.44 ?
+				2.27) and intracranial haemorrhage rates at 3yr of 0.56% in the
+				ticagrelor 90mg arm, 0.61% in the ticagrelor 60mg arm and 0.47% in
+				the placebo arm (HR for ticagrelor 90mg vs placebo 1.44, 95% CI 0.83
+				? 2.49; HR for ticagrelor 60mg vs placebo 1.33, 95% CI 0.77 ?
+				2.31).^In a worldwide (in countries as shown), randomized,
+				double-blind Phase III trial (PLATO) in 18624 patients with acute
+				coronary syndrome (ACS) (enrollment complete) to evaluate the safety
+				and efficacy of ticagrelor 90mg bid + aspirin vs clopidogrel
+				hydrogen sulfate 75mg once-daily (qv) + aspirin, ticagrelor met the
+				primary efficacy endpoint of prevention of cardiovascular events
+				without an increase in major bleeding. Further endpoints included
+				first occurence of any event including myocardial infarction, stroke
+				and CV death. Patients with stents experienced a 33% reduction in
+				risk of definite stent thrombosis. There were no differences in
+				major bleeding with ticagrelor vs clopidogrel. Further analysis of
+				the PLATO trials in 1261 patients undergoing planned invasive
+				treatments and with ST Segment Elevation Myocardial Infarction
+				(STEMI), showed that ticagrelor reduced cardiovascular death,
+				myocardial infarction, definite stent thrombosis and total mortality
+				cf clopidogrel (Analysts&apos; presentation, AstraZeneca, 2 Feb
+				2006; 2nd Qtr Res, AstraZeneca, 2008 &amp; 2009; ClinicalTrials.gov
+				Web Page, 18 Aug 2008, NCT00391872; Press releases, AstraZeneca, 11
+				May, 31 Aug, 25 Sep &amp; 16 Nov 2009; Scrip Daily Online, 11 May
+				2009, S01027064).^ In a PLATO sub-analysis, ticagrelor showed a
+				reduction of total mortality by 51% and CV death by 48% when
+				adminstered to ACS patients 7 days prior to having a coronary artery
+				bypass graft (CABG) vs clopidogrel (Press release, AstraZeneca, 16
+				Mar 2010). In 54 patients treated with ticagrelor instead of
+				clopidogrel for 1yr, it prevented one atherothrombotic event and
+				treating 91 patients prevented one cardiovascular death, with no
+				increase in overall major/fatal bleeding over the course of one year
+				of treatment (11.6% for ticagrelor vs 11.2% for clopidogrel) (Press
+				release, AstraZeneca, 6 Dec 2010,
+				http://www.astrazeneca.com/Media/Press-releases/Article/European-Commission-Approves-Brilique).
+				Total rates of vascular deaths and non-vascular deaths from the time
+				of CABG until study end for the ticagrelor and clopidogrel groups
+				were 4, 0.6% and 7.5, 1.7%, respectively. Ticagrelor reduced
+				definite stent thrombosis compared with clopidogrel, independent of
+				type of ACS, diabetes status, stent type, loading dose of aspirin
+				and dose of clopidogrel pre-randomisation. Fewer
+				cardiovascular-related deaths from heart attack, heart failure,
+				arrhythmia/sudden death, haemorrhagic stroke/intracranial
+				haemorrhage and bleeding/other haemorrhage were observed (Press
+				release, AstraZeneca, 30 Aug 2011,
+				http://www.biospace.com/News/astrazeneca-plc-bloodthinner-shows-mortality/231556/source=TopBreaking).
+				A sub-analysis that evaluated the effect of smoking status on
+				clinical outcomes in patients with acute coronary syndrome (ACS)
+				suggested the overall findings from the PLATO study of greater
+				reduction in thrombotic CV events with ticagrelor tablets + aspirin
+				compared to clopidogrel + aspirin was consistent regardless of
+				smoking habits. Among the 18610 patients with known smoking status
+				at randomization in the PLATO study, 6678 (36%) were reported as
+				being habitual smokers and 11932 (64%) were ex/non-smokers. Habitual
+				smokers had an overall lower risk profile and presented more often
+				with ST-elevation MI. After adjustment for baseline differences,
+				habitual smoking was associated with a higher incidence of definite
+				stent thrombosis; there were no significant associations with other
+				ischaemic or bleeding end points. The effects of ticagrelor compared
+				to clopidogrel were consistent for thrombotic CV events, regardless
+				of smoking status. Thus, there was a similar reduction in the
+				primary composite end point for habitual smokers and ex/non-smokers,
+				and in definite stent thrombosis for habitual smokers and
+				ex/non-smokers. There was no significant interaction between smoking
+				habits and the effects of treatment on major bleeding or non-CABG
+				related major bleeding. The adjusted hazard ratios for the rate of
+				all PLATO-defined major bleeding for ticagrelor versus clopidogrel
+				were 1.18 in habitual smokers and 1.04 in ex/non-smokers. For
+				non-CABG related major bleeding events the adjusted hazard ratios
+				for ticagrelor versus clopidogrel were 1.22 in habitual smokers and
+				1.35 in ex/non-smokers. The conclusion of the sub-analysis of PLATO
+				suggested results of ticagrelor versus clopidogrel were consistent
+				for thrombotic cardiovascular (CV) events in patients with ACS
+				regardless of smoking status and that habitual smoking was
+				associated with a greater risk of subsequent stent thrombosis (Press
+				release, AstraZeneca, 6 Sep 2012,
+				http://www.businesswire.com/portal/site/biospace/index.jsp?ndmViewId=news_view&amp;newsId=20120906006378&amp;newsLang=en).^A
+				randomized, double-blind, parallel-assignment, double-dummy Phase
+				III trial (D5130C00027; PHILO) to evaluate the safety and efficacy
+				of ticagrelor 90mg po bid vs clopidogrel 75mg po once-daily on top
+				of low dose ASA in 800 patients with non-ST or ST elevation ACS with
+				planned percutaneous coronary intervention (PCI) in Japan, S Korea
+				and Taiwan was completed (ClinicalTrials.gov, 28 Mar 2011and 25 Aug
+				2012, http://www.clinicaltrials.gov/show/NCT01294462; Press release,
+				AstraZeneca, 17 Jul 2012,
+				http://www.biospace.com/News/astrazeneca-plc-starts-new-study-of-heart-drug/266902/source=TopBreaking).^Peripheral
+				vascular disease^It is in a randomized, double-blind, parallel-group
+				Phase IIIb trial (EUCLID) in 13500 patients (enrollment complete)
+				aged 50yr or older with peripheral artery disease (PAD) in
+				Argentina, Brazil, Bulgaria, Canada, Chile, China, the Czech
+				Republic, France, Germany, Hungary, Italy, Japan, Mexico, the
+				Netherlands, the Philippines, Poland, Romania, Russia, Slovakia, S
+				Africa, S Korea, Spain, Sweden, Thailand, Turkey, Ukraine, the UK,
+				the US and Vietnam, to evaluate the efficacy and safety of
+				ticagrelor 90mg po bid against clopidogrel 75mg po once-daily in
+				reducing a composite of CV death, MI or ischaemic stroke in patients
+				with PAD (Press release, AstraZeneca, 17 Jul 2012,
+				http://www.biospace.com/News/astrazeneca-plc-starts-new-study-of-heart-drug/266902/source=TopBreaking;
+				ClinicalTrials.gov, 26 Dec 2012 &amp; 8 Nov 2014,
+				http://clinicaltrials.gov/ct2/show/NCT01732822; Company pipeline,
+				AstraZeneca, 30 Jun 2012 &amp; 31 Mar 2015, Page 34,
+				http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+				Data is expected in the 2nd half of 2016 (3rd Qtr Res, AstraZeneca,
+				5 Nov 2015, Page 24,
+				https://www.astrazeneca.com/content/dam/az/our-company/investor-relations/presentations-and-webcast/AstraZeneca%20Results%20Presentation%20Q3%202015.pdf).
+				Enrollment completion is expected in the 2nd half of 2016 (3rd Qtr
+				Res, AstraZeneca, 5 Nov 2015, Page 14,
+				https://www.astrazeneca.com/content/dam/az/our-company/investor-relations/presentations-and-webcast/AstraZeneca%20Clinical%20Trials%20Appendix%20Q3%202015%20Results.PDF).^Thrombosis,
+				unspecified^A randomized, open-label, crossover Phase III trial
+				(D5130C00078) to evaluate the safety and P2Y12 receptor inhibition
+				effects of ticagrelor 90mg x5 days and clopidogrel in Vietnamese
+				patients in Vietnam with coronary heart disease has been withdrawn
+				prior to enrollment (ClinicalTrials.gov, 29 Dec 2012 &amp; 15 May
+				2013, http://clinicaltrials.gov/ct2/show/NCT01757262). ^In a 6wk,
+				randomized, double-blind clinical trial (ONSET/OFFSET) in 123
+				patients on stable coronary artery disease (CAD) therapy, ticagrelor
+				90mg bid achieved a rapid onset of antiplatelet activity, inhibition
+				of platelet aggregation and faster offset IPA cf clopidogrel (Press
+				release, AstraZeneca, 18 Nov 2009).^Ischaemia,
+				cerebral^AstraZeneca^It is in a randomized, double-blind,
+				parallel-group Phase III study (SOCRATES) in 13600 patients
+				(enrollment complete) who have experienced an acute ischaemic stroke
+				or transient ischaemic attack (TIA) in Argentina, Australia,
+				Belgium, Brazil, Bulgaria, Canada, Chile, China, the Czech Republic,
+				France, Germany, Hong Kong, Hungary, Israel, Italy, Japan, Mexico,
+				Peru, the Philippines, Poland, Romania, Russia, Slovakia, S Korea,
+				Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, Ukraine,
+				Vietnam and the US, to evaluate the efficacy of ticagrelor 90mg po
+				tablets bid vs aspirin in reducing major vascular events (composite
+				of all-cause mortality, myocardial infarction and stroke).
+				Completion is expected in Oct 2015 (Press release, AstraZeneca, 14
+				Nov 2013,
+				http://www.astrazeneca-us.com/media/press-releases/Article/20131114-astrazeneca-announces-initiation-of-two-additional;
+				ClinicalTrials.gov, 3 Dec 2013, 8 Nov 2014 &amp; 22 Dec 2015,
+				http://clinicaltrials.gov/ct2/show/NCT01994720; EU Clinical Trials
+				Register, 2012-003895-38, 9 Oct 2015,
+				https://www.clinicaltrialsregister.eu/ctr-search/search?query=eudract_number:2012-003895-38;
+				Company pipeline, AstraZeneca, 31 Dec 2013 &amp; 31 Mar 2015, Page
+				34,
+				http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+				Data is expected in the 1st half of 2016 (1st Half Res, AstraZeneca,
+				30 Jul 2015, Page 11,
+				http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-presentation.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285696934628&amp;ssbinary=true;
+				3rd Qtr Res, AstraZeneca, 5 Nov 2015, Page 14,
+				https://www.astrazeneca.com/content/dam/az/our-company/investor-relations/presentations-and-webcast/AstraZeneca%20Clinical%20Trials%20Appendix%20Q3%202015%20Results.PDF).
+			</PhaseIII>
+			<PhaseII>Peripheral vascular disease^It is in a multicentre,
+				randomized, double-blind, controlled, parallel-group Phase II trial
+				(D5135L00003, TI-PAD EVR) in the US to evaluate the walking time
+				effect of long-term ticagrelor 90mg bid in comparison to long-term
+				aspirin administration in 175 ambulatory patients (enrollment
+				complete) with peripheral artery disease undergoing endovascular
+				revascularization (ClinicalTrials.gov, 6 Nov 2014 &amp; 23 Dec 2015,
+				http://clinicaltrials.gov/ct2/show/NCT02227368). ^Thrombosis,
+				unspecified^It is in a randomized, double-blind, double-dummy,
+				parallel-group Phase IIb trial (D5136C00008), to evaluate the effect
+				of ticagrelor 10 and 45mg bid versus placebo in reducing the number
+				of days with pain in 90 young adults with sickle cell disease
+				(ClinicalTrials.gov, 29 Jun 2015,
+				https://clinicaltrials.gov/show/NCT02482298).^An open-label,
+				randomized, dose-ranging Phase II trial (D5136C00007, HESTIA 1) in
+				Canada, S Africa, the UK and the US to evaluate the pharmacokinetics
+				and pharmacodynamics of ticagrelor followed by a double-blind,
+				randomized, parallel-group, placebo-controlled, 4wk extension Phase
+				in 39 paediatric patients with sickle cell disease has suspended
+				participant recruitment (ClinicalTrials.gov, 25 Sep 2014 &amp; 16
+				Oct 2015, http://clinicaltrials.gov/ct2/show/NCT02214121; Company
+				pipeline, AstraZeneca, 31 Dec 2014, Page 36,
+				http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DPress-release-amp-development-pipeline.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285686741585&amp;ssbinary=true
+				&amp; 31 Mar 2015, Page 34,
+				http://www.astrazeneca.com/cs/Satellite?blobcol=urldata&amp;blobheader=application%2Fpdf&amp;blobheadername1=Content-Disposition&amp;blobheadername2=MDT-Type&amp;blobheadervalue1=inline%3B+filename%3DDownload-press-release-amp-pipeline-update.pdf&amp;blobheadervalue2=abinary%3B+charset%3DUTF-8&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1285691535910&amp;ssbinary=true).
+				^A randomized, double-blind, parallel-group Phase II (D5130C00065)
+				trial to evaluate the pharmacokinetic (PK) and pharmacodynamic
+				profile of 2 doses of ticagrelor x4wk vs clopidogrel on top of low
+				dose ASA on platelet aggregation in 146 patients with stable
+				coronary artery disease in Japan and Philippines was completed
+				(ClinicalTrials.gov, 18 Feb 2011,
+				http://clinicaltrials.gov/ct2/show/NCT01118325). ^A randomized,
+				double-blind, parallel-assignment Phase II trial in 80 patients with
+				stable CAD to assess ticagrelor po vs clopidogrel hydrogen sulfate
+				on the primary endpoint of inhibition of platelet aggregation in
+				non-responders to clopidogrel hydrogen sulfate was completed.
+				Secondary endpoints include inhibition of platelet aggregation and
+				biomarker expression in clopidogrel hydrogen sulfate responsive
+				patients (ClinicalTrials.gov Web Page, 23 May 2008 &amp; 15 Mar
+				2010, NCT00642811). ^In a randomized Phase II trial (RESPOND),
+				ticagrelor increased mean IPA by 26% in CAD patients who were
+				switched from clopidogrel to ticagrelor vs a 24% decrease when
+				switched from ticagrelor to clopidogrel. Results for the primary
+				endpoint in clopidogrel non-responders were not significant (Press
+				release, AstraZeneca, 18 Nov 2009).^In Phase II trials, it showed
+				faster and more complete platelet inhibition cf clopidogrel hydrogen
+				sulfate, and total bleeding was similar to clopidogrel hydrogen
+				sulfate. It was generaly well tolerated (Analysts&apos;
+				presentation, AstraZeneca, 2 Feb 2006). ^A Phase II trial (DISPERSE)
+				compared the ability of ticagrelor to inhibit platelet aggregation
+				with clopidogrel hydrogen sulfate(Press release, AstraZeneca, 15 Nov
+				2005).^In a Phase IIb trial (DISPERSE2), ticagrelor + ASA 90mg bid,
+				180mg bid and 75mg/day gave an overall incidence of total bleeding
+				events of 10.2, 10.2 and 9.2%, respectively, with major bleeds in
+				7.8 and 6.2% in the 90 bid and 180mg bid groups, respectively, cf 8%
+				with clopidrogrel hydrogen sulfate 75mg (Press release, AstraZeneca,
+				15 Nov 2005). The 90mg bid dose has been selected for further trials
+				(Analysts&apos; presentation, AstraZeneca, 1 Feb 2007).</PhaseII>
+			<PhaseI>AstraZeneca^An open-label, randomized, 3-period, 3-treatment,
+				crossover, single-centre, single-dose Phase I trial (D5139C00004) in
+				the UK to assess the bioequivalence between ticagrelor 90mg
+				orodispersible tablets and ticagrelor IR tablets in 42 healthy
+				Japanese subjects, is complete (ClinicalTrials.gov, 8 May, 15 Jun
+				&amp; 31 Aug 2015 &amp; 11 Sep 2015,
+				https://www.clinicaltrials.gov/ct2/show/NCT02436577). Top-line
+				results are expected in the 4th qtr of 2015 (3rd Qtr Res,
+				AstraZeneca, 5 Nov 2015, Page 14,
+				https://www.astrazeneca.com/content/dam/az/our-company/investor-relations/presentations-and-webcast/AstraZeneca%20Clinical%20Trials%20Appendix%20Q3%202015%20Results.PDF).^An
+				open-label, randomized, 4-period, 4-treatment, crossover,
+				single-dose Phase I trial (D5139C00003) in Germany to evaluate the
+				bioavailability of ticagrelor orodispersible tablets (ODT)
+				administered with water, without water and suspended in water to be
+				administered through nasogastric tubes vs ticagrelor IR tablets in
+				36 healthy subjects (enrollment complete) (ClinicalTrials.gov, 3 Apr
+				2015, 18 Jun 2015, 8 Jul &amp; 10 Aug 2015,
+				https://www.clinicaltrials.gov/ct2/show/NCT02400333). Top-line
+				results are expected in the 4th qtr of 2015 (3rd Qtr Res,
+				AstraZeneca, 5 Nov 2015, Page 14,
+				https://www.astrazeneca.com/content/dam/az/our-company/investor-relations/presentations-and-webcast/AstraZeneca%20Clinical%20Trials%20Appendix%20Q3%202015%20Results.PDF)^An
+				open-label, randomized, crossover and potential parallel,
+				single-dose Phase I trial (D5130C00079) of ticagrelor 180mg and
+				acetylsalicylic acid in 258 healthy volunteers followed by
+				autologous in-vivo platelet transfusion to determine the effects of
+				platelet supplementation on the reversibility of platelet inhibition
+				in the US, is complete (ClinicalTrials.gov, 10 Dec 2012 &amp; 25 Apr
+				2014, http://clinicaltrials.gov/ct2/show/study/NCT01744288). ^It is
+				in an open-label, randomized, cross-over assignment, single-dose,
+				parallel-group Phase I trial (D5130L00067) in 40 hemodialysis
+				patients and healthy subjects with normal renal function in the US,
+				to compare the pharmacokinetics, pharmacodynamics, safety and
+				tolerability of ticagrelor 90mg po tablet (ClinicalTrials.gov, 20
+				Feb 2014, http://clinicaltrials.gov/ct2/show/NCT02022748). ^An
+				open-label, randomized, 3-period, 3-treatment, crossover,
+				single-dose Phase I trial (D5130C00076) to investigate the
+				bioavailability of ticagrelor 90mg po crushed tablets or when
+				administered through nasogastric tubes vs whole tablets in 36
+				healthy volunteers in India, the UK and the US, is complete
+				(ClinicalTrials.gov, 11 Jul &amp; 20 Sep 2013,
+				http://www.clinicaltrials.gov/show/NCT01887626). ^An open-label
+				Phase I trial (D5133C00001) to assess the pharmacokinetics of
+				single-dose ticagrelor 90mg po tablet in 12 healthy Japanese male
+				volunteers in Japan was completed (ClinicalTrials.gov, 25 May 2012
+				and 16 Jul 2012, http://clinicaltrials.gov/ct2/show/NCT01588626).
+				^An open-label, randomized, 3-treatment, 3-period cross-over Phase I
+				trial (D5130C00074) to assess the effect of cyclosporine 600mg on
+				the pharmacokinetics, safety, and tolerability of single-dose
+				ticagrelor 180mg po tablet and the effect of ticagrelor on the
+				pharmacokinetics, safety, and tolerability of cyclosporine in 20
+				healthy male subjects in the US was completed (ClinicalTrials.gov,
+				27 Jan 2012 and 10 Jul 2012,
+				http://clinicaltrials.gov/ct2/show/NCT01504906). ^A sequential,
+				open-label, crossover-assignment Phase I trial (D5130C00073) to
+				evaluate the drug-drug interaction and to compare the PK, safety and
+				tolerability of single-dose ticagrelor 90mg po immediate release
+				(IR) tablets on day 1 and 9 and venlafaxine 37.5mg po bid given
+				concomitantly in 22 healthy subjects aged 18 to 45 yr in Sweden and
+				the US was completed (ClinicalTrials.gov, 11 May 2011 and 2 Apr
+				2012, http://www.clinicaltrials.gov/show/NCT01350921). ^A
+				randomized, double-blind, placebo-controlled, crossover Phase I
+				trial (D5130C00067) to evaluate the effect of ticagrelor 180mg on
+				adenosine-induced coronary blood flow velocity in 39 healthy male
+				subjects in Sweden was completed (ClinicalTrials.gov, 22 Apr 2011,
+				http://clinicaltrials.gov/ct2/show/NCT01226602). ^Thrombosis,
+				unspecified^In a single-dose-escalating trial in healthy volunteers,
+				ticagrelor showed maximal platelet inhibition 2hr post dose, and
+				inhibition continued x24hr. In a steady-state trial in healthy
+				volunteers, ticagrelor resulted in greater antiplatelet effect and
+				lower variability cf clopidogrel hydrogen sulfate (Ann Bus Rev,
+				AstraZeneca, 6 Oct 2004).</PhaseI>
+			<Preclinical>In vivo^It had 40 and 86% bioavailability in rats and
+				dogs, respectively (225th ACS (New Orleans), 2003, MEDI 16).^In
+				preclinical studies, ticagrelor 200mg produced more consistent and
+				complete inhibition of ADP-induced platelet aggregation vs a loading
+				dose of 300mg clopidogrel hydrogen sulfate (Ann Bus Rev,
+				AstraZeneca, 7 Nov 2002).</Preclinical>
+		</KeyClinicalInformation>
+	</CASIS.TX>
+	<LatestChangeDate>20160223</LatestChangeDate>
+	<LatestChange>Revised timing of Chinese filing for myocardial
+		infarction, acute coronary syndrome and the EU approval for myocardial
+		infarction reported</LatestChange>
+	<CASIS.RDAT>
+		<KeyEvent>20131114 New Therapeutic Activity:Neuroprotective</KeyEvent>
+		<KeyEvent>20131114 New Disease:Ischaemia, cerebral</KeyEvent>
+		<KeyEvent>20121221 Change in Disease Status:Peripheral vascular
+			disease; Phase III Clinical Trial</KeyEvent>
+		<KeyEvent>20121129 Additional Registrations:China; Acute coronary
+			syndrome; Thrombosis, arterial</KeyEvent>
+		<KeyEvent>20121019 Additional Launches:India; Acute coronary syndrome
+		</KeyEvent>
+		<KeyEvent>20120815 Additional Launches:Australia; Various indications
+		</KeyEvent>
+		<KeyEvent>20120726 Additional Launches:Italy; Various indications
+		</KeyEvent>
+		<KeyEvent>20120717 New Disease:Peripheral vascular disease</KeyEvent>
+		<KeyEvent>20120715 Additional Launches:France; Acute coronary syndrome
+		</KeyEvent>
+		<KeyEvent>20120425 New Licensees:The Medicines Company; The US
+		</KeyEvent>
+		<KeyEvent>20110909 Additional Registrations:Various countries
+		</KeyEvent>
+		<KeyEvent>20110909 Additional Launches:Various countries</KeyEvent>
+		<KeyEvent>20110822 Additional Launches:The US</KeyEvent>
+		<KeyEvent>20110815 Additional Registrations:New Zealand</KeyEvent>
+		<KeyEvent>20110720 Additional Registrations:The US</KeyEvent>
+		<KeyEvent>20110720 Additional Registrations:Australia</KeyEvent>
+		<KeyEvent>20110601 Additional Registrations:Canada</KeyEvent>
+		<KeyEvent>20110127 Additional Registrations:Norway</KeyEvent>
+		<KeyEvent>20110127 Additional Registrations:Iceland</KeyEvent>
+		<KeyEvent>20110127 Additional Registrations:Brazil</KeyEvent>
+		<KeyEvent>20110127 Additional Launches:Germany</KeyEvent>
+		<KeyEvent>20110127 Additional Launches:Denmark</KeyEvent>
+		<KeyEvent>20110104 First Launches:The UK, NAS</KeyEvent>
+		<KeyEvent>20101206 First Registrations:The EU</KeyEvent>
+		<KeyEvent>20091026 Registration Submissions:The EU</KeyEvent>
+		<KeyEvent>20070823 New Chemical Structure:New</KeyEvent>
+		<KeyEvent>20070821 Names Granted:AZD-6140</KeyEvent>
+		<KeyEvent>20060202 Change in Global Status:Phase III Clinical Trial
+		</KeyEvent>
+		<KeyEvent>20031002 Change in Global Status:Phase II Clinical Trial
+		</KeyEvent>
+		<KeyEvent>20010726 Compounds Identified:P2X7 antagonists, AstraZeneca
+		</KeyEvent>
+		<KeyEvent>20010726 Change in Global Status:Phase I Clinical Trial
+		</KeyEvent>
+		<KeyEvent>20010407 New Product</KeyEvent>
+	</CASIS.RDAT>
+	<CASIS.DSTA>
+		<Country>World: Launched</Country>
+		<Country>AR: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>AU: Launched 2012; Licensing Availability: Unknown</Country>
+		<Country>AT: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>BE: Registered; Licensing Availability: Unknown</Country>
+		<Country>BR: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>CA: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>CL: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>CN: Launched; Licensing Availability: Unknown</Country>
+		<Country>CO: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>DK: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>SF: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>FR: Launched 2012; Licensing Availability: Unknown</Country>
+		<Country>DE: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>GR: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>HK: Phase III Clinical Trial; Licensing Availability: Unknown
+		</Country>
+		<Country>IN: Launched 2012; Licensing Availability: Unknown</Country>
+		<Country>IE: Registered; Licensing Availability: Unknown</Country>
+		<Country>IL: Phase III Clinical Trial; Licensing Availability: Unknown
+		</Country>
+		<Country>IT: Launched 2012; Licensing Availability: Unknown</Country>
+		<Country>JP: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>LU: Registered; Licensing Availability: Unknown</Country>
+		<Country>MY: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>MX: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>NL: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>NZ: Registered; Licensing Availability: Unknown</Country>
+		<Country>NO: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>PE: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>PH: Phase III Clinical Trial; Licensing Availability: Unknown
+		</Country>
+		<Country>PT: Registered; Licensing Availability: Unknown</Country>
+		<Country>RU: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>ZA: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>KR: Registered; Licensing Availability: Unknown</Country>
+		<Country>ES: Registered; Licensing Availability: Unknown</Country>
+		<Country>SE: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>CH: Phase III Clinical Trial; Licensing Availability: Unknown
+		</Country>
+		<Country>TH: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>TR: Pre-registration; Licensing Availability: Unknown
+		</Country>
+		<Country>UK: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>US: Launched 2011; Licensing Availability: Unknown</Country>
+		<Country>VE: Pre-registration; Licensing Availability: Unknown
+		</Country>
+	</CASIS.DSTA>
+	<CASIS.CO>
+		<Company>Originator: AstraZeneca: Launched</Company>
+		<Company>Licensee: The Medicines Company: Launched</Company>
+	</CASIS.CO>
+	<CASIS.LN>
+		<LN>Antithrombotic, other:Launched</LN>
+		<LN>Cardiovascular:Launched</LN>
+		<LN>Neuroprotective:Launched</LN>
+	</CASIS.LN>
+	<CASIS.USE>
+		<CASIS.ACT>
+			<ACT>Antithrombotic, other</ACT>
+			<ACT>Cardiovascular</ACT>
+			<ACT>Neuroprotective</ACT>
+		</CASIS.ACT>
+		<CASIS.MA>
+			<MA>Purinoreceptor P2Y12 antagonist</MA>
+		</CASIS.MA>
+		<CASIS.IND>
+			<IND>Acute coronary syndrome::Launched</IND>
+			<IND>Angina, unstable::Launched</IND>
+			<IND>Coronary artery bypass grafting::Launched</IND>
+			<IND>Infarction, myocardial::Launched</IND>
+			<IND>Ischaemia, cerebral::Phase III Clinical Trial</IND>
+			<IND>Peripheral vascular disease::Phase III Clinical Trial</IND>
+			<IND>Thrombosis, arterial::Launched</IND>
+			<IND>Thrombosis, unspecified::Phase II Clinical Trial</IND>
+		</CASIS.IND>
+	</CASIS.USE>
+	<DeliveryData>
+		<DeliveryRouteData>
+			<DeliveryRoute>Oral</DeliveryRoute>
+			<DeliveryRoute>Oral, swallowed</DeliveryRoute>
+		</DeliveryRouteData>
+		<DeliveryMediumData>
+			<DeliveryMedium>Tablet</DeliveryMedium>
+		</DeliveryMediumData>
+		<DeliveryTechnologyData>
+			<DeliveryTechnology>Immediate-release</DeliveryTechnology>
+			<DeliveryTechnology>Rapidly-disintegrating</DeliveryTechnology>
+		</DeliveryTechnologyData>
+	</DeliveryData>
+	<TargetData>
+		<Targets>
+			<Target>
+				<TargetName>purinergic receptor P2Y, G-protein-coupled, 12
+				</TargetName>
+				<EntrezGeneID>64805</EntrezGeneID>
+				<TargetTarget>
+					<TargetTargetFamilies>
+						<TargetTargetFamily>Receptor &gt; GPCR &gt; P2Y
+						</TargetTargetFamily>
+					</TargetTargetFamilies>
+				</TargetTarget>
+			</Target>
+		</Targets>
+	</TargetData>
+	<DrugURL>http://bayer-pipeline.citeline.com/CpViewAccess.aspx?B=25950&amp;C=0&amp;D=9
+	</DrugURL>
+	<CASIS.MDNUMBER>MD000001</CASIS.MDNUMBER>
+</Document>

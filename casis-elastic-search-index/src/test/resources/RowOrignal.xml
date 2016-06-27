@@ -1,0 +1,70 @@
+<Document>
+	<CASIS-DOCNO>DGL1421004</CASIS-DOCNO>
+	<CASIS-UPD>
+		<PublicationDate CCYYMMDD="20101228">28 Dec 2010
+		</PublicationDate>
+	</CASIS-UPD>
+	<LaunchDetails>
+		<LaunchDateComment />
+		<NewChemicalEntity />
+		<Ingredients>
+			<Ingredient>nabumetone</Ingredient>
+		</Ingredients>
+		<CASIS-USE>
+			<CASIS-ACT>
+				<Class>
+					<ClassCode>M1A</ClassCode>
+					<ClassDescription>Anti-rheumatics</ClassDescription>
+				</Class>
+			</CASIS-ACT>
+			<CASIS-IND>
+				<Indication>Inflammation, pain, fever.</Indication>
+			</CASIS-IND>
+		</CASIS-USE>
+		<CASIS-CN>
+			<BrandName>NABUMETONE</BrandName>
+		</CASIS-CN>
+		<CASIS-CO>
+			<CASIS-NORMALIZED-CO>Manufacturer: Sanis Health Inc
+			</CASIS-NORMALIZED-CO>
+			<CASIS-NORMALIZED-CO>SANIS HEALTH INC</CASIS-NORMALIZED-CO>
+			<Manufacturer>Sanis Health Inc</Manufacturer>
+			<Corporation>SANIS HEALTH INC</Corporation>
+		</CASIS-CO>
+		<CASIS-DSTA>
+			<CASIS-NORMALIZED-DSTA>CA: Launched 20100801</CASIS-NORMALIZED-DSTA>
+			<Country>Canada</Country>
+			<LaunchDate CCYYMM="20100801">01 Aug 2010</LaunchDate>
+		</CASIS-DSTA>
+		<CASIS-TX>
+			<Biotech>No</Biotech>
+			<Unbranded>Yes</Unbranded>
+		</CASIS-TX>
+		<CASIS-RN>
+			<CASInfo>
+				<CASItem />
+			</CASInfo>
+		</CASIS-RN>
+	</LaunchDetails>
+	<PackInfo>
+		<ExcipientInfo>
+			<Excipient />
+		</ExcipientInfo>
+		<PriceInfo>
+			<Price>tabs film-coated 100: CAD 47.940 (RPP)</Price>
+		</PriceInfo>
+		<DoseFormInfo>
+			<DoseForm>tabs film-coated</DoseForm>
+		</DoseFormInfo>
+		<NumberOfIngredients>1</NumberOfIngredients>
+		<CASIS-TX>
+			<CompositionInfo>
+				<Composition>tabs film-coated: nabumetone base, 500 mg</Composition>
+			</CompositionInfo>
+		</CASIS-TX>
+	</PackInfo>
+	<LaunchStatus>
+		<RecordStatus />
+	</LaunchStatus>
+	<CASIS-MDNUMBER>MD000001</CASIS-MDNUMBER>
+</Document>

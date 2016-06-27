@@ -1,0 +1,495 @@
+PUT /casisvm1
+{
+  "mappings": {
+    "casisdocs": {
+      "properties": {
+        "DOCNO": {
+          "type": "string"
+        },
+        "PART": {
+          "type": "string"
+        },
+        "UPD": {
+          "type": "string"
+        },
+        "SRC_DB": {
+          "type": "string"
+        },
+        "DATEINSERTED": {
+          "type": "string"
+        },
+        
+        "CASNO": {
+            "type": "string"
+          },
+        "CN": {
+            "type": "string"
+          },
+        "CO": {
+            "type": "string"
+          },
+        "CODE": {
+            "type": "string"
+          },
+        "COUNTRY": {
+            "type": "string"
+          },
+          
+        "CASIS_COMPANY": {
+          "properties": {
+            "CO": {
+              "type": "string"
+            },
+            "COUNTRY": {
+              "type": "string"
+            },
+            "SRC_DB": {
+              "type": "string"
+            },
+            "STATUS": {
+              "type": "string"
+            }
+          }
+        },
+        "CASIS_DEVSTATUS": {
+          "properties": {
+            "COUNTRY": {
+              "type": "string"
+            },
+            "DSTA": {
+              "type": "string"
+            },
+            "SRC_DB": {
+              "type": "string"
+            }
+          }
+        },
+        "CHEM_STRUCTURE_DATA": {
+          "properties": {
+            "MOLWEIGHT": {
+              "type": "string"
+            },
+            "LINK_SRC_DB": {
+              "type": "string"
+            },
+            "MOLDATE": {
+              "type": "string"
+            },
+            "MOLNAME": {
+              "type": "string"
+            },
+            "CASNO": {
+              "type": "string"
+            },
+            "MOLTABLE_SRC_DB": {
+              "type": "string"
+            },
+            "CDBREGNO": {
+              "type": "string"
+            },
+            "MDNUMBER": {
+              "type": "string"
+            }
+          }
+        },
+        "CASIS_COMPOUND": {
+          "properties": {
+          "CN": {
+            "type": "string"
+          },
+          "SRC_DB": {
+            "type": "string"
+          }
+        }
+          
+        },
+        "CASIS_USE": {
+          "properties": {
+            "CODE": {
+              "type": "string"
+            },
+            "SOURCE": {
+              "type": "string"
+            },
+            "THE_USE": {
+              "type": "string"
+            },
+            "SRC_DB": {
+              "type": "string"
+            }
+          }
+        },
+        "Document": {
+            "properties": {
+              "DATE": {
+                "type": "long"
+              },
+              "DERD": {
+                "type": "string"
+              },
+              "DIAG": {
+                "type": "long"
+              },
+              "DOCN": {
+                "type": "string"
+              },
+              "ETAL": {
+                "type": "string"
+              },
+              "EXNX": {
+                "type": "string"
+              },
+              "HAZF": {
+                "type": "string"
+              },
+              "INCI": {
+                "type": "string"
+              },
+              "INCK": {
+                "type": "string"
+              },
+              "INDX": {
+                "type": "string"
+              },
+              "INIT": {
+                "type": "string"
+              },
+              "LITR": {
+                "type": "string"
+              },
+              "MASS": {
+                "type": "double"
+              },
+              "MOLF": {
+                "type": "string"
+              },
+              "MOLW": {
+                "type": "double"
+              },
+              "NAME": {
+                "type": "string"
+              },
+              "OPTR": {
+                "type": "string"
+              },
+              "PAGE": {
+                "type": "long"
+              },
+              "PHYS": {
+                "type": "string"
+              },
+              "PROG": {
+                "type": "string"
+              },
+              "REFX": {
+                "type": "string"
+              },
+              "RKEY": {
+                "type": "string"
+              },
+              "RSRT": {
+                "type": "string"
+              },
+              "RTAG": {
+                "type": "string"
+              },
+              "SUBS": {
+                "type": "string"
+              },
+              "SURN": {
+                "type": "string"
+              },
+              "TITL": {
+                "type": "string"
+              },
+              "TOCN": {
+                "type": "string"
+              },
+              "TX": {
+                "type": "string"
+              },
+              "UKEY": {
+                "type": "string"
+              },
+              "UVUV": {
+                "type": "string"
+              },
+              "VARD": {
+                "type": "string"
+              },
+              "VOLN": {
+                "type": "long"
+              },
+              "CASIS-LITR": {
+                "properties": {
+                  "REFERENCES": {
+                    "type": "string"
+                  }
+                }
+              },
+              "CASIS-MDNUMBER": {
+                "type": "string"
+              },
+              "CASIS-SORC": {
+                "properties": {
+                  "SOURCE": {
+                    "type": "string"
+                  }
+                }
+              },
+              "CASIS-USE": {
+                "properties": {
+                  "CASIS-ACT": {
+                    "properties": {
+                      "ACTIVITY": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "GROUP": {
+                "type": "string"
+              },
+              "HRMS": {
+                "type": "double"
+              },
+              "HRMSN": {
+                "type": "double"
+              },
+              "HRMSNa": {
+                "type": "double"
+              },
+              "HRMSP": {
+                "type": "double"
+              },
+              "CASIS-UPD": {
+                "properties": {
+                  "PublicationDate": {
+                    "properties": {
+                      "CCYYMMDD": {
+                        "type": "date",
+                        "format": "yyyyMMdd"
+                      },
+                      "content": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "LaunchDetails": {
+                "properties": {
+                  "CASIS-CN": {
+                    "properties": {
+                      "BrandName": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "CASIS-CO": {
+                    "properties": {
+                      "CASIS-NORMALIZED-CO": {
+                        "type": "string"
+                      },
+                      "Corporation": {
+                        "type": "string"
+                      },
+                      "Manufacturer": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "CASIS-DSTA": {
+                    "properties": {
+                      "CASIS-NORMALIZED-DSTA": {
+                        "type": "string"
+                      },
+                      "Country": {
+                        "type": "string"
+                      },
+                      "LaunchDate": {
+                        "properties": {
+                          "CCYYMM": {
+                            "type": "date",
+                            "format": "yyyyMMdd"
+                          },
+                          "content": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "CASIS-RN": {
+                    "properties": {
+                      "CASInfo": {
+                        "properties": {
+                          "CASItem": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "CASIS-TX": {
+                    "properties": {
+                      "Biotech": {
+                        "type": "string"
+                      },
+                      "Unbranded": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "CASIS-USE": {
+                    "properties": {
+                      "CASIS-ACT": {
+                        "properties": {
+                          "Class": {
+                            "properties": {
+                              "ClassCode": {
+                                "type": "string"
+                              },
+                              "ClassDescription": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "CASIS-IND": {
+                        "properties": {
+                          "Indication": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "CASISRN": {
+                    "properties": {
+                      "CASInfo": {
+                        "properties": {
+                          "CASItem": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Ingredients": {
+                    "properties": {
+                      "Ingredient": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "LaunchDateComment": {
+                    "type": "string"
+                  },
+                  "NewChemicalEntity": {
+                    "type": "string"
+                  }
+                }
+              },
+              "LaunchStatus": {
+                "properties": {
+                  "RecordStatus": {
+                    "type": "string"
+                  }
+                }
+              },
+              "PackInfo": {
+                "properties": {
+                  "CASIS-TX": {
+                    "properties": {
+                      "CompositionInfo": {
+                        "properties": {
+                          "Composition": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DoseFormInfo": {
+                    "properties": {
+                      "DoseForm": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "ExcipientInfo": {
+                    "properties": {
+                      "Excipient": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "NumberOfIngredients": {
+                    "type": "long"
+                  },
+                  "PriceInfo": {
+                    "properties": {
+                      "Price": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "BSRC": {
+               "type": "string"
+              },
+              "CASIS-DOCN": {
+                "properties": {
+                  "CA": {
+                    "type": "string"
+                  }
+                }
+              },
+              
+              "CASIS-RN": {
+                "properties": {
+                  "CASM": {
+                    "type": "string"
+                  }
+                }
+              },
+              "CASIS-TX": {
+                "properties": {
+                  "REMARKS": {
+                    "type": "string"
+                  }
+                }
+              },
+              "COMP": {
+                "type": "string"
+              },
+              "CTFL": {
+                "type": "string"
+              },
+              "C-NMR": {
+                "type": "string"
+              },
+              "CASIS-CN": {
+                "properties": {
+                  "NAME": {
+                    "type": "string"
+                  }
+                }
+              },
+              "CASIS-DOCNO": {
+                "properties": {
+                  "ID": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+}

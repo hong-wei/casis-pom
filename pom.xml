@@ -1,0 +1,113 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.bayer.casis</groupId>
+	<artifactId>casis-pom</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>de.osthus</groupId>
+		<artifactId>osthus-pom</artifactId>
+		<version>0.0.35</version>
+	</parent>
+
+	<properties>
+		<applicationName>casis-pom</applicationName>
+		<version.ambeth>2.3.287</version.ambeth>
+	</properties>
+
+	<modules>
+		<module>casis-chemical-structure-rest</module>
+		<module>casis-elastic-search-rest</module>
+		<module>casis-elastic-search-index</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>de.osthus.ambeth</groupId>
+				<artifactId>jambeth-tomcat</artifactId>
+				<version>${version.ambeth}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.osthus.ambeth</groupId>
+				<artifactId>jambeth-server-rest</artifactId>
+				<version>${version.ambeth}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.osthus.ambeth</groupId>
+				<artifactId>jambeth-job-cron4j</artifactId>
+				<version>${version.ambeth}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>de.osthus.ambeth</groupId>
+				<artifactId>jambeth-ioc-test</artifactId>
+				<version>${version.ambeth}</version>
+			</dependency>
+
+<!-- 		<dependency> -->
+<!-- 				<groupId>de.osthus.ambeth</groupId> -->
+<!-- 				<artifactId>jambeth-persistence-jdbc </artifactId> -->
+<!-- 				<version>${version.ambeth}</version> -->
+<!-- 			</dependency> -->
+<!-- 			<dependency> -->
+<!-- 				<groupId>de.osthus.ambeth</groupId> -->
+<!-- 				<artifactId>jambeth-persistence-oracle11 </artifactId> -->
+<!-- 				<version>${version.ambeth}</version> -->
+<!-- 			</dependency> -->
+			<!-- <dependency> <groupId>de.osthus.ambeth</groupId> <artifactId>jambeth-core</artifactId> 
+				<version>${version.ambeth}</version> </dependency> -->
+			<dependency>
+				<groupId>de.osthus.ambeth</groupId>
+				<artifactId>jambeth-core-test</artifactId>
+				<version>${version.ambeth}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>http://${webserver.host}:${webserver.port}/manager/text</url>
+					<server>${server.id}</server>
+					<path>${application.context}</path>
+					<!-- Port for locally started Tomcat servers: mvn tomcat:run -->
+					<port>${local.server.port}</port>
+					<path>/${project.build.finalName}</path>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>method-file-service-server-local</id>
+			<activation>
+				<property>
+					<name>!deploy.env</name>
+				</property>
+			</activation>
+			<properties>
+				<webserver.host>localhost</webserver.host>
+				<webserver.port>9090</webserver.port>
+				<deploy.env>test</deploy.env>
+				<local.server.port>8089</local.server.port>
+				<server.id>tomcat</server.id>
+			</properties>
+		</profile>
+	</profiles>
+</project>

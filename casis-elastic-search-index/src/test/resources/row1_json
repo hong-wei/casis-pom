@@ -1,0 +1,78 @@
+{  
+   "Document":{  
+      "LaunchDetails":{  
+         "LaunchDateComment":"",
+         "Ingredients":{  
+            "Ingredient":"various vitamins and minerals"
+         },
+         "NewChemicalEntity":"",
+         "CASIS-DSTA":{  
+            "LaunchDate":{  
+               "content":"01 Jan 2000",
+               "CCYYMM":20000101
+            },
+            "CASIS-NORMALIZED-DSTA":"PK: Launched 20000101",
+            "Country":"Pakistan"
+         },
+         "CASIS-CO":{  
+            "Manufacturer":"Flow Phar-",
+            "Corporation":"FLOW PHAR-",
+            "CASIS-NORMALIZED-CO":[  
+               "Manufacturer: Flow Phar-",
+               "FLOW PHAR-"
+            ]
+         },
+         "CASIS-RN":{  
+            "CASInfo":{  
+               "CASItem":""
+            }
+         },
+         "CASIS-CN":{  
+            "BrandName":"C-FORTE"
+         },
+         "CASIS-TX":{  
+            "Unbranded":"No",
+            "Biotech":"No"
+         },
+         "CASIS-USE":{  
+            "CASIS-ACT":{  
+               "Class":{  
+                  "ClassDescription":"Multivitamins with Minerals",
+                  "ClassCode":"A11A"
+               }
+            },
+            "CASIS-IND":{  
+               "Indication":"Vitamin and mineral supplementation"
+            }
+         }
+      },
+      "LaunchStatus":{  
+         "RecordStatus":""
+      },
+      "CASIS-UPD":{  
+         "PublicationDate":{  
+            "content":"28 Nov 2001",
+            "CCYYMMDD":20011128
+         }
+      },
+      "CASIS-DOCNO":"DGL1235379",
+      "PackInfo":{  
+         "PriceInfo":{  
+            "Price":"tabs coated 30: PKR 93-500 (RPP)"
+         },
+         "NumberOfIngredients":1,
+         "ExcipientInfo":{  
+            "Excipient":""
+         },
+         "DoseFormInfo":{  
+            "DoseForm":"tabs coated"
+         },
+         "CASIS-TX":{  
+            "CompositionInfo":{  
+               "Composition":"tabs coated: various vitamins and minerals"
+            }
+         }
+      },
+      "CASIS-MDNUMBER":"MD000001"
+   }
+}

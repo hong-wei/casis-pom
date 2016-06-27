@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<UKEY>00335638- -000</UKEY>
+	<TX>Main Compound</TX>
+	<REFX />
+	<SUBS>D1</SUBS>
+	<SUBS>E0</SUBS>
+	<CASIS.DOCNO>
+		<EXNO>CHJJW74</EXNO>
+	</CASIS.DOCNO>
+	<CASIS.UPD>20151005</CASIS.UPD>
+	<PROG>O</PROG>
+	<NAME>Myxochelin A</NAME>
+	<DOCN>M-001940 &lt;b&gt;V0&lt;/b&gt;</DOCN>
+	<DIAG>1</DIAG>
+	<CASIS.CN>
+		<SYNS>,&apos;-[1-(Hydroxymethyl)-1,5-pentanediyl]bis[2,3-dihydroxybenzamide],
+			ll&gt;9CIall&gt;</SYNS>
+	</CASIS.CN>
+	<CASIS.CN>
+		<SYNS>&gt;2p&gt;,&gt;6p&gt;-Bis(2,3-dihydroxybenzoyl)lysinol</SYNS>
+	</CASIS.CN>
+	<INDX>Myxochelin A</INDX>
+	<CASIS.RN>
+		<CASM>00120243029</CASM>
+	</CASIS.RN>
+	<CTFL>N</CTFL>
+	<MOLF>C&lt;sub&gt;20&lt;/sub&gt;H&lt;sub&gt;24&lt;/sub&gt;N&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;7&lt;/sub&gt;
+	</MOLF>
+	<MOLW>404.419</MOLW>
+	<MASS>404.158353</MASS>
+	<COMP>C 59.40%; H 5.98%; N 6.93%; O 27.69%</COMP>
+	<BSRC>Prod. by ngiococcus disciformis strain An d30, onomuraea pusilla
+		TP-A0861, yxidicoccus fallax HKI 727 and tigmatella aurantiaca Sg a15
+	</BSRC>
+	<DUIM>Siderophore. Inhibitor of human 5-lipoxygenase</DUIM>
+	<PHYS>Amorph. solid</PHYS>
+	<SOLP>Sol. MeOH, CHCl&gt;3b&gt;, EtOAc; fairly sol. Et&gt;2b&gt;O;
+		poorly sol. hexane</SOLP>
+	<OPTR>[Î±]n style=&quot;font-size:6pt; position: relative; top:
+		-6px;&quot;&gt;21an&gt;n style=&quot;font-size:6pt; position:
+		relative; top: 2px; left: -9px;&quot;&gt;Dan&gt;-16.5 (c, 0.85 in
+		MeOH)</OPTR>
+	<MISC>Related to Azotochelin #CKQ45-E</MISC>
+	<UVUV>[neutral] Î»&gt;maxb&gt; 210 (Îµ 57500); 245 (sh) (Îµ 20000); 310
+		(Îµ 7940) (MeOH) (Derep)</UVUV>
+	<HAZF>N</HAZF>
+	<TOCN>Polyamine alkaloids PA4 (putrescines)</TOCN>
+	<TOCN>Eubacteria (other than actinomycetes and cyanobacteria)</TOCN>
+	<RKEY>00335638-01</RKEY>
+	<RSRT>001</RSRT>
+	<SURN>Kunze</SURN>
+	<INIT>B.</INIT>
+	<ETAL>Y</ETAL>
+	<TITL>J. Antibiot.</TITL>
+	<DATE>1989</DATE>
+	<VOLN>42</VOLN>
+	<PAGE>14-17</PAGE>
+	<RTAG>Myxochelin A, isol, activity</RTAG>
+	<RKEY>00335638-02</RKEY>
+	<RSRT>002</RSRT>
+	<SURN>Ambrosi</SURN>
+	<INIT>H.-D.</INIT>
+	<ETAL>Y</ETAL>
+	<TITL>Eur. J. Org. Chem.</TITL>
+	<DATE>1998</DATE>
+	<PAGE>541-551</PAGE>
+	<RTAG>Myxochelins B,C</RTAG>
+	<RKEY>00335638-03</RKEY>
+	<RSRT>003</RSRT>
+	<SURN>Silakowski</SURN>
+	<INIT>B.</INIT>
+	<ETAL>Y</ETAL>
+	<TITL>Eur. J. Biochem.</TITL>
+	<DATE>2000</DATE>
+	<VOLN>267</VOLN>
+	<PAGE>6476-6485</PAGE>
+	<RTAG>Stigmatella constits, biosynth</RTAG>
+	<RKEY>00335638-04</RKEY>
+	<RSRT>004</RSRT>
+	<SURN>Miyanaga</SURN>
+	<INIT>S.</INIT>
+	<ETAL>Y</ETAL>
+	<TITL>J. Antibiot.</TITL>
+	<DATE>2006</DATE>
+	<VOLN>59</VOLN>
+	<PAGE>698-703</PAGE>
+	<RTAG>Myxochelin A, synth, abs config</RTAG>
+	<RKEY>00335638-05</RKEY>
+	<RSRT>005</RSRT>
+	<SURN>Li</SURN>
+	<INIT>Y.</INIT>
+	<ETAL>Y</ETAL>
+	<TITL>JACS</TITL>
+	<DATE>2008</DATE>
+	<VOLN>130</VOLN>
+	<PAGE>7554-7555</PAGE>
+	<RTAG>biosynth</RTAG>
+	<INCK>WNBVGSNESTZACV-UHFFFAOYSA-N</INCK>
+	<INCI>InChI=1S/C20H24N2O7/c23-11-12(22-20(29)14-7-4-9-16(25)18(14)27)5-1-2-10-21-19(28)13-6-3-8-15(24)17(13)26/h3-4,6-9,12,23-27H,1-2,5,10-11H2,(H,21,28)(H,22,29)
+	</INCI>
+	<LITR>Kunze, B. et al., J. Antibiot., 1989, 42, 14-17 (Myxochelin A,
+		isol, activity)</LITR>
+	<LITR>Ambrosi, H.-D. et al., Eur. J. Org. Chem., 1998, 541-551
+		(Myxochelins B,C)</LITR>
+	<LITR>Silakowski, B. et al., Eur. J. Biochem., 2000, 267, 6476-6485
+		(Stigmatella constits, biosynth)</LITR>
+	<LITR>Miyanaga, S. et al., J. Antibiot., 2006, 59, 698-703 (Myxochelin
+		A, synth, abs config)</LITR>
+	<LITR>Li, Y. et al., JACS, 2008, 130, 7554-7555 (biosynth)</LITR>
+	<CASIS.MDNUMBER>MD071841    </CASIS.MDNUMBER>
+</Document>
