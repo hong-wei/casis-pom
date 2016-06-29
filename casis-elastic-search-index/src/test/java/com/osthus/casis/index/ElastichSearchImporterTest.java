@@ -1,9 +1,14 @@
 package com.osthus.casis.index;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Timestamp;
 
 import org.json.JSONArray;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -21,6 +26,7 @@ import io.searchbox.core.SearchResult;
 public class ElastichSearchImporterTest  extends AbstractIocTest{
 
 	private final String esIndex= "bb";
+	private final String tableName= "CASIS_DOCUMENT_RUNS";
 	private final int esPageSize= 2;
 	private final int esPageCount= 1;
 	private JestClient clinet = ElasticSearchUtil.getEsClinet();
@@ -31,9 +37,19 @@ public class ElastichSearchImporterTest  extends AbstractIocTest{
 //	@Autowired
 //	protected  IConnectionFactory connectionFactoryService;
 	
+	private Connection conn;
+
+	@Autowired
+	protected JdbcDao jdbcDaoService;
+
+	@Before
+	public void before() {
+		conn = DBManager.getConn();
+	}
+	
 	@Test
 	public void importFromOralcePartTest() throws Exception {
-		elastichSearchImporterService.importFromOralce(esPageSize, esPageCount,esIndex);
+		elastichSearchImporterService.importFromOralce(esPageSize, esPageCount,esIndex,tableName);
 		
 		Thread.sleep(1000);//supend 1 s
 		String query1 = "{\r\n" + 
@@ -76,7 +92,7 @@ public class ElastichSearchImporterTest  extends AbstractIocTest{
 	@Test
 	// index the whole database.
 	public void importFromOralceTest() throws Exception {
-//		elastichSearchImporterService.importFromOralce(1000, 0, esIndex);
+		elastichSearchImporterService.importFromOralce(2, 2, esIndex,tableName);
 	}
 	
 	@Test
@@ -133,7 +149,56 @@ public class ElastichSearchImporterTest  extends AbstractIocTest{
 	
 	
 	@Test
-	public void getXXXX2Test() throws Exception {
+	public void importFromOralceUpdateEsTest() throws Exception {
+		java.util.Date date = new java.util.Date();
+		long t = date.getTime();
+		// case 1:if(lastHourUpdate.getLastCasisIndexTimestamp().getTime()<=lastHourUpdate.getLastIngestedRecordTs().getTime())
+		Timestamp endTs = new Timestamp(t);
+		Timestamp lastCasisIndexTimestamp=new Timestamp(t);
+		String sqlInsert = "INSERT INTO CASIS2_BG_INGEST_RUNS2 (START_TS,END_TS,LAST_INGESTED_RECORD_TS,LOADING_PROCESS_ACTIVE) VALUES (?,?,?,?) ";
+		String loadingProcessActive = null;
+		Timestamp lastIngestedRecordTs = null ;
+		Timestamp startTs = null;
+		
+		String loadingProcessActiveTest="N";
+		Timestamp lastIngestedRecordTsTest =new Timestamp(t);
+		Timestamp startTsTest=new Timestamp(t);
+
+		LastHourState lastHourUpdate = new LastHourState();
+
+		lastHourUpdate.setEndTs(endTs);
+		lastHourUpdate.setLastIngestedRecordTs(lastIngestedRecordTsTest);
+		lastHourUpdate.setLoadingProcessActive(loadingProcessActiveTest);
+		
+		lastHourUpdate.setLastCasisIndexTimestamp(lastCasisIndexTimestamp);
+		elastichSearchImporterService.importFromOralceUpdateEs(conn,lastHourUpdate,startTsTest);
+		
+		// check results
+		String sqlCheckLastRunTable = "select * from CASIS2_BG_INGEST_RUNS2 where START_TS = ?";
+		try (PreparedStatement ps = conn.prepareStatement(sqlCheckLastRunTable);){
+			ps.setTimestamp(1, startTsTest);
+			try (ResultSet resultSet = ps.executeQuery();) {
+				while (resultSet.next()) {
+					startTs = resultSet.getTimestamp("START_TS");
+					lastIngestedRecordTs = resultSet.getTimestamp("LAST_INGESTED_RECORD_TS");
+					loadingProcessActive = resultSet.getString("LOADING_PROCESS_ACTIVE");
+				}
+			}	
+		}
+		
+	
+		Assert.assertEquals(startTsTest,startTs);
+		Assert.assertEquals(lastIngestedRecordTsTest, lastIngestedRecordTs);
+		Assert.assertEquals(loadingProcessActiveTest, loadingProcessActive);
+		
+		// delete the database
+		String sqlDeleteTestRow = "DELETE CASIS2_BG_INGEST_RUNS2 where START_TS=?";
+		try (PreparedStatement ps = conn.prepareStatement(sqlDeleteTestRow);){
+			ps.setTimestamp(1, startTs);
+			try (ResultSet resultSet = ps.executeQuery();) {
+				
+			}	
+		}
 		
 	}
 	@Test
@@ -141,4 +206,9 @@ public class ElastichSearchImporterTest  extends AbstractIocTest{
 		
 	}
 	
+	@After
+	public void after() {
+		DBManager.closeConn(conn);
+		// client.shutdownClient();
+	}
 }

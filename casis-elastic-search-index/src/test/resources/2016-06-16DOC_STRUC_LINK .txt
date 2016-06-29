@@ -24,7 +24,7 @@
 --    IF INSERTING then
 --        SELECT DOC_STRUC_LINK_SEQU.NEXTVAL INTO :NEW.ID FROM DUAL;
 --        :NEW.Version := 1;
---        :NEW.UPDATE_TIMESTAMP := SYSDATE; 
+--        :NEW.UPDATE_TIMESTAMP := SYSTIMESTAMP; 
 --    ELSIF UPDATING then
 --        :NEW.Version := :OLD.Version +1;
 --    ELSE

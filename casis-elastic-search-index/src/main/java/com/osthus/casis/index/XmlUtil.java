@@ -38,9 +38,8 @@ public class XmlUtil {
 	@LogInstance
 	private static ILogger log;
 
-	public String renameTagsDotToMinus(String value)
-			throws TransformerFactoryConfigurationError, TransformerConfigurationException, TransformerException,
-			ParserConfigurationException, SAXException, IOException {
+	public String renameTagsDotToMinus(String value) throws ParserConfigurationException, SAXException, IOException, TransformerException
+			{
 		Document doc = convertStringToXmlDocumnet(value);
 		loopRenameTagsDotToMinus(doc, doc.getDocumentElement());
 
@@ -54,8 +53,8 @@ public class XmlUtil {
 		return output;
 	}
 
-	public Document convertStringToXmlDocumnet(String xmlStr)
-			throws ParserConfigurationException, SAXException, IOException {
+	public Document convertStringToXmlDocumnet(String xmlStr) throws ParserConfigurationException, SAXException, IOException
+			 {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder;
 		Document doc = null;
@@ -96,7 +95,7 @@ public class XmlUtil {
 
 	// TODO0 refactory -- 6  change String to String Buffer
 	public void getNodesValue(org.dom4j.Element node, org.dom4j.Element root, String parentString,
-			Map<String, ArrayList<String>> map) throws DocumentException {
+			Map<String, ArrayList<String>> map) {
 		List<org.dom4j.Element> listElement = node.elements();
 
 		if (node == root)
@@ -138,8 +137,8 @@ public class XmlUtil {
 		}
 	}
 
-	public HashMap<String, ArrayList<String>> getXmlKeyValuesPairs(String valueUnderline)
-			throws DocumentException, ParserConfigurationException, SAXException, IOException {
+	public HashMap<String, ArrayList<String>> getXmlKeyValuesPairs(String valueUnderline) throws ParserConfigurationException, SAXException, IOException, DocumentException
+			  {
 		String parentString = "";
 		HashMap<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
 		Document doc = convertStringToXmlDocumnet(valueUnderline);

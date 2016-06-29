@@ -13,32 +13,62 @@
 		<tomcat.version>8.0.26</tomcat.version>
 	</properties>
 
+<repositories>
+		<repository>
+			<id>JBoss repository</id>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+		</repository>
+	</repositories>
+	
+	
 	<dependencies>
+	<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>2.2.1.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>2.2.1.GA</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>de.osthus.ambeth</groupId>
 			<artifactId>jambeth-server-rest</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.bayer.casis</groupId>
-			<artifactId>casis-elastic-search-index</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.bayer.casis</groupId> -->
+<!-- 			<artifactId>casis-elastic-search-index</artifactId> -->
+<!-- 			<version>0.0.1-SNAPSHOT</version> -->
+<!-- 		</dependency> -->
 
-		<dependency>
-			<groupId>de.osthus.ambeth</groupId>
-			<artifactId>jambeth-tomcat</artifactId>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>de.osthus.ambeth</groupId> -->
+<!-- 			<artifactId>jambeth-tomcat</artifactId> -->
+<!-- 		</dependency> -->
 
-		<dependency>
-			<groupId>de.osthus.ambeth</groupId>
-			<artifactId>jambeth-ioc-test</artifactId>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>de.osthus.ambeth</groupId> -->
+<!-- 			<artifactId>jambeth-ioc-test</artifactId> -->
+<!-- 		</dependency> -->
 
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-servlet</artifactId>
-			<version>1.19.1</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.sun.jersey</groupId> -->
+<!-- 			<artifactId>jersey-servlet</artifactId> -->
+<!-- 			<version>1.19.1</version> -->
+<!-- 		</dependency> -->
+	<dependency>
+		<groupId>org.glassfish.jersey.core</groupId>
+		<artifactId>jersey-server</artifactId>
+		<version>2.17</version>
+	</dependency>
+	<dependency>
+		<groupId>org.glassfish.jersey.containers</groupId>
+		<artifactId>jersey-container-servlet-core</artifactId>
+		<version>2.17</version>
+	</dependency>
 
 		<!--Add Jest as a dependency to your project. -->
 		<dependency>
@@ -71,14 +101,14 @@
 	<build>
 		<finalName>${applicationName}</finalName>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.5</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-war-plugin</artifactId> -->
+<!-- 				<version>2.5</version> -->
+<!-- 				<configuration> -->
+<!-- 					<failOnMissingWebXml>false</failOnMissingWebXml> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
 
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>

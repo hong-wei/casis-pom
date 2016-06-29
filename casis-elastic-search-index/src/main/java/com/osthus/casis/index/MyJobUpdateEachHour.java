@@ -3,6 +3,7 @@ package com.osthus.casis.index;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.Date;
 
 import javax.xml.transform.TransformerException;
@@ -59,25 +60,19 @@ public class MyJobUpdateEachHour implements IJob
 	@Override
 	public void execute(IJobContext context) throws Throwable
 	{
-		System.out.println(Thread.currentThread().getId() + " current time:" + new Date());
+//		System.out.println(Thread.currentThread().getId() + " current time:" + new Date());
+		
+		java.util.Date date = new java.util.Date();
+		long t = date.getTime();
+		Timestamp startTs = new Timestamp(t);
 		
 		Connection conn=DBManager.getConn();  
-		LastHourState checkLastHourUpdate = jdbcDaoService.checkLastHourUpdate(conn);
-		//
-//		if (checkLastHourUpdate.isTriggerUpdateIndexFlag()) {
-		if (true){ // test
-			try {
-				elastichSearchImporter.importFromOralce(conn,checkLastHourUpdate.getCasis2bIngestRunsState(), "aa");
-//				jdbcDaoService.deleteAllTables(conn);
-				log.info("update the date to ES"); 
-				System.out.println("update the date to ES");
-			} catch (JSONException | SQLException | IOException | TransformerException | DocumentException e) {
-				log.error("JSONException | SQLException | IOException | TransformerException | DocumentException", e);
-			} catch (Exception e) {
-				log.info("Exception", e);
-			}
-		}
+		LastHourState lastHourUpdate=jdbcDaoService.queryLastTsFromCasisTableAndPreviousRunTable(conn);
+		elastichSearchImporter.importFromOralceUpdateEs(conn,lastHourUpdate,startTs);
 		DBManager.closeConn(conn); 
+		
+//		importFromOralce(conn,checkLastHourUpdate.getResultCBIR(), "aa");
+		
 	}
 
 }

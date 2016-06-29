@@ -1,32 +1,66 @@
 package com.osthus.casis.index;
 
+import java.sql.Timestamp;
+
 import org.json.JSONArray;
 
 public class LastHourState {
-	// last hour do not update in oralce , and there are data in Runs_table
-	private boolean triggerUpdateIndexFlag;
-	private JSONArray casis2bIngestRunsState = new JSONArray();
-	private JSONArray lastHourAllTableState = new JSONArray();
+	private Timestamp lastCasisIndexTimestamp = null;
+	private Timestamp startTs = null;
+	private Timestamp endTs = null;
+	private Timestamp lastIngestedRecordTs = null;
+	private String loadingProcessActive = null;
 	
-	
-	public boolean isTriggerUpdateIndexFlag() {
-		return triggerUpdateIndexFlag;
-	}
-	public void setTriggerUpdateIndexFlag(boolean triggerUpdateIndexFlag) {
-		this.triggerUpdateIndexFlag = triggerUpdateIndexFlag;
-	}
-	public JSONArray getCasis2bIngestRunsState() {
-		return casis2bIngestRunsState;
-	}
-	public void setCasis2bIngestRunsState(JSONArray casis2bIngestRunsState) {
-		this.casis2bIngestRunsState = casis2bIngestRunsState;
-	}
-	public JSONArray getLastHourAllTableState() {
-		return lastHourAllTableState;
-	}
-	public void setLastHourAllTableState(JSONArray lastHourAllTableState) {
-		this.lastHourAllTableState = lastHourAllTableState;
+	private JSONArray allRowsFromLastESIngest = new JSONArray();
+
+	public Timestamp getLastCasisIndexTimestamp() {
+		return lastCasisIndexTimestamp;
 	}
 
+	public void setLastCasisIndexTimestamp(Timestamp lastCasisIndexTimestamp) {
+		this.lastCasisIndexTimestamp = lastCasisIndexTimestamp;
+	}
+
+	public Timestamp getStartTs() {
+		return startTs;
+	}
+
+	public void setStartTs(Timestamp startTs) {
+		this.startTs = startTs;
+	}
+
+	public Timestamp getEndTs() {
+		return endTs;
+	}
+
+	public void setEndTs(Timestamp endTs) {
+		this.endTs = endTs;
+	}
+
+	public Timestamp getLastIngestedRecordTs() {
+		return lastIngestedRecordTs;
+	}
+
+	public void setLastIngestedRecordTs(Timestamp lastIngestedRecordTs) {
+		this.lastIngestedRecordTs = lastIngestedRecordTs;
+	}
+
+	public String getLoadingProcessActive() {
+		return loadingProcessActive;
+	}
+
+	public void setLoadingProcessActive(String loadingProcessActive) {
+		this.loadingProcessActive = loadingProcessActive;
+	}
+
+	public JSONArray getAllRowsFromLastESIngest() {
+		return allRowsFromLastESIngest;
+	}
+
+	public void setAllRowsFromLastESIngest(JSONArray allRowsFromLastESIngest) {
+		this.allRowsFromLastESIngest = allRowsFromLastESIngest;
+	}
+	
+	
 
 }

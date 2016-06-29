@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactoryConfigurationError;
 
 import org.apache.commons.lang3.StringUtils;
 import org.codehaus.jackson.JsonGenerationException;
@@ -134,9 +136,8 @@ public class JsonUtil {
 		return map;
 	}
 
-	public JSONArray resultSetToJsonDocument(ResultSet rs)
-			throws SQLException, JSONException, JsonGenerationException, JsonMappingException, IOException,
-			TransformerException, DocumentException, ParserConfigurationException, SAXException {
+	public JSONArray resultSetToJsonDocument(ResultSet rs) throws SQLException, TransformerConfigurationException, TransformerFactoryConfigurationError, TransformerException, ParserConfigurationException, SAXException, IOException, DocumentException
+			  {
 		JSONArray array = new JSONArray();
 
 		ResultSetMetaData metaData = rs.getMetaData();
