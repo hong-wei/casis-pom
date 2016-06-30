@@ -2,6 +2,7 @@ package com.osthus.casis.client;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
@@ -9,8 +10,6 @@ import org.junit.Test;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import de.osthus.ambeth.collections.HashMap;
 
 //https://github.com/searchbox-io/Jest/tree/master/jest
 

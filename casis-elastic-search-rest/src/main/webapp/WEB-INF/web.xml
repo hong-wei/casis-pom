@@ -9,11 +9,16 @@
 <!-- 		<param-value>true</param-value> -->
 <!-- 	</context-param> -->
 
+<!-- 	<context-param> -->
+<!-- 		<param-name>resteasy.resources</param-name> -->
+<!-- 		<param-value>com.mkyong.rest.JSONService</param-value> -->
+<!-- 	</context-param> -->
+
 	<context-param>
 		<param-name>resteasy.resources</param-name>
-		<param-value>com.mkyong.rest.JSONService</param-value>
+		<param-value>com.osthus.casis.web.CasisRestController</param-value>
 	</context-param>
-
+	
 	<listener>
 		<listener-class>
 			org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
