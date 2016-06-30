@@ -10,7 +10,7 @@
 //
 //import com.osthus.casis.web.CasisRestController;
 //
-//@ApplicationPath("")
+//@ApplicationPath("/foo")
 //public class CasisApplication extends Application
 //{
 //	@Override
@@ -22,4 +22,20 @@
 //		return classes;
 //	}
 //
+//}
+
+//package com.osthus.casis.web.app;
+//
+//import java.util.Collections;
+//import java.util.Set;
+//import javax.ws.rs.ApplicationPath;
+//import javax.ws.rs.core.Application;
+//
+//@ApplicationPath("/foo")
+//public class CasisApplication extends Application {
+//
+//    @Override
+//    public Set<Class<?>> getClasses() {
+//        return Collections.emptySet();
+//    }
 //}

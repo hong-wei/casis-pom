@@ -294,14 +294,13 @@ public class JdbcDaoTest extends AbstractIocTest {
 		long length=10;
 		
 		jdbcDaoService.queryDeleteToCasisDocumentRunsTable(conn);
-		String sqlInsertCasisDocumentTable = " select COUNT(*) from CASIS_DOCUMENT_RUNS;";
+		String sqlInsertCasisDocumentTable = " select COUNT(*) from CASIS_DOCUMENT_RUNS ";
 		try (PreparedStatement stmt = conn.prepareStatement(sqlInsertCasisDocumentTable);
 				ResultSet rset = stmt.executeQuery();) {
 			while(rset.next()){
 				length =rset.getLong(1);
 			}
 		}
-		
 		Assert.assertEquals(0,length);
 	}
 		

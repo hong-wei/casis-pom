@@ -1,6 +1,5 @@
 package com.osthus.casis.index;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
