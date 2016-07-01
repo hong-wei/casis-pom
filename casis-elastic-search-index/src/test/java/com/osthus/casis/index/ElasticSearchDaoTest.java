@@ -29,15 +29,62 @@ public class ElasticSearchDaoTest extends AbstractIocTest{
 	@Test
 	public void bulkIndexTest() throws IOException{
 		
-		JSONArray resultSetToJson = new JSONArray();
-
-		JSONObject jsonObj = new JSONObject();
 		
-		jsonObj.put("hongwei1", "AVV327GBqCKPC-GOuRAD");
-		jsonObj.put("hongwei2", "AVV327GBqCKPC-GOuRAD");
-		jsonObj.put("hongwei3", "AVV327GBqCKPC-GOuRAD");
-		resultSetToJson.put(jsonObj);
-		new ElasticSearchDao().bulkIndex(resultSetToJson,"a1");
+		// prepare data
+		JSONArray indexData = new JSONArray();
+		JSONObject jsonObj = new JSONObject();
+		jsonObj.put("DOCNO", "1");
+		jsonObj.put("DOCNO", "2");
+		jsonObj.put("DOCNO", "3");
+		indexData.put(jsonObj);
+		
+	
+		// run
+		new ElasticSearchDao().bulkIndex(indexData,"a1");
+		
+		
+//		// get the result from ES
+//		Thread.sleep(1000);// supend 1 s
+//		String query1 = "{\r\n" + "  \"size\":1,\r\n" + "  \"query\":\r\n" + "  {\r\n" + "    \"match_all\": {}\r\n"
+//				+ "  }\r\n" + "}";
+//
+//		Search search1 = new Search.Builder(query1).addIndex(esIndex).addType("documents").build();
+//
+//		SearchResult result = clinet.execute(search1);
+//
+//		// System.out.println(result.getJsonString());
+//		String allResponse = result.getJsonString();
+//		// System.out.println(allResponse);
+//		ObjectMapper mapper = new ObjectMapper();
+//		JsonNode rootNode = mapper.readTree(allResponse);
+//		JsonNode path = rootNode.path("hits").path("hits");
+//
+//		String objString = null;
+//		if (path.isArray()) {
+//			for (final JsonNode objNode : path) {
+//				objString = objNode.path("_source").toString();
+//			}
+//		}
+//		
+//		
+//		Assert.assertTrue(objString.contains("DOCNO"));
+//		Assert.assertTrue(objString.contains("DOCUMENT"));
+//		
+//		if(objString.contains("CHEM_STRUCTURE_DATA")){
+//			Assert.assertTrue(objString.contains("CHEM_STRUCTURE_DATA"));
+//		}
+//		if(objString.contains("CASIS_DEVSTATUS")){
+//			Assert.assertTrue(objString.contains("CASIS_DEVSTATUS"));
+//		}
+//		if(objString.contains("CASIS_COMPOUND")){
+//		 Assert.assertTrue(objString.contains("CASIS_COMPOUND"));
+//		}
+//		if(objString.contains("CASIS_USE")){
+//		 Assert.assertTrue(objString.contains("CASIS_USE"));
+//		}
+//		if(objString.contains("CASIS_COMPANY")){
+//		 Assert.assertTrue(objString.contains("CASIS_COMPANY"));
+//		}
 		
 	}
 	

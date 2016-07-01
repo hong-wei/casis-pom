@@ -27,7 +27,6 @@ public class ElasticSearchDao {
 			
 		}
 		client.execute(bulkBuilder.build());
-		
 	}
 
 }

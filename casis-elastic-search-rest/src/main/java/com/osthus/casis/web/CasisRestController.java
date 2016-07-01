@@ -17,7 +17,7 @@ import io.searchbox.client.JestClient;
 import io.searchbox.client.JestClientFactory;
 import io.searchbox.client.config.HttpClientConfig;
 
-@Path("/")
+@Path("/v1")
 public class CasisRestController extends AbstractServiceREST
 {
 
@@ -38,6 +38,7 @@ public class CasisRestController extends AbstractServiceREST
 	@POST
 	@Path("/search")
 	@Consumes("application/json")
+	@Produces("application/json")
 	public String sayPlainTextHello(final String input) throws JsonProcessingException, IOException
 	{
 		JestClientFactory factory = new JestClientFactory();

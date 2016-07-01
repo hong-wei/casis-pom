@@ -10,7 +10,6 @@ import org.apache.commons.dbcp.BasicDataSourceFactory;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-//TODO 0 question 1 -- need I IOC this  class to Ambeth ?
 public class DBManager {
 	private static final Log log = LogFactory.getLog(DBManager.class);
 	private static final String configFile = "dbcp.properties";
