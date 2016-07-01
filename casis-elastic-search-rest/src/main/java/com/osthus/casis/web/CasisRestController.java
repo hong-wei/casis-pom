@@ -17,7 +17,7 @@ import io.searchbox.client.JestClient;
 import io.searchbox.client.JestClientFactory;
 import io.searchbox.client.config.HttpClientConfig;
 
-@Path("/v1")
+@Path("/")
 public class CasisRestController extends AbstractServiceREST
 {
 

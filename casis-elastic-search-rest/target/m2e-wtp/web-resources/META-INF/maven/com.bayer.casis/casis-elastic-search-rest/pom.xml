@@ -106,7 +106,7 @@
 				<version>2.5</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<warName>/casis-elastic-search-rest</warName>
+					<warName>/casis</warName>
 				</configuration>
 			</plugin>
 

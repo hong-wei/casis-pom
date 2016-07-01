@@ -65,7 +65,7 @@ public class MyJobUpdateEachHour implements IJob {
 		LastHourState lastHourUpdate = jdbcDaoService.queryLastTsFromCasisTableAndPreviousRunTable(conn);
 		try {
 			elastichSearchImporter.importFromOralceUpdateEs(conn, lastHourUpdate, startTs);
-//			log.info("update the date to ES");
+			log.info("update the date to ES");
 		} catch (JSONException | SQLException | IOException | TransformerException | DocumentException
 				| ParserConfigurationException | SAXException e) {
 			log.info("Update exception", e);

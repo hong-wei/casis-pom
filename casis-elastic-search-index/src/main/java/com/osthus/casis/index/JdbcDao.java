@@ -228,7 +228,8 @@ public class JdbcDao {
 				+ "UNION                                                                 "
 				+ "SELECT MAX(UPDATE_TIMESTAMP)as UPDATE_TIMESTAMP FROM DOC_STRUC_LINK   " + ")";
 
-		String sqlCheckLastRunTable = "select * from CASIS2_BG_INGEST_RUNS2 ";
+		String sqlCheckLastRunTable = "SELECT * FROM CASIS2_BG_INGEST_RUNS2 " + 
+				"WHERE END_TS = (SELECT MAX(END_TS)AS END_TS FROM CASIS2_BG_INGEST_RUNS2) ";
 
 		LastHourState lastHourState = queryToLastHourState(conn, sqlCheckLastRunTable);
 

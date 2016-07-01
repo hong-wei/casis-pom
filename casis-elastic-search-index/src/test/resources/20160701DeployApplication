@@ -1,0 +1,69 @@
+0 infromation :
+ server : casis.bayer.vmserver; 172.16.56.130
+	
+ account : casis-admin M1DRsMMaOnGxgwZEBOH8
+
+1  configure the /opt/apache-tomcat-8.0.33/conf/server.xml 
+
+<Context docBase="/opt/apache-tomcat-8.0.33/webapps/casis-elastic-search-rest" path="" reloadable="true" source="org.eclipse.jst.j2ee.server:casis-elastic-search-rest"/>
+
+
+2 copy the file to 
+/opt/apache-tomcat-8.0.33/webapps
+
+
+
+3 test 
+case 1: --Advanced REST client
+http://casis.bayer.vmserver:8080/v1/search
+{
+"text_search": {
+  "post_filter": {
+    "term": {
+      "PART": "8"
+    }
+  },
+  "from": "0",
+  "size": "2",
+  "sort": [
+    {
+      "SRC_DB": {
+        "order": "desc"
+      }
+    }
+  ],
+  "aggregations": {
+    "aggregation_by_date": {
+      "terms": {
+        "field": "SRC_DB"
+      }
+    }
+  }
+}}
+
+case 2:  test with get -- in linux command line
+ curl -XGET -H "Content-type: application/json" -d '{
+"text_search": {
+  "post_filter": {
+    "term": {
+      "PART": "8"
+    }
+  },
+  "from": "0",
+  "size": "2",
+  "sort": [
+    {
+      "SRC_DB": {
+        "order": "desc"
+      }
+    }
+  ],
+  "aggregations": {
+    "aggregation_by_date": {
+      "terms": {
+        "field": "SRC_DB"
+      }
+    }
+  }
+}}' 'http://casis.bayer.vmserver:8080/v1/search'
+

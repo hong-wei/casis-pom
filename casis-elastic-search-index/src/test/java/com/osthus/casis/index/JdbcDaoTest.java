@@ -361,7 +361,6 @@ public class JdbcDaoTest extends AbstractIocTest {
 		stmt.setTimestamp(3, lastIngestedRecordTs);
 		stmt.setString(4, loadingProcessActive);
 
-		// get the date from oracle and set it to new database
 		try (ResultSet rset = stmt.executeQuery();) {
 		}
 
