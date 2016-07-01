@@ -28,6 +28,7 @@ public class CasisRestController extends AbstractServiceREST
 	public String getJSON(final String input) throws JsonProcessingException, IOException
 	{
 		JestClientFactory factory = new JestClientFactory();
+		//TODO hard code, change it to the property files.
 		factory.setHttpClientConfig(new HttpClientConfig.Builder("http://casis.bayer.vmserver:9200").multiThreaded(true).build());
 		JestClient client = factory.getObject();
 		String resposeToGUI1 = new ClientJest().reqToRes(client, input);

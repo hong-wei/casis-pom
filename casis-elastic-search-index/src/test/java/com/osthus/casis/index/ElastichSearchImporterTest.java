@@ -25,10 +25,10 @@ import io.searchbox.core.SearchResult;
 @TestFrameworkModule(value = ElasticSearchIocModule.class)
 public class ElastichSearchImporterTest extends AbstractIocTest {
 
-	private final String esIndex = "bb";
-	private final String tableName = "CASIS_DOCUMENT_RUNS"; //CASIS_DOCUMENT
-	private final int esPageSize = 2;
-	private final int esPageCount = 1;
+	private  String esIndex = "junit";
+	private  String tableName = "CASIS_DOCUMENT_RUNS"; //CASIS_DOCUMENT
+	private  int esPageSize = 2;
+	private  int esPageCount = 1;
 	private JestClient clinet;
 
 	@Autowired
@@ -46,7 +46,6 @@ public class ElastichSearchImporterTest extends AbstractIocTest {
 
 	@Test
 	public void importFromOralcePartTest() throws Exception {
-		
 		
 		
 		elastichSearchImporterService.importFromOralce(esPageSize, esPageCount, esIndex, tableName);
@@ -99,7 +98,11 @@ public class ElastichSearchImporterTest extends AbstractIocTest {
 	@Test
 	// index the whole database.
 	public void importFromOralceTest() throws Exception {
-		elastichSearchImporterService.importFromOralce(2, 2, esIndex, tableName);
+		esIndex     = "casis";
+		esPageCount = 0; //start from page 0
+		esPageSize  = 1000; // each page have 1000 items
+		tableName  ="CASIS_DOCUMENT";
+		elastichSearchImporterService.importFromOralce(esPageSize, esPageCount, esIndex, tableName);
 	}
 
 	@Test

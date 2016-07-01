@@ -1,5 +1,7 @@
 package com.osthus.casis.index;
 
+import java.security.SecureRandom;
+import java.math.BigInteger;
 
 import java.io.IOException;
 
@@ -22,74 +24,81 @@ import io.searchbox.core.Delete;
 import io.searchbox.core.Index;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
-@TestFrameworkModule(value=ElasticSearchIocModule.class)
-public class ElasticSearchDaoTest extends AbstractIocTest{
+import java.util.UUID;
 
-	
+@TestFrameworkModule(value = ElasticSearchIocModule.class)
+public class ElasticSearchDaoTest extends AbstractIocTest {
+
 	@Test
-	public void bulkIndexTest() throws IOException{
-		
+	public void bulkIndexTest() throws IOException {
+
 		
 		// prepare data
+		String uuid1 = UUID.randomUUID().toString();
+		String uuid2 = UUID.randomUUID().toString();
 		JSONArray indexData = new JSONArray();
-		JSONObject jsonObj = new JSONObject();
-		jsonObj.put("DOCNO", "1");
-		jsonObj.put("DOCNO", "2");
-		jsonObj.put("DOCNO", "3");
-		indexData.put(jsonObj);
+		JSONObject jsonObj1 = new JSONObject();
+
+		jsonObj1.put("DOCNO", uuid1);
+		indexData.put(jsonObj1);
+		JSONObject jsonObj2 = new JSONObject();
+
+		jsonObj2.put("DOCNO", uuid2);
+		indexData.put(jsonObj2);
 		
-	
+
 		// run
-		new ElasticSearchDao().bulkIndex(indexData,"a1");
-		
-		
-//		// get the result from ES
-//		Thread.sleep(1000);// supend 1 s
-//		String query1 = "{\r\n" + "  \"size\":1,\r\n" + "  \"query\":\r\n" + "  {\r\n" + "    \"match_all\": {}\r\n"
-//				+ "  }\r\n" + "}";
-//
-//		Search search1 = new Search.Builder(query1).addIndex(esIndex).addType("documents").build();
-//
-//		SearchResult result = clinet.execute(search1);
-//
-//		// System.out.println(result.getJsonString());
-//		String allResponse = result.getJsonString();
-//		// System.out.println(allResponse);
-//		ObjectMapper mapper = new ObjectMapper();
-//		JsonNode rootNode = mapper.readTree(allResponse);
-//		JsonNode path = rootNode.path("hits").path("hits");
-//
-//		String objString = null;
-//		if (path.isArray()) {
-//			for (final JsonNode objNode : path) {
-//				objString = objNode.path("_source").toString();
-//			}
-//		}
+		new ElasticSearchDao().bulkIndex(indexData, "junit-bulkindextest");
+
+//		 // get the result from ES
+//		 Thread.sleep(1000);// supend 1 s
+//		 String query1 = "{\r\n" + " \"size\":1,\r\n" + " \"query\":\r\n" + "
+//		 {\r\n" + " \"match_all\": {}\r\n"
+//		 + " }\r\n" + "}";
+//		
+//		 Search search1 = new
+//		 Search.Builder(query1).addIndex(esIndex).addType("documents").build();
+//		
+//		 SearchResult result = clinet.execute(search1);
+//		
+//		 // System.out.println(result.getJsonString());
+//		 String allResponse = result.getJsonString();
+//		 // System.out.println(allResponse);
+//		 ObjectMapper mapper = new ObjectMapper();
+//		 JsonNode rootNode = mapper.readTree(allResponse);
+//		 JsonNode path = rootNode.path("hits").path("hits");
+//		
+//		 String objString = null;
+//		 if (path.isArray()) {
+//		 for (final JsonNode objNode : path) {
+//		 objString = objNode.path("_source").toString();
+//		 }
+//		 }
 //		
 //		
-//		Assert.assertTrue(objString.contains("DOCNO"));
-//		Assert.assertTrue(objString.contains("DOCUMENT"));
+//		 Assert.assertTrue(objString.contains("DOCNO"));
+//		 Assert.assertTrue(objString.contains("DOCUMENT"));
 //		
-//		if(objString.contains("CHEM_STRUCTURE_DATA")){
-//			Assert.assertTrue(objString.contains("CHEM_STRUCTURE_DATA"));
-//		}
-//		if(objString.contains("CASIS_DEVSTATUS")){
-//			Assert.assertTrue(objString.contains("CASIS_DEVSTATUS"));
-//		}
-//		if(objString.contains("CASIS_COMPOUND")){
+//		 if(objString.contains("CHEM_STRUCTURE_DATA")){
+//		 Assert.assertTrue(objString.contains("CHEM_STRUCTURE_DATA"));
+//		 }
+//		 if(objString.contains("CASIS_DEVSTATUS")){
+//		 Assert.assertTrue(objString.contains("CASIS_DEVSTATUS"));
+//		 }
+//		 if(objString.contains("CASIS_COMPOUND")){
 //		 Assert.assertTrue(objString.contains("CASIS_COMPOUND"));
-//		}
-//		if(objString.contains("CASIS_USE")){
+//		 }
+//		 if(objString.contains("CASIS_USE")){
 //		 Assert.assertTrue(objString.contains("CASIS_USE"));
-//		}
-//		if(objString.contains("CASIS_COMPANY")){
+//		 }
+//		 if(objString.contains("CASIS_COMPANY")){
 //		 Assert.assertTrue(objString.contains("CASIS_COMPANY"));
-//		}
-		
+//		 }
+
 	}
-	
-//	@Test
-	public void mainTest() throws IOException{
+
+	// @Test
+	public void mainTest() throws IOException {
 
 		// Construct a new Jest client according to configuration via factory
 		JestClientFactory factory = new JestClientFactory();
@@ -155,9 +164,10 @@ public class ElasticSearchDaoTest extends AbstractIocTest{
 		// Map<String, String> source = new LinkedHashMap<String,String>();
 		// source.put("user", "kimchy");
 		// as POJO
-//		 Article source = new Article();
-//		 source.setAuthor("John Ronald Reuel Tolkien");
-//		 source.setContent("The Lord of the Rings is an epic high fantasy novel");
+		// Article source = new Article();
+		// source.setAuthor("John Ronald Reuel Tolkien");
+		// source.setContent("The Lord of the Rings is an epic high fantasy
+		// novel");
 
 		// An example of indexing given source to twitter index with type tweet;
 		Index index = new Index.Builder(source).index("twitter").type("tweet").build();
@@ -192,7 +202,7 @@ public class ElasticSearchDaoTest extends AbstractIocTest{
 				.addIndex("casis").addType("item").build();
 
 		SearchResult result1 = client.execute(search1);
-		 System.out.println(result1.getJsonString());
+		System.out.println(result1.getJsonString());
 
 		String query2 = "{\r\n  \"post_filter\": {\r\n    \"term\": {\r\n      \"PART\": \"8\"\r\n    }\r\n  },\r\n  \r\n  \"from\": 0,\r\n  \"size\": 5, \r\n  \r\n  \"sort\": [\r\n    {\r\n      \"UPD\": {\r\n        \"order\": \"desc\"\r\n      }\r\n    }\r\n  ], \r\n  \r\n  \"aggregations\": {\r\n    \"aggregation_by_date\": {\r\n      \"terms\": {\r\n        \"field\": \"UPD\"\r\n      }\r\n    }\r\n  }\r\n}";
 		// System.out.println(query1.toString());
@@ -201,50 +211,49 @@ public class ElasticSearchDaoTest extends AbstractIocTest{
 				.addIndex("casis").addType("item").build();
 
 		SearchResult result2 = client.execute(search2);
-//		System.out.println(result2.getJsonString());
+		// System.out.println(result2.getJsonString());
 
-//		 escapeJava("");
-		
-	}
-	
-	@Test
-	public void indexTest() throws IOException
-	{
-
-//		// Construct a new Jest client according to configuration via factory
-//		JestClientFactory factory = new JestClientFactory();
-//		factory.setHttpClientConfig(new HttpClientConfig.Builder("http://casis.bayer.vmserver:9200").multiThreaded(true).build());
-//		JestClient client = factory.getObject();
-//
-//		long startTime = System.currentTimeMillis();
-//		Bulk.Builder bulkBuilder = new Bulk.Builder();
-//		for (int i = 0; i < 16; i++) // 16021 -- 3323 ms
-//		{
-//
-//			User user = new User();
-//			user.setId(new Long(i));
-//			user.setName("huang fox " + i);
-//			user.setAge(i % 100);
-//			Index index = new Index.Builder(user).index("a").type("a").build();
-//			bulkBuilder.addAction(index);
-//		}
-//		client.execute(bulkBuilder.build());
-//		client.shutdownClient();
-//		
-//		long endTime = System.currentTimeMillis();
-//		long totalTime = endTime - startTime;
-//		System.out.println(totalTime);
-		
+		// escapeJava("");
 
 	}
-	
+
 	@Test
-	public void indexTest1() throws IOException
-	{
+	public void indexTest() throws IOException {
+
+		// // Construct a new Jest client according to configuration via factory
+		// JestClientFactory factory = new JestClientFactory();
+		// factory.setHttpClientConfig(new
+		// HttpClientConfig.Builder("http://casis.bayer.vmserver:9200").multiThreaded(true).build());
+		// JestClient client = factory.getObject();
+		//
+		// long startTime = System.currentTimeMillis();
+		// Bulk.Builder bulkBuilder = new Bulk.Builder();
+		// for (int i = 0; i < 16; i++) // 16021 -- 3323 ms
+		// {
+		//
+		// User user = new User();
+		// user.setId(new Long(i));
+		// user.setName("huang fox " + i);
+		// user.setAge(i % 100);
+		// Index index = new Index.Builder(user).index("a").type("a").build();
+		// bulkBuilder.addAction(index);
+		// }
+		// client.execute(bulkBuilder.build());
+		// client.shutdownClient();
+		//
+		// long endTime = System.currentTimeMillis();
+		// long totalTime = endTime - startTime;
+		// System.out.println(totalTime);
+
+	}
+
+	@Test
+	public void indexTest1() throws IOException {
 
 		// Construct a new Jest client according to configuration via factory
 		JestClientFactory factory = new JestClientFactory();
-		factory.setHttpClientConfig(new HttpClientConfig.Builder("http://casis.bayer.vmserver:9200").multiThreaded(true).build());
+		factory.setHttpClientConfig(
+				new HttpClientConfig.Builder("http://casis.bayer.vmserver:9200").multiThreaded(true).build());
 		JestClient client = factory.getObject();
 
 		long startTime = System.currentTimeMillis();
@@ -252,65 +261,61 @@ public class ElasticSearchDaoTest extends AbstractIocTest{
 		for (int i = 0; i < 16; i++) // 16021 -- 3323 ms
 		{
 
-			JSONObject docJson = new JSONObject ();
+			JSONObject docJson = new JSONObject();
 			docJson.put(String.valueOf(i), i);
 			Index index = new Index.Builder(docJson).index("b").type("b").build();
 			bulkBuilder.addAction(index);
 		}
 		client.execute(bulkBuilder.build());
 		client.shutdownClient();
-		
+
 		long endTime = System.currentTimeMillis();
 		long totalTime = endTime - startTime;
 		System.out.println(totalTime);
 
 	}
-	
-	
+
 	// http://www.cnblogs.com/huangfox/p/3542858.html
 	// @Test
-	public void indexBulk(String indexName, JestClient client) throws IOException
-	{
-//		try
-//		{
-//			Bulk.Builder bulkBuilder = new Bulk.Builder();
-//			for (int i = 0; i < 16; i++) // 16021 -- 3323 ms
-//			{
-//
-//				User user = new User();
-//				user.setId(new Long(i));
-//				user.setName("huang fox " + i);
-//				user.setAge(i % 100);
-//				Index index = new Index.Builder(user).index(indexName).type(indexName).build();
-//				bulkBuilder.addAction(index);
-//			}
-//			client.execute(bulkBuilder.build());
-//			client.shutdownClient();
-////		}
-//		catch (IOException e)
-//		{
-//			e.printStackTrace();
-//		}
-//	}
+	public void indexBulk(String indexName, JestClient client) throws IOException {
+		// try
+		// {
+		// Bulk.Builder bulkBuilder = new Bulk.Builder();
+		// for (int i = 0; i < 16; i++) // 16021 -- 3323 ms
+		// {
+		//
+		// User user = new User();
+		// user.setId(new Long(i));
+		// user.setName("huang fox " + i);
+		// user.setAge(i % 100);
+		// Index index = new
+		// Index.Builder(user).index(indexName).type(indexName).build();
+		// bulkBuilder.addAction(index);
+		// }
+		// client.execute(bulkBuilder.build());
+		// client.shutdownClient();
+		//// }
+		// catch (IOException e)
+		// {
+		// e.printStackTrace();
+		// }
+		// }
 
 	}
+
 	@Test
 	public void getOraclConnectionTest() throws IOException {
-		
-		
-		
+
 		String complexString = "myowndataisfortesttestthisiaissjjsfjsakfjksajfklsjfskljflskfspeicl";
 		JestClient clinet = ElasticSearchUtil.getEsClinet();
 
-		
 		String indexTest = "{ \"test\":\"myowndataisfortesttest\"}";
 		Bulk.Builder bulkBuilder = new Bulk.Builder();
-		
+
 		Index index = new Index.Builder(indexTest).index("aa").type("documents").id("myJunitTestID").build();
 		bulkBuilder.addAction(index);
 		clinet.execute(bulkBuilder.build());
-		
-				
+
 		String query1 = "{\r\n  \"_source\": \"test\", \r\n  \"query\": {\r\n    \"match\": {\r\n      \"test\": \"myowndataisfortesttest\"\r\n    }\r\n  }\r\n}";
 		// System.out.println(query1.toString());
 		Search search1 = new Search.Builder(query1)
@@ -318,25 +323,21 @@ public class ElasticSearchDaoTest extends AbstractIocTest{
 				.addIndex("aa").addType("documents").build();
 
 		SearchResult result = clinet.execute(search1);
-		
-//		System.out.println(result.getJsonString());
+
+		// System.out.println(result.getJsonString());
 		String allResponse = result.getJsonString();
-//		System.out.println(allResponse);
+		// System.out.println(allResponse);
 		ObjectMapper mapper = new ObjectMapper();
 		JsonNode rootNode = mapper.readTree(allResponse);
 		JsonNode path = rootNode.path("hits").path("hits");
-//		System.out.println(path);
-		String subResponse =path.toString();
-		
+		// System.out.println(path);
+		String subResponse = path.toString();
+
 		boolean contains = subResponse.contains("myowndataisfortesttest");
 		Assert.assertEquals(true, contains);
 
-		
-		clinet.execute(new Delete.Builder("myJunitTestID")
-      .index("aa")
-      .type("documents")
-      .build());
-		
+		clinet.execute(new Delete.Builder("myJunitTestID").index("aa").type("documents").build());
+
 	}
 
 }

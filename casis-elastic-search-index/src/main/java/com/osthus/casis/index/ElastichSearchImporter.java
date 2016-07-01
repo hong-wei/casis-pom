@@ -34,13 +34,15 @@ public class ElastichSearchImporter {
 	@Autowired
 	protected JsonUtil jsonUtilService;
 	
-	private final String esIndex = "casisvm3";
-	private final int esPageCount = 0;
-	private final int esPageSize = 10;
+	private  String esIndex = "casisvm3";
+	private  int esPageCount = 0;
+	private  int esPageSize = 10;
 	
 	public void importFromOralce(int pageSize, int pageCount, String casisIndex, String tableName)
 			throws SQLException, FileNotFoundException, JSONException, IOException, TransformerException,
 			DocumentException, ParserConfigurationException, SAXException {
+		
+		
 		Connection conn = DBManager.getConn();
 		long startTime = System.currentTimeMillis();
 		int pageCountRealTime = 0;
