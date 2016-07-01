@@ -1,11 +1,11 @@
 package com.osthus.casis.index;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -24,15 +24,15 @@ import com.google.common.collect.Multimap;
 import de.osthus.ambeth.ioc.annotation.Autowired;
 
 public class JdbcDao {
-	// TODO 0 refactory --4 I don't know when the connm ,stmt,rset close.
 	@Autowired
 	private JsonUtil jsonUtil;
 
-	public long checkOralceUpdates(Connection conn, String sqlCheckUpdate) throws SQLException  {
+	public long checkOralceUpdates(Connection conn, String sqlCheckUpdate) throws SQLException {
 
-		try (PreparedStatement stmt = conn.prepareStatement(sqlCheckUpdate); ResultSet rset = stmt.executeQuery();) {
-			ResultSet countQuery = conn.createStatement()
-					.executeQuery("select count(DOCNO) from CASIS2_BG_INGEST_RUNS");
+		try (PreparedStatement stmt = conn.prepareStatement(sqlCheckUpdate);
+				ResultSet rset = stmt.executeQuery();
+				ResultSet countQuery = conn.createStatement()
+						.executeQuery("select count(DOCNO) from CASIS2_BG_INGEST_RUNS");) {
 			countQuery.next();
 			long length = countQuery.getLong(1);
 			return length;
@@ -50,22 +50,34 @@ public class JdbcDao {
 		return resultSetToJson;
 	}
 
-
-
-	public long getDocumentLength(Connection conn, String sqlCheckLength) throws SQLException {
-		ResultSet countQuery = conn.createStatement().executeQuery("select count(DOCNO) from CASIS_DOCUMENT");
-		countQuery.next();
-		long length = countQuery.getLong(1);
+	public long getDocumentLength(Connection conn, String sqlCheckLength, String tableName) throws SQLException {
+		long length = 0;
+		sqlCheckLength = sqlCheckLength.replace("$tableName", tableName);
+		try (PreparedStatement stmt = conn.prepareStatement(sqlCheckLength); ResultSet rset = stmt.executeQuery();) {
+			while (rset.next()) {
+				length = rset.getLong(1);
+			}
+		}
 		return length;
 	}
 
-	public int getTotalPageCount(Connection conn, int size) throws SQLException {
-		String sqlCheckLength = "select count(DOCNO) from CASIS_DOCUMENT";
-		long count = getDocumentLength(conn, sqlCheckLength);
-
-		System.out.println(count);
+	public int getTotalPageCount(Connection conn, int size, String tableName) throws SQLException {
+		String sqlCheckLength = "select count(DOCNO) from $tableName";
+		sqlCheckLength = sqlCheckLength.replace("$tableName", tableName);
+		long count = getDocumentLength(conn, sqlCheckLength, tableName);
 		int pageCount = (int) Math.ceil((count * 1.0) / size); // 1603
 		return pageCount;
+	}
+
+	private Timestamp queryToTimestamp(Connection conn, String sqlCheckCasisTableIndexTs) throws SQLException {
+		Timestamp lastCasisIndexTimestamp = null;
+		try (PreparedStatement ps = conn.prepareStatement(sqlCheckCasisTableIndexTs);
+				ResultSet resultSet = ps.executeQuery();) {
+			while (resultSet.next()) {
+				lastCasisIndexTimestamp = resultSet.getTimestamp("UPDATE_TIMESTAMP");
+			}
+		}
+		return lastCasisIndexTimestamp;
 	}
 
 	public JSONArray queryToJsonArray(Connection conn, String sqlDocuments)
@@ -96,33 +108,26 @@ public class JdbcDao {
 		}
 	}
 
-	public JSONArray operateByPage(Connection conn, int page, int size, String casisIndex)
-			throws SQLException, FileNotFoundException, IOException, JSONException, TransformerException,
-			DocumentException, ParserConfigurationException, SAXException {
+	public JSONArray operateByPage(Connection conn, int page, int size, String casisIndex, String tableName)
+			throws SQLException, JsonGenerationException, JsonMappingException, JSONException, IOException,
+			TransformerException, DocumentException, ParserConfigurationException, SAXException {
 		// prepare statement
 		int offset = (page + 1) * size;
 		int skip = size * page;
-		String sql = "select DOCNO,SRC_DB,PART,UPD,DOCUMENT,DATEINSERTED from(select a.*,rownum rn from (select * from CASIS_DOCUMENT) a where rownum <= ?) where rn > ?";
-		PreparedStatement stmt = conn.prepareStatement(sql);
-		stmt.setInt(1, offset);
-		stmt.setInt(2, skip);
+		String sql = "select DOCNO,SRC_DB,PART,UPD,DOCUMENT,DATEINSERTED from(select a.*,rownum rn from (select * from $tableName) a where rownum <= ?) where rn > ?";
+		sql = sql.replace("$tableName", tableName);
 		JSONArray resultSetToJson = null;
 
-		try (ResultSet rset = stmt.executeQuery();) {
-			try {
+		try (PreparedStatement stmt = conn.prepareStatement(sql);) {
+			stmt.setInt(1, offset);
+			stmt.setInt(2, skip);
+			try (ResultSet rset = stmt.executeQuery();) {
 				resultSetToJson = jsonUtil.resultSetToJsonDocument(rset);
-			} finally {
-				try {
-					rset.close();
-				} catch (Exception ignore) {
-				}
+				String nos = jsonUtil.getOracleInValues(resultSetToJson);
+				addOtherTables(conn, nos, resultSetToJson);
 			}
-
-			String nos = jsonUtil.getOracleInValues(resultSetToJson);
-			addOtherTables(conn, nos, resultSetToJson);
 		}
 		return resultSetToJson;
-
 	}
 
 	public void addOtherTables(Connection conn, String nos, JSONArray resultSetToJson) throws SQLException {
@@ -189,27 +194,107 @@ public class JdbcDao {
 		}
 		boolean triggerUpdateIndexFlag = false;
 
-		if (lastHourAllTableState.length() == 0 && casis2bIngestRunsState.length() != 0){
+		if (lastHourAllTableState.length() == 0 && casis2bIngestRunsState.length() != 0) {
 			triggerUpdateIndexFlag = true;
 		}
 
-		lastHourState.setTriggerUpdateIndexFlag(triggerUpdateIndexFlag);
-		lastHourState.setCasis2bIngestRunsState(casis2bIngestRunsState);
-		lastHourState.setLastHourAllTableState(lastHourAllTableState);
+		// lastHourState.setTriggerUpdateIndexFlag(triggerUpdateIndexFlag);
+		// lastHourState.setCasis2bIngestRunsState(casis2bIngestRunsState);
+		// lastHourState.setLastHourAllTableState(lastHourAllTableState);
 
 		return lastHourState;
 	}
-	
+
 	public void deleteAllTables(Connection conn) throws SQLException {
 		String sqlDelete = "truncate table CASIS2_BG_INGEST_RUNS";
 		try (PreparedStatement stmt = conn.prepareStatement(sqlDelete); ResultSet rset = stmt.executeQuery();) {
 		}
-
 	}
-	
-	public void deleteAllTables1(Connection conn) {
-		// TODO Auto-generated method stub
-		
+
+	public LastHourState queryLastTsFromCasisTableAndPreviousRunTable(Connection conn) throws SQLException {
+		// test sql is in
+		// casis-elastic-search-index/src/test/resources/2016-06-28OracleSqlTest
+		String sqlCheckCasisTableIndexTs = "SELECT MAX(UPDATE_TIMESTAMP) as UPDATE_TIMESTAMP  FROM              "
+				+ "(                                                                     "
+				+ "SELECT MAX(UPDATE_TIMESTAMP)as UPDATE_TIMESTAMP FROM CASIS_DOCUMENT   "
+				+ "UNION                                                                 "
+				+ "SELECT MAX(UPDATE_TIMESTAMP)as UPDATE_TIMESTAMP FROM CASIS_COMPANY    "
+				+ "UNION                                                                 "
+				+ "SELECT MAX(UPDATE_TIMESTAMP)as UPDATE_TIMESTAMP FROM CASIS_COMPOUND   "
+				+ "UNION                                                                 "
+				+ "SELECT MAX(UPDATE_TIMESTAMP) as UPDATE_TIMESTAMP FROM CASIS_USE       "
+				+ "UNION                                                                 "
+				+ "SELECT MAX(UPDATE_TIMESTAMP)as UPDATE_TIMESTAMP FROM CASIS_DEVSTATUS  "
+				+ "UNION                                                                 "
+				+ "SELECT MAX(UPDATE_TIMESTAMP)as UPDATE_TIMESTAMP FROM DOC_STRUC_LINK   " + ")";
+
+		String sqlCheckLastRunTable = "SELECT * FROM CASIS2_BG_INGEST_RUNS2 " + 
+				"WHERE END_TS = (SELECT MAX(END_TS)AS END_TS FROM CASIS2_BG_INGEST_RUNS2) ";
+
+		LastHourState lastHourState = queryToLastHourState(conn, sqlCheckLastRunTable);
+
+		Timestamp lastCasisIndexTimestamp = null;
+
+		lastCasisIndexTimestamp = queryToTimestamp(conn, sqlCheckCasisTableIndexTs);
+
+		lastHourState.setLastCasisIndexTimestamp(lastCasisIndexTimestamp);
+
+		return lastHourState;
+	}
+
+	private LastHourState queryToLastHourState(Connection conn, String sqlCheckLastRunTable) throws SQLException {
+		LastHourState lastHourState = new LastHourState();
+
+		try (PreparedStatement ps = conn.prepareStatement(sqlCheckLastRunTable);
+				ResultSet resultSet = ps.executeQuery();) {
+			while (resultSet.next()) {
+				lastHourState.setStartTs(resultSet.getTimestamp("START_TS"));
+				lastHourState.setEndTs(resultSet.getTimestamp("END_TS"));
+				lastHourState.setLastIngestedRecordTs(resultSet.getTimestamp("LAST_INGESTED_RECORD_TS"));
+				lastHourState.setLoadingProcessActive(resultSet.getString("LOADING_PROCESS_ACTIVE"));
+			}
+		}
+		return lastHourState;
+	}
+
+	public void queryInsertToRunsTable(Connection conn, Timestamp startTs, LastHourState lastHourUpdate,
+			String loadingProcessActive) throws SQLException {
+		String sqlInsert = "INSERT INTO CASIS2_BG_INGEST_RUNS2 (START_TS,END_TS,LAST_INGESTED_RECORD_TS,LOADING_PROCESS_ACTIVE) VALUES (?,?,?,?) ";
+		Timestamp lastIngestedRecordTs = lastHourUpdate.getLastIngestedRecordTs();
+
+		java.util.Date date = new java.util.Date();
+		long t = date.getTime();
+		Timestamp endTs = new Timestamp(t);
+
+		try (PreparedStatement stmt = conn.prepareStatement(sqlInsert);) {
+			stmt.setTimestamp(1, startTs);
+			stmt.setTimestamp(2, endTs);
+			stmt.setTimestamp(3, lastIngestedRecordTs);
+			stmt.setString(4, loadingProcessActive);
+			try (ResultSet rset = stmt.executeQuery();) {
+			}
+		}
+	}
+
+	public void queryInsertToCasisDocumentRunsTable(Connection conn, LastHourState lastHourUpdate) throws SQLException {
+		String sqlInsertCasisDocumentTable = "INSERT INTO CASIS_DOCUMENT_RUNS   "
+				+ "SELECT DOCNO ,SRC_DB, PART ,UPD, DOCUMENT, DATEINSERTED  FROM CASIS_DOCUMENT  "
+				+ "WHERE UPDATE_TIMESTAMP BETWEEN ? and ?";
+		try (PreparedStatement stmt = conn.prepareStatement(sqlInsertCasisDocumentTable);) {
+			stmt.setTimestamp(1, lastHourUpdate.getLastIngestedRecordTs());
+			stmt.setTimestamp(2, lastHourUpdate.getLastCasisIndexTimestamp());
+			try (ResultSet rset = stmt.executeQuery();) {
+			}
+		}
+	}
+
+	public void queryDeleteToCasisDocumentRunsTable(Connection conn) throws SQLException {
+		String sqlInsertCasisDocumentTable = "truncate table CASIS_DOCUMENT_RUNS";
+		try (PreparedStatement stmt = conn.prepareStatement(sqlInsertCasisDocumentTable);
+				ResultSet rset = stmt.executeQuery();) {
+
+		}
+
 	}
 
 }

@@ -20,12 +20,11 @@ public class ElasticSearchDao {
 
 	public void bulkIndex(JSONArray resultSetToJson, String esIndexName) throws IOException {
 		Bulk.Builder bulkBuilder = new Bulk.Builder();
-		// System.out.println("length is " + resultSetToJson.length());
 		for (Object obj : resultSetToJson) {
 			JSONObject docJson = (JSONObject) obj;
-			// System.out.println(docJson);
-			Index index = new Index.Builder(docJson.toString()).index(esIndexName).type("documents").build();
+			Index index = new Index.Builder(docJson.toString()).index(esIndexName).type("documents").id(docJson.get("DOCNO").toString()).build();
 			bulkBuilder.addAction(index);
+			
 		}
 		client.execute(bulkBuilder.build());
 		

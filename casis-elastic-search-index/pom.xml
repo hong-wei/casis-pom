@@ -9,9 +9,9 @@
 		<artifactId>casis-pom</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
+
 	<artifactId>casis-elastic-search-index</artifactId>
-	
+
 	<name>casis-elastic-search-index</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -146,11 +146,11 @@
 		<!-- <artifactId>jambeth-persistence-oracle11 </artifactId> -->
 		<!-- </dependency> -->
 
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-servlet</artifactId>
-			<version>1.19.1</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.sun.jersey</groupId> -->
+<!-- 			<artifactId>jersey-servlet</artifactId> -->
+<!-- 			<version>1.19.1</version> -->
+<!-- 		</dependency> -->
 
 		<!--Add Jest as a dependency to your project. -->
 		<dependency>
@@ -179,7 +179,7 @@
 	<build>
 		<finalName>${applicationName}</finalName>
 		<plugins>
-		<plugin>
+			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
@@ -187,7 +187,7 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -212,5 +212,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

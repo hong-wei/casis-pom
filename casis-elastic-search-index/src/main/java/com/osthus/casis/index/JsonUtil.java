@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactoryConfigurationError;
 
 import org.apache.commons.lang3.StringUtils;
 import org.codehaus.jackson.JsonGenerationException;
@@ -26,11 +28,11 @@ import com.google.common.collect.Multimap;
 import de.osthus.ambeth.ioc.annotation.Autowired;
 
 public class JsonUtil {
-	//TODO fix -1 Unitl only use the static methods
+	// TODO fix -1 Unitl only use the static methods
 	@Autowired
 	protected XmlUtil xmlUtilService;
-	
-	//TODO 0 refactory --5 mix the following two methods in one, is it right ?
+
+	// TODO 0 refactory --5 mix the following two methods in one, is it right ?
 	public String getOralceInvalues2(JSONArray resultSetToJson) {
 		StringBuilder sb = new StringBuilder();
 
@@ -41,22 +43,22 @@ public class JsonUtil {
 		String nos = sb.substring(1);
 		return nos;
 	}
-	
+
 	public String getOracleInValues(JSONArray resultSetToJson) {
 		JSONObject jsonDocument;
 		StringBuilder sb = new StringBuilder();
-		 if (resultSetToJson.getJSONObject(0) instanceof JSONObject) {
-		for (int i = 0; i < resultSetToJson.length(); i++) {
-			jsonDocument = resultSetToJson.getJSONObject(i);
-			String documentDOCNO = jsonDocument.getString("DOCNO");
-			sb.append(",'").append(documentDOCNO).append("'");
-		}
-		 } else {
-		 for (int i = 0; i < resultSetToJson.length(); i++) {
-		 String documentDOCNO = resultSetToJson.getString(i);
-		 sb.append(",'").append(documentDOCNO).append("'");
-		 }
-		 }
+//		if (resultSetToJson.getJSONObject(0) instanceof JSONObject) {
+			for (int i = 0; i < resultSetToJson.length(); i++) {
+				jsonDocument = resultSetToJson.getJSONObject(i);
+				String documentDOCNO = jsonDocument.getString("DOCNO");
+				sb.append(",'").append(documentDOCNO).append("'");
+			}
+//		} else {
+//			for (int i = 0; i < resultSetToJson.length(); i++) {
+//				String documentDOCNO = resultSetToJson.getString(i);
+//				sb.append(",'").append(documentDOCNO).append("'");
+//			}
+//		}
 		String nos = sb.substring(1);
 		return nos;
 	}
@@ -135,8 +137,8 @@ public class JsonUtil {
 	}
 
 	public JSONArray resultSetToJsonDocument(ResultSet rs)
-			throws SQLException, JSONException, JsonGenerationException, JsonMappingException, IOException,
-			TransformerException, DocumentException, ParserConfigurationException, SAXException {
+			throws SQLException, TransformerConfigurationException, TransformerFactoryConfigurationError,
+			TransformerException, ParserConfigurationException, SAXException, IOException, DocumentException {
 		JSONArray array = new JSONArray();
 
 		ResultSetMetaData metaData = rs.getMetaData();
@@ -151,7 +153,7 @@ public class JsonUtil {
 				if ("DOCUMENT".equalsIgnoreCase(columnName)) {
 					// TODO refactory the code here:
 					String xmlTagsWithDot = rs.getString(columnName);
-					if (xmlTagsWithDot != null) { 
+					if (xmlTagsWithDot != null) {
 						String xmlTagsWithMinus = xmlUtilService.renameTagsDotToMinus(xmlTagsWithDot);
 						HashMap<String, ArrayList<String>> map = xmlUtilService.getXmlKeyValuesPairs(xmlTagsWithMinus);
 
