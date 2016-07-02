@@ -7,7 +7,9 @@ import java.io.IOException;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -29,71 +31,53 @@ import java.util.UUID;
 @TestFrameworkModule(value = ElasticSearchIocModule.class)
 public class ElasticSearchDaoTest extends AbstractIocTest {
 
+	JestClient client = null;
+
+	@Before
+	public void before() {
+		client = ElasticSearchUtil.getEsClient();
+	}
+
 	@Test
 	public void bulkIndexTest() throws IOException {
-
-		
 		// prepare data
+		String esIndexName = "junitbulkindextest";
 		String uuid1 = UUID.randomUUID().toString();
 		String uuid2 = UUID.randomUUID().toString();
 		JSONArray indexData = new JSONArray();
-		JSONObject jsonObj1 = new JSONObject();
+		JSONObject jsonObj1 = new JSONObject(
+				"{\r\n" + "  \"DOCNO\":\"1\",\r\n" + "  \"22222222222222222\":\"" + uuid1 + "\"\r\n" + "}");
 
-		jsonObj1.put("DOCNO", uuid1);
 		indexData.put(jsonObj1);
-		JSONObject jsonObj2 = new JSONObject();
+		JSONObject jsonObj2 = new JSONObject(
+				"{\r\n" + "  \"DOCNO\":\"2\",\r\n" + "  \"22\":\"" + uuid2 + " \"\r\n" + "}");
 
-		jsonObj2.put("DOCNO", uuid2);
 		indexData.put(jsonObj2);
-		
 
 		// run
-		new ElasticSearchDao().bulkIndex(indexData, "junit-bulkindextest");
+		new ElasticSearchDao().bulkIndex(indexData, esIndexName);
 
-//		 // get the result from ES
-//		 Thread.sleep(1000);// supend 1 s
-//		 String query1 = "{\r\n" + " \"size\":1,\r\n" + " \"query\":\r\n" + "
-//		 {\r\n" + " \"match_all\": {}\r\n"
-//		 + " }\r\n" + "}";
-//		
-//		 Search search1 = new
-//		 Search.Builder(query1).addIndex(esIndex).addType("documents").build();
-//		
-//		 SearchResult result = clinet.execute(search1);
-//		
-//		 // System.out.println(result.getJsonString());
-//		 String allResponse = result.getJsonString();
-//		 // System.out.println(allResponse);
-//		 ObjectMapper mapper = new ObjectMapper();
-//		 JsonNode rootNode = mapper.readTree(allResponse);
-//		 JsonNode path = rootNode.path("hits").path("hits");
-//		
-//		 String objString = null;
-//		 if (path.isArray()) {
-//		 for (final JsonNode objNode : path) {
-//		 objString = objNode.path("_source").toString();
-//		 }
-//		 }
-//		
-//		
-//		 Assert.assertTrue(objString.contains("DOCNO"));
-//		 Assert.assertTrue(objString.contains("DOCUMENT"));
-//		
-//		 if(objString.contains("CHEM_STRUCTURE_DATA")){
-//		 Assert.assertTrue(objString.contains("CHEM_STRUCTURE_DATA"));
-//		 }
-//		 if(objString.contains("CASIS_DEVSTATUS")){
-//		 Assert.assertTrue(objString.contains("CASIS_DEVSTATUS"));
-//		 }
-//		 if(objString.contains("CASIS_COMPOUND")){
-//		 Assert.assertTrue(objString.contains("CASIS_COMPOUND"));
-//		 }
-//		 if(objString.contains("CASIS_USE")){
-//		 Assert.assertTrue(objString.contains("CASIS_USE"));
-//		 }
-//		 if(objString.contains("CASIS_COMPANY")){
-//		 Assert.assertTrue(objString.contains("CASIS_COMPANY"));
-//		 }
+		// check the result
+		String queryMatchAll = "{\r\n" + "  \"query\": {\r\n" + "    \"match_all\": {}\r\n" + "  }\r\n" + "}";
+		Search search1 = new Search.Builder(queryMatchAll).addIndex(esIndexName).addType("documents").build();
+
+		SearchResult result = client.execute(search1);
+
+		String allResponse = result.getJsonString();
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode rootNode = mapper.readTree(allResponse);
+		JsonNode path = rootNode.path("hits").path("hits");
+
+		String objString = null;
+		if (path.isArray()) {
+			for (final JsonNode objNode : path) {
+				objString = objNode.path("_source").toString();
+			}
+		}
+
+//		Assert.assertTrue(objString.contains(uuid1));
+		System.out.println(objString.contains(uuid1));
+		Assert.assertTrue(false);
 
 	}
 
@@ -277,10 +261,10 @@ public class ElasticSearchDaoTest extends AbstractIocTest {
 
 	// http://www.cnblogs.com/huangfox/p/3542858.html
 	// @Test
-	public void indexBulk(String indexName, JestClient client) throws IOException {
+	public void indexBulk(String indexName, JestClient client) {
 		// try
 		// {
-		// Bulk.Builder bulkBuilder = new Bulk.Builder();
+		Bulk.Builder bulkBuilder = new Bulk.Builder();
 		// for (int i = 0; i < 16; i++) // 16021 -- 3323 ms
 		// {
 		//
@@ -292,9 +276,14 @@ public class ElasticSearchDaoTest extends AbstractIocTest {
 		// Index.Builder(user).index(indexName).type(indexName).build();
 		// bulkBuilder.addAction(index);
 		// }
-		// client.execute(bulkBuilder.build());
-		// client.shutdownClient();
-		//// }
+		try {
+			client.execute(bulkBuilder.build());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		client.shutdownClient();
+		// // }
 		// catch (IOException e)
 		// {
 		// e.printStackTrace();
@@ -307,14 +296,14 @@ public class ElasticSearchDaoTest extends AbstractIocTest {
 	public void getOraclConnectionTest() throws IOException {
 
 		String complexString = "myowndataisfortesttestthisiaissjjsfjsakfjksajfklsjfskljflskfspeicl";
-		JestClient clinet = ElasticSearchUtil.getEsClinet();
+		JestClient client = ElasticSearchUtil.getEsClient();
 
 		String indexTest = "{ \"test\":\"myowndataisfortesttest\"}";
 		Bulk.Builder bulkBuilder = new Bulk.Builder();
 
 		Index index = new Index.Builder(indexTest).index("aa").type("documents").id("myJunitTestID").build();
 		bulkBuilder.addAction(index);
-		clinet.execute(bulkBuilder.build());
+		client.execute(bulkBuilder.build());
 
 		String query1 = "{\r\n  \"_source\": \"test\", \r\n  \"query\": {\r\n    \"match\": {\r\n      \"test\": \"myowndataisfortesttest\"\r\n    }\r\n  }\r\n}";
 		// System.out.println(query1.toString());
@@ -322,7 +311,7 @@ public class ElasticSearchDaoTest extends AbstractIocTest {
 				// multiple index or types can be added.
 				.addIndex("aa").addType("documents").build();
 
-		SearchResult result = clinet.execute(search1);
+		SearchResult result = client.execute(search1);
 
 		// System.out.println(result.getJsonString());
 		String allResponse = result.getJsonString();
@@ -336,8 +325,13 @@ public class ElasticSearchDaoTest extends AbstractIocTest {
 		boolean contains = subResponse.contains("myowndataisfortesttest");
 		Assert.assertEquals(true, contains);
 
-		clinet.execute(new Delete.Builder("myJunitTestID").index("aa").type("documents").build());
+		client.execute(new Delete.Builder("myJunitTestID").index("aa").type("documents").build());
 
+	}
+
+	@After
+	public void after() {
+		ElasticSearchUtil.close(client);
 	}
 
 }

@@ -120,7 +120,7 @@ public class JdbcDaoTest extends AbstractIocTest {
 	@Test
 	public void getDocumentLengthTest() throws Exception {
 		// prepare data
-//		String tableName="CASIS_DOCUMENT";
+//		 tableName="CASIS_DOCUMENT";
 		
 		String sqlCheckLength = "select count(DOCNO) from $tableName";
 		String query =sqlCheckLength.replace("$tableName",tableName);

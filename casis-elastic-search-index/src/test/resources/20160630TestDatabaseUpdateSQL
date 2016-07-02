@@ -28,20 +28,22 @@ WHERE END_TS = (SELECT MAX(END_TS)AS END_TS FROM CASIS2_BG_INGEST_RUNS2);
 	--newest runs-table
 	  SELECT * FROM CASIS2_BG_INGEST_RUNS2
 	WHERE END_TS = (SELECT MAX(END_TS)AS END_TS FROM CASIS2_BG_INGEST_RUNS2);
-
-
+	-- delete all tables
+	truncate table CASIS2_BG_INGEST_RUNS2;
 
 case 2 :  --insert one talbe and check the result
 
 --2.1 Insert the tables
 INSERT INTO CASIS_DOCUMENT (DOCNO,SRC_DB,PART,UPD,DATEINSERTED) VALUES ('1','ANTIBASE',10,20140611,SYSDATE);
 commit;
+--insert the company and doclinks
+INSERT INTO CASIS_COMPANY (DOCNO,SRC_DB,CO,COUNTRY,STATUS) VALUES ('1','ID_PATENT','THE RESEARCH FOUNDATION OF STATE UNIVERSITY OF NEW',NULL,NULL);
+Insert into DOC_STRUC_LINK (DOCNO,SRC_DB,CASNO,MDNUMBER) values ('1','DGL',null,'MD000001    ');
+commit;
 
 
 case 3 :
-insert the data , in contiour two minuts
-
-
+insert the data , in continuous two minuts
 
 
 

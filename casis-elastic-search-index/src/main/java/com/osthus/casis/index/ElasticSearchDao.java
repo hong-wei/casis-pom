@@ -7,26 +7,33 @@ import io.searchbox.core.Bulk;
 import io.searchbox.core.Index;
 import org.json.JSONObject;
 
-import de.osthus.ambeth.ioc.annotation.Autowired;
+import de.osthus.ambeth.log.ILogger;
+import de.osthus.ambeth.log.LogInstance;
 
 public class ElasticSearchDao {
+
+	@LogInstance
+	private static ILogger log;
 
 	//TODO 0 refactory --3 I don't know when the client closed : client.shutdownClient();
 	private JestClient client;
 	
 	public ElasticSearchDao() {
-		client = ElasticSearchUtil.getEsClinet();
+		client = ElasticSearchUtil.getEsClient();
 	}
 
-	public void bulkIndex(JSONArray resultSetToJson, String esIndexName) throws IOException {
+	public void bulkIndex(JSONArray resultSetToJson, String esIndexName)   {
 		Bulk.Builder bulkBuilder = new Bulk.Builder();
 		for (Object obj : resultSetToJson) {
 			JSONObject docJson = (JSONObject) obj;
 			Index index = new Index.Builder(docJson.toString()).index(esIndexName).type("documents").id(docJson.get("DOCNO").toString()).build();
 			bulkBuilder.addAction(index);
-			
 		}
-		client.execute(bulkBuilder.build());
+		try {
+			client.execute(bulkBuilder.build());
+		} catch (IOException e) {
+			log.info("After backend processing ,Elastic Seach index exception", e);
+		}
 	}
 
 }

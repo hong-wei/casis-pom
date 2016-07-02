@@ -34,9 +34,9 @@ public class ElastichSearchImporter {
 	@Autowired
 	protected JsonUtil jsonUtilService;
 	
-	private  String esIndex = "casisvm3";
+	private  String esIndex = "casis1";
 	private  int esPageCount = 0;
-	private  int esPageSize = 10;
+	private  int esPageSize = 1000;
 	
 	public void importFromOralce(int pageSize, int pageCount, String casisIndex, String tableName)
 			throws SQLException, FileNotFoundException, JSONException, IOException, TransformerException,
@@ -51,14 +51,14 @@ public class ElastichSearchImporter {
 			pageCountRealTime = jdbcDaoService.getTotalPageCount(conn, pageSize, tableName);
 		else
 			pageCountRealTime = pageCount;
-
+		log.info("total page counts is  " + pageCountRealTime+ " pages");
 		for (int i = 0; i < pageCountRealTime; i++) {
 			JSONArray resultSetToJson = jdbcDaoService.operateByPage(conn, i, pageSize, casisIndex, tableName);
+			log.info("this is the index lenght " + resultSetToJson.length());
 			elasticSearchDaoService.bulkIndex(resultSetToJson, casisIndex);
-			System.out.println(
-					"This is " + i + " is using " + (System.currentTimeMillis() - startTime) / 1000 + " seconds");
+			log.info("This is " + i + " is using " + (System.currentTimeMillis() - startTime) / 1000 + " seconds");
 		}
-		System.out.println("All data is using " + (System.currentTimeMillis() - startTime) / 6000 + " minutes");
+		log.info("All data is using " + (System.currentTimeMillis() - startTime) / 6000 + " minutes");
 
 		DBManager.closeConn(conn);
 	}
@@ -84,46 +84,47 @@ public class ElastichSearchImporter {
 			throws SQLException, FileNotFoundException, JSONException, IOException, TransformerException,
 			DocumentException, ParserConfigurationException, SAXException {
 		if(lastHourUpdate.getLastIngestedRecordTs()==null){
+			log.info("initial index data  ---- case1");
 			final String tableName = "CASIS_DOCUMENT";
-
 			importFromOralce(esPageSize, esPageCount, esIndex, tableName);
 			String loadingProcessActive = "N";
 			lastHourUpdate.setLastIngestedRecordTs(lastHourUpdate.getLastCasisIndexTimestamp());
 			jdbcDaoService.queryInsertToRunsTable(conn, startTs, lastHourUpdate, loadingProcessActive);
 			jdbcDaoService.queryDeleteToCasisDocumentRunsTable(conn);
-			log.info("update the date to ES - case4");
+			
 		}
 		else if ("N".equals(lastHourUpdate.getLoadingProcessActive())
-				&& lastHourUpdate.getLastCasisIndexTimestamp().getTime() >= lastHourUpdate.getEndTs().getTime()) { //TODO think about it .
+				&& lastHourUpdate.getLastCasisIndexTimestamp().getTime() >= lastHourUpdate.getEndTs().getTime()) {
+			log.info("this hour loading some data, need wait for next hour  ---- case2");
 			String loadingProcessActive = "Y";
 			jdbcDaoService.queryInsertToRunsTable(conn, startTs, lastHourUpdate, loadingProcessActive);
-			log.info("update the date to ES - case2");
+			
 			System.out.println(lastHourUpdate.getLastCasisIndexTimestamp());
 		} else if ("Y".equals(lastHourUpdate.getLoadingProcessActive())
 				&& lastHourUpdate.getLastCasisIndexTimestamp().getTime() >= lastHourUpdate.getEndTs().getTime()) {
+			log.info("last hour loading some data, this hour still loading data  ---- case3 ");
 			String loadingProcessActive = "Y";
 			jdbcDaoService.queryInsertToRunsTable(conn, startTs, lastHourUpdate, loadingProcessActive);
-			log.info("update the date to ES - case3");
 			System.out.println(lastHourUpdate.getLastCasisIndexTimestamp());
 		} else if ("Y".equals(lastHourUpdate.getLoadingProcessActive())
 				&& lastHourUpdate.getLastCasisIndexTimestamp().getTime() < lastHourUpdate.getEndTs().getTime()) {
+			log.info("last one hour before finshed loading ,last one hour no loading, start to updata elastic search  ---- case4");
 			jdbcDaoService.queryInsertToCasisDocumentRunsTable(conn, lastHourUpdate);
 
-			
 			final String tableName = "CASIS_DOCUMENT_RUNS";
-
 			importFromOralce(esPageSize, esPageCount, esIndex, tableName);
 			String loadingProcessActive = "N";
 			lastHourUpdate.setLastIngestedRecordTs(lastHourUpdate.getLastCasisIndexTimestamp());
 			jdbcDaoService.queryInsertToRunsTable(conn, startTs, lastHourUpdate, loadingProcessActive);
 			jdbcDaoService.queryDeleteToCasisDocumentRunsTable(conn);
 
-			log.info("update the date to ES - case4");
+			
 		} else {
+			log.info("Nothing happen during last two hours  ---- case0");
 			String loadingProcessActive = "N";
 			jdbcDaoService.queryInsertToRunsTable(conn, startTs, lastHourUpdate, loadingProcessActive);
 			System.out.println(lastHourUpdate.getLastCasisIndexTimestamp());
-			log.info("update the date to ES - case1");
+		
 		}
 
 

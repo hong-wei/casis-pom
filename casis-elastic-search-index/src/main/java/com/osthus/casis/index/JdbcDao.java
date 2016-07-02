@@ -114,7 +114,7 @@ public class JdbcDao {
 		// prepare statement
 		int offset = (page + 1) * size;
 		int skip = size * page;
-		String sql = "select DOCNO,SRC_DB,PART,UPD,DOCUMENT,DATEINSERTED from(select a.*,rownum rn from (select * from $tableName) a where rownum <= ?) where rn > ?";
+		String sql = "select DOCNO,SRC_DB,PART,UPD,DOCUMENT,DATEINSERTED from(select a.*,rownum rn from (select * from $tableName ORDER BY ID) a where rownum <= ?) where rn > ?";
 		sql = sql.replace("$tableName", tableName);
 		JSONArray resultSetToJson = null;
 

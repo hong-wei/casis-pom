@@ -29,7 +29,7 @@ public class ElastichSearchImporterTest extends AbstractIocTest {
 	private  String tableName = "CASIS_DOCUMENT_RUNS"; //CASIS_DOCUMENT
 	private  int esPageSize = 2;
 	private  int esPageCount = 1;
-	private JestClient clinet;
+	private JestClient client;
 
 	@Autowired
 	private ElastichSearchImporter elastichSearchImporterService;
@@ -41,28 +41,31 @@ public class ElastichSearchImporterTest extends AbstractIocTest {
 	@Before
 	public void before() {
 		conn = DBManager.getConn();
-		clinet = ElasticSearchUtil.getEsClinet();
+		client = ElasticSearchUtil.getEsClient();
 	}
 
 	@Test
 	public void importFromOralcePartTest() throws Exception {
 		
+		//prepare data
+		esIndex = "junitimportfromoralceparttest";
+		String tableName = "CASIS_DOCUMENT"; //CASIS_DOCUMENT_RUNS
+		int esPageSize = 2;
+		int esPageCount = 1;
 		
+		// run the function
 		elastichSearchImporterService.importFromOralce(esPageSize, esPageCount, esIndex, tableName);
+		Thread.sleep(1000);// make sure the data has been inserted to Elastic Search
 		
-		
-		
-		Thread.sleep(1000);// supend 1 s
+		// get the result
 		String query1 = "{\r\n" + "  \"size\":1,\r\n" + "  \"query\":\r\n" + "  {\r\n" + "    \"match_all\": {}\r\n"
 				+ "  }\r\n" + "}";
 
 		Search search1 = new Search.Builder(query1).addIndex(esIndex).addType("documents").build();
 
-		SearchResult result = clinet.execute(search1);
+		SearchResult result = client.execute(search1);
 
-		// System.out.println(result.getJsonString());
 		String allResponse = result.getJsonString();
-		// System.out.println(allResponse);
 		ObjectMapper mapper = new ObjectMapper();
 		JsonNode rootNode = mapper.readTree(allResponse);
 		JsonNode path = rootNode.path("hits").path("hits");
@@ -98,10 +101,14 @@ public class ElastichSearchImporterTest extends AbstractIocTest {
 	@Test
 	// index the whole database.
 	public void importFromOralceTest() throws Exception {
-		esIndex     = "casis";
+		//prepare date 
+		esIndex     = "casis1";
 		esPageCount = 0; //start from page 0
 		esPageSize  = 1000; // each page have 1000 items
+		tableName  ="CASIS_DOCUMENT_JUNITS";
 		tableName  ="CASIS_DOCUMENT";
+		
+		//run the app
 		elastichSearchImporterService.importFromOralce(esPageSize, esPageCount, esIndex, tableName);
 	}
 
@@ -124,7 +131,7 @@ public class ElastichSearchImporterTest extends AbstractIocTest {
 
 		Search search1 = new Search.Builder(query1).addIndex(esIndex).addType("documents").build();
 
-		SearchResult result = clinet.execute(search1);
+		SearchResult result = client.execute(search1);
 
 		// System.out.println(result.getJsonString());
 		String allResponse = result.getJsonString();
