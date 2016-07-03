@@ -13,7 +13,7 @@ public class MyJobUpdateEachHourTest extends AbstractIocTest {
 	
 	@Test
 	public void executeTest() throws Throwable {
-		Thread.sleep(100000000);
+//		Thread.sleep(100000000);
 	}
 
 }

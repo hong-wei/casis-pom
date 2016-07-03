@@ -15,7 +15,6 @@ public class ElasticSearchDao {
 	@LogInstance
 	private static ILogger log;
 
-	//TODO 0 refactory --3 I don't know when the client closed : client.shutdownClient();
 	private JestClient client;
 	
 	public ElasticSearchDao() {

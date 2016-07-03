@@ -28,42 +28,24 @@ import com.google.common.collect.Multimap;
 import de.osthus.ambeth.ioc.annotation.Autowired;
 
 public class JsonUtil {
-	// TODO fix -1 Unitl only use the static methods
 	@Autowired
 	protected XmlUtil xmlUtilService;
+	final String DocumentDocnoColumn = "DOCNO";
 
-	// TODO 0 refactory --5 mix the following two methods in one, is it right ?
-	public String getOralceInvalues2(JSONArray resultSetToJson) {
+	public String getOracleInValues(JSONArray resultSetToJson) {
+		JSONObject jsonDocument;
 		StringBuilder sb = new StringBuilder();
-
 		for (int i = 0; i < resultSetToJson.length(); i++) {
-			String documentDOCNO = resultSetToJson.getString(i);
+			jsonDocument = resultSetToJson.getJSONObject(i);
+
+			String documentDOCNO = jsonDocument.getString(DocumentDocnoColumn);
 			sb.append(",'").append(documentDOCNO).append("'");
 		}
 		String nos = sb.substring(1);
 		return nos;
 	}
 
-	public String getOracleInValues(JSONArray resultSetToJson) {
-		JSONObject jsonDocument;
-		StringBuilder sb = new StringBuilder();
-//		if (resultSetToJson.getJSONObject(0) instanceof JSONObject) {
-			for (int i = 0; i < resultSetToJson.length(); i++) {
-				jsonDocument = resultSetToJson.getJSONObject(i);
-				String documentDOCNO = jsonDocument.getString("DOCNO");
-				sb.append(",'").append(documentDOCNO).append("'");
-			}
-//		} else {
-//			for (int i = 0; i < resultSetToJson.length(); i++) {
-//				String documentDOCNO = resultSetToJson.getString(i);
-//				sb.append(",'").append(documentDOCNO).append("'");
-//			}
-//		}
-		String nos = sb.substring(1);
-		return nos;
-	}
-
-	public Multimap<String, JSONObject> resultTOMap(ResultSet rs) throws SQLException {
+	public Map<String, JSONArray> resultTOMap(ResultSet rs) throws JSONException, SQLException {
 		HashMultimap<String, JSONObject> map = HashMultimap.create();
 
 		ResultSetMetaData metaData = rs.getMetaData();
@@ -78,7 +60,7 @@ public class JsonUtil {
 				String columnName = metaData.getColumnLabel(i);
 				String value = rs.getString(columnName);
 
-				if (columnName.equalsIgnoreCase("DOCNO")) {
+				if (columnName.equalsIgnoreCase(DocumentDocnoColumn)) {
 					docNo = value;
 					continue;
 				}
@@ -89,10 +71,12 @@ public class JsonUtil {
 			}
 			map.put(docNo, jsonObj);
 		}
-		return map;
+
+		Map<String, JSONArray> docNoMapCompany = convertMultiMap(map);
+		return docNoMapCompany;
 	}
 
-	public Multimap<String, JSONObject> resultTOMapLinks(ResultSet rs) throws SQLException {
+	public Map<String, JSONArray> resultTOMapLinks(ResultSet rs) throws SQLException {
 		HashMultimap<String, JSONObject> map = HashMultimap.create();
 
 		ResultSetMetaData metaData = rs.getMetaData();
@@ -101,21 +85,23 @@ public class JsonUtil {
 		// travel each row in ResultSet
 		while (rs.next()) {
 			JSONObject jsonObj = new JSONObject();
-			// each collom
+			// each column
 			String docNo = null;
 			for (int i = 1; i <= columnCount; i++) {
 
 				String columnName = metaData.getColumnLabel(i);
 				String value = rs.getString(columnName);
 
-				if (columnName.equalsIgnoreCase("DOCNO")) {
+				if (columnName.equalsIgnoreCase(DocumentDocnoColumn)) {
 					docNo = value;
 					continue;
 				}
-				if (i == 1) { // TODO 1 fix the hard code, it is not useful
-					jsonObj.put("LINK_SRC_DB", value);
+				if (i == 1) {
+					final String DslTableSrcDb = "LINK_SRC_DB";
+					jsonObj.put(DslTableSrcDb, value);
 				} else if (i == 2) {
-					jsonObj.put("MOLTABLE_SRC_DB", value);
+					final String MolTableSrcDb = "MOLTABLE_SRC_DB";
+					jsonObj.put(MolTableSrcDb, value);
 				} else if (StringUtils.isBlank(value)) // JSON object has no
 														// null value
 					jsonObj.put(columnName, "");
@@ -124,16 +110,8 @@ public class JsonUtil {
 			}
 			map.put(docNo, jsonObj);
 		}
-		return map;
-	}
-
-	public Map<String, JSONArray> convertMultiMap(Multimap<String, JSONObject> multiMap) {
-		Map<String, JSONArray> map = new HashMap<>();
-		for (String docNo : multiMap.keySet()) {
-			JSONArray jsonArray = new JSONArray(multiMap.get(docNo));
-			map.put(docNo, jsonArray);
-		}
-		return map;
+		Map<String, JSONArray> docNoMapCompany = convertMultiMap(map);
+		return docNoMapCompany;
 	}
 
 	public JSONArray resultSetToJsonDocument(ResultSet rs)
@@ -158,16 +136,11 @@ public class JsonUtil {
 						HashMap<String, ArrayList<String>> map = xmlUtilService.getXmlKeyValuesPairs(xmlTagsWithMinus);
 
 						ArrayList<String> completeXML = new ArrayList<String>();
-						// String valueUnderline1
-						// =StringEscapeUtils.escapeXml(valueUnderline);
 						completeXML.add(xmlTagsWithMinus);
+						String documentCompletetext = "DOCUMENT_COMPLETETEXT";
+						map.put(documentCompletetext, completeXML);
 
-						map.put("DOCUMENT_COMPLETETEXT", completeXML);
-
-						// TODO 01 test the new functions -- these memery should
 						JSONObject xmlJSONObj = new JSONObject(map);
-
-						// System.out.println(xmlJSONObj.toString());
 						jsonObj.put(columnName, xmlJSONObj);
 					}
 
@@ -180,5 +153,15 @@ public class JsonUtil {
 		}
 
 		return array;
+	}
+
+	// one key ,have many values -- multi maps
+	private Map<String, JSONArray> convertMultiMap(Multimap<String, JSONObject> multiMap) {
+		Map<String, JSONArray> map = new HashMap<>();
+		for (String docNo : multiMap.keySet()) {
+			JSONArray jsonArray = new JSONArray(multiMap.get(docNo));
+			map.put(docNo, jsonArray);
+		}
+		return map;
 	}
 }

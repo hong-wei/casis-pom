@@ -28,7 +28,6 @@ public class ElasticSearchIocModule implements IInitializingModule
 		
 		beanContextFactory.registerBean(ElastichSearchImporter.class).autowireable(ElastichSearchImporter.class);;
 		beanContextFactory.registerBean(ElasticSearchDao.class).autowireable(ElasticSearchDao.class);
-		beanContextFactory.registerBean(ElasticSearchUtil.class).autowireable(ElasticSearchUtil.class);
 		beanContextFactory.registerBean(JdbcDao.class).autowireable(JdbcDao.class);
 		beanContextFactory.registerBean(JsonUtil.class).autowireable(JsonUtil.class);
 		beanContextFactory.registerBean(LastHourState.class).autowireable(LastHourState.class);

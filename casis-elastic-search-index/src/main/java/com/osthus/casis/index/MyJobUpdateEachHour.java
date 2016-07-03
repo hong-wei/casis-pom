@@ -21,7 +21,6 @@ import de.osthus.ambeth.log.LogInstance;
 
 public class MyJobUpdateEachHour implements IJob {
 
-	// TODO add more tags
 	@LogInstance
 	private static ILogger log;
 
@@ -57,15 +56,12 @@ public class MyJobUpdateEachHour implements IJob {
 	@Override
 	public void execute(IJobContext context) throws SQLException {
 
-		java.util.Date date = new java.util.Date();
-		long t = date.getTime();
-		Timestamp startTs = new Timestamp(t);
-
 		Connection conn = DBManager.getConn();
+		
 		LastHourState lastHourUpdate = jdbcDaoService.queryLastTsFromCasisTableAndPreviousRunTable(conn);
+		
 		try {
-			elastichSearchImporter.importFromOralceUpdateEs(conn, lastHourUpdate, startTs);
-//			log.info("update the date to ES");
+			elastichSearchImporter.importFromOralceUpdateEs(conn, lastHourUpdate);
 		} catch (JSONException | SQLException | IOException | TransformerException | DocumentException
 				| ParserConfigurationException | SAXException e) {
 			log.info("Update exception", e);

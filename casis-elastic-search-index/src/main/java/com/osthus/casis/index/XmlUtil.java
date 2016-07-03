@@ -38,8 +38,20 @@ public class XmlUtil {
 	@LogInstance
 	private static ILogger log;
 
-	public String renameTagsDotToMinus(String value) throws ParserConfigurationException, SAXException, IOException, TransformerException
-			{
+	public Document convertStringToXmlDocumnet(String xmlStr)
+			throws ParserConfigurationException, SAXException, IOException {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder;
+		Document doc = null;
+
+		builder = factory.newDocumentBuilder();
+		doc = builder.parse(new InputSource(new StringReader(xmlStr)));
+
+		return doc;
+	}
+
+	public String renameTagsDotToMinus(String value)
+			throws ParserConfigurationException, SAXException, IOException, TransformerException {
 		Document doc = convertStringToXmlDocumnet(value);
 		loopRenameTagsDotToMinus(doc, doc.getDocumentElement());
 
@@ -53,27 +65,10 @@ public class XmlUtil {
 		return output;
 	}
 
-	public Document convertStringToXmlDocumnet(String xmlStr) throws ParserConfigurationException, SAXException, IOException
-			 {
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder;
-		Document doc = null;
-
-		builder = factory.newDocumentBuilder();
-		doc = builder.parse(new InputSource(new StringReader(xmlStr)));
-
-		return doc;
-	}
-	// TODO0 refactory -- 6  change String to String Buffer
 	private void loopRenameTagsDotToMinus(Document doc, Node node) {
-		// TODO string ? to StringBuilder?
 		String nodeName = node.getNodeName();
 		if (nodeName.contains("."))
 			changeTagName(doc, nodeName, nodeName.replace(".", "-"));
-		// StringBuilder nodeName = new StringBuilder(node.getNodeName());
-		// if (nodeName.indexOf(".")!=-1)
-		// changeTagName(doc, nodeName, nodeName.replaceall(".", "-"));
-
 		NodeList nodeList = node.getChildNodes();
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			Node currentNode = nodeList.item(i);
@@ -90,27 +85,6 @@ public class XmlUtil {
 				Element elem = (Element) nodes.item(i);
 				doc.renameNode(elem, elem.getNamespaceURI(), toTag);
 			}
-		}
-	}
-
-	// TODO0 refactory -- 6  change String to String Buffer
-	public void getNodesValue(org.dom4j.Element node, org.dom4j.Element root, String parentString,
-			Map<String, ArrayList<String>> map) {
-		List<org.dom4j.Element> listElement = node.elements();
-
-		if (node == root)
-			parentString = node.getName();
-		else
-			parentString = parentString + "_" + node.getName();
-		// travel all the data nodes
-
-		if (listElement.isEmpty()) {
-			getLeafAttributes(node, parentString, map);
-			getLeafValues(node, parentString, map);
-		}
-		
-		for (org.dom4j.Element e : listElement) {
-			this.getNodesValue(e, root, parentString, map);//
 		}
 	}
 
@@ -137,8 +111,8 @@ public class XmlUtil {
 		}
 	}
 
-	public HashMap<String, ArrayList<String>> getXmlKeyValuesPairs(String valueUnderline) throws ParserConfigurationException, SAXException, IOException, DocumentException
-			  {
+	public HashMap<String, ArrayList<String>> getXmlKeyValuesPairs(String valueUnderline)
+			throws ParserConfigurationException, SAXException, IOException, DocumentException {
 		String parentString = "";
 		HashMap<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
 		Document doc = convertStringToXmlDocumnet(valueUnderline);
@@ -153,42 +127,25 @@ public class XmlUtil {
 		return map;
 	}
 
-	public void getNodesValue1(org.dom4j.Element node, org.dom4j.Element root, StringBuilder parentString,
-			HashMap<StringBuilder, ArrayList<StringBuilder>> map) {
+	// TODO0 refactory -- 6 change String to String Buffer
+	public void getNodesValue(org.dom4j.Element node, org.dom4j.Element root, String parentString,
+			Map<String, ArrayList<String>> map) {
 		List<org.dom4j.Element> listElement = node.elements();
 
 		if (node == root)
-			parentString = new StringBuilder(node.getName());
+			parentString = node.getName();
 		else
-			parentString = parentString.append("_").append(node.getName());
+			parentString = parentString + "_" + node.getName();
 		// travel all the data nodes
 
 		if (listElement.isEmpty()) {
-			List<Attribute> listAttr = node.attributes();
-			for (Attribute attr : listAttr) {
-				ArrayList<StringBuilder> arrayList = new ArrayList<StringBuilder>();
-				StringBuilder newParentString = new StringBuilder(parentString);
-				String name = attr.getName();
-				String value = attr.getValue();
-				newParentString = parentString.append("_").append(name);
-				if (map.get(newParentString) != null)
-					arrayList = map.get(newParentString);
-				arrayList.add(new StringBuilder(value));
-				map.put(newParentString, arrayList);
-			}
-
-			// TODO element's atrributes should be there also
-			ArrayList<StringBuilder> arrayList1 = new ArrayList<StringBuilder>();
-			if (map.get(parentString) != null)
-				arrayList1 = map.get(parentString);
-			arrayList1.add(new StringBuilder(node.getStringValue()));
-			map.put(parentString, arrayList1);
+			getLeafAttributes(node, parentString, map);
+			getLeafValues(node, parentString, map);
 		}
 
 		for (org.dom4j.Element e : listElement) {
-			this.getNodesValue1(e, root, parentString, map);//
+			this.getNodesValue(e, root, parentString, map);//
 		}
-
 	}
 
 }

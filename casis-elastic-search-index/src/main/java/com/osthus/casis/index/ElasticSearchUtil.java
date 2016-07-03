@@ -26,6 +26,8 @@ public final class ElasticSearchUtil {
 		}
 		esserver = props.getProperty("esserver");
 	}
+	private ElasticSearchUtil() {
+	}
 
 	public static JestClient getEsClient() {
 		JestClient client = null;
